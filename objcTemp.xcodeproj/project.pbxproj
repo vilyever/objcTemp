@@ -7,9 +7,68 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FE615F3B1D23679B00AECD76 /* objcTemp.h in Headers */ = {isa = PBXBuildFile; fileRef = FE615F3A1D23679B00AECD76 /* objcTemp.h */; };
+		FE615F3B1D23679B00AECD76 /* objcTemp.h in Headers */ = {isa = PBXBuildFile; fileRef = FE615F3A1D23679B00AECD76 /* objcTemp.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FE615F421D23679B00AECD76 /* objcTemp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE615F371D23679B00AECD76 /* objcTemp.framework */; };
 		FE615F471D23679B00AECD76 /* objcTempTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FE615F461D23679B00AECD76 /* objcTempTests.m */; };
+		FE615F9E1D2367B500AECD76 /* CALayer+VDEnhance.h in Headers */ = {isa = PBXBuildFile; fileRef = FE615F521D2367B500AECD76 /* CALayer+VDEnhance.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE615F9F1D2367B500AECD76 /* CALayer+VDEnhance.m in Sources */ = {isa = PBXBuildFile; fileRef = FE615F531D2367B500AECD76 /* CALayer+VDEnhance.m */; };
+		FE615FA01D2367B500AECD76 /* VDFingerPrintViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = FE615F551D2367B500AECD76 /* VDFingerPrintViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE615FA11D2367B500AECD76 /* VDFingerPrintViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE615F561D2367B500AECD76 /* VDFingerPrintViewController.m */; };
+		FE615FA21D2367B500AECD76 /* NSObject+VDHook.h in Headers */ = {isa = PBXBuildFile; fileRef = FE615F581D2367B500AECD76 /* NSObject+VDHook.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE615FA31D2367B500AECD76 /* NSObject+VDHook.m in Sources */ = {isa = PBXBuildFile; fileRef = FE615F591D2367B500AECD76 /* NSObject+VDHook.m */; };
+		FE615FA41D2367B500AECD76 /* VDHook.h in Headers */ = {isa = PBXBuildFile; fileRef = FE615F5A1D2367B500AECD76 /* VDHook.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE615FA51D2367B500AECD76 /* VDHook.m in Sources */ = {isa = PBXBuildFile; fileRef = FE615F5B1D2367B500AECD76 /* VDHook.m */; };
+		FE615FA61D2367B500AECD76 /* VDHookElement.h in Headers */ = {isa = PBXBuildFile; fileRef = FE615F5C1D2367B500AECD76 /* VDHookElement.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE615FA71D2367B500AECD76 /* VDHookElement.m in Sources */ = {isa = PBXBuildFile; fileRef = FE615F5D1D2367B500AECD76 /* VDHookElement.m */; };
+		FE615FA81D2367B500AECD76 /* VDHookInvocationInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = FE615F5E1D2367B500AECD76 /* VDHookInvocationInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE615FA91D2367B500AECD76 /* VDHookInvocationInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = FE615F5F1D2367B500AECD76 /* VDHookInvocationInfo.m */; };
+		FE615FAA1D2367B500AECD76 /* VDHookRecorder.h in Headers */ = {isa = PBXBuildFile; fileRef = FE615F601D2367B500AECD76 /* VDHookRecorder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE615FAB1D2367B500AECD76 /* VDHookRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = FE615F611D2367B500AECD76 /* VDHookRecorder.m */; };
+		FE615FAC1D2367B500AECD76 /* VDMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = FE615F631D2367B500AECD76 /* VDMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE615FAD1D2367B500AECD76 /* NSDictionary+VDEnhance.h in Headers */ = {isa = PBXBuildFile; fileRef = FE615F651D2367B500AECD76 /* NSDictionary+VDEnhance.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE615FAE1D2367B500AECD76 /* NSDictionary+VDEnhance.m in Sources */ = {isa = PBXBuildFile; fileRef = FE615F661D2367B500AECD76 /* NSDictionary+VDEnhance.m */; };
+		FE615FAF1D2367B500AECD76 /* NSObject+VDEnhance.h in Headers */ = {isa = PBXBuildFile; fileRef = FE615F681D2367B500AECD76 /* NSObject+VDEnhance.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE615FB01D2367B500AECD76 /* NSObject+VDEnhance.m in Sources */ = {isa = PBXBuildFile; fileRef = FE615F691D2367B500AECD76 /* NSObject+VDEnhance.m */; };
+		FE615FB11D2367B500AECD76 /* VDDelayOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = FE615F6B1D2367B500AECD76 /* VDDelayOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE615FB21D2367B500AECD76 /* VDDelayOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = FE615F6C1D2367B500AECD76 /* VDDelayOperation.m */; };
+		FE615FB31D2367B500AECD76 /* NSString+VDEnhance.h in Headers */ = {isa = PBXBuildFile; fileRef = FE615F6E1D2367B500AECD76 /* NSString+VDEnhance.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE615FB41D2367B500AECD76 /* NSString+VDEnhance.m in Sources */ = {isa = PBXBuildFile; fileRef = FE615F6F1D2367B500AECD76 /* NSString+VDEnhance.m */; };
+		FE615FB51D2367B500AECD76 /* NSString+VDJavaScript.h in Headers */ = {isa = PBXBuildFile; fileRef = FE615F701D2367B500AECD76 /* NSString+VDJavaScript.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE615FB61D2367B500AECD76 /* NSString+VDJavaScript.m in Sources */ = {isa = PBXBuildFile; fileRef = FE615F711D2367B500AECD76 /* NSString+VDJavaScript.m */; };
+		FE615FB71D2367B500AECD76 /* NSString+VDRegex.h in Headers */ = {isa = PBXBuildFile; fileRef = FE615F721D2367B500AECD76 /* NSString+VDRegex.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE615FB81D2367B500AECD76 /* NSString+VDRegex.m in Sources */ = {isa = PBXBuildFile; fileRef = FE615F731D2367B500AECD76 /* NSString+VDRegex.m */; };
+		FE615FB91D2367B500AECD76 /* UIViewController+VDRouter.h in Headers */ = {isa = PBXBuildFile; fileRef = FE615F751D2367B500AECD76 /* UIViewController+VDRouter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE615FBA1D2367B500AECD76 /* UIViewController+VDRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = FE615F761D2367B500AECD76 /* UIViewController+VDRouter.m */; };
+		FE615FBB1D2367B500AECD76 /* VDRouter.h in Headers */ = {isa = PBXBuildFile; fileRef = FE615F771D2367B500AECD76 /* VDRouter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE615FBC1D2367B500AECD76 /* VDRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = FE615F781D2367B500AECD76 /* VDRouter.m */; };
+		FE615FBD1D2367B500AECD76 /* VDRouterNavigationViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = FE615F791D2367B500AECD76 /* VDRouterNavigationViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE615FBE1D2367B500AECD76 /* VDRouterNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE615F7A1D2367B500AECD76 /* VDRouterNavigationViewController.m */; };
+		FE615FBF1D2367B500AECD76 /* UIApplication+VDEnhance.h in Headers */ = {isa = PBXBuildFile; fileRef = FE615F7C1D2367B500AECD76 /* UIApplication+VDEnhance.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE615FC01D2367B500AECD76 /* UIApplication+VDEnhance.m in Sources */ = {isa = PBXBuildFile; fileRef = FE615F7D1D2367B500AECD76 /* UIApplication+VDEnhance.m */; };
+		FE615FC11D2367B500AECD76 /* UICollectionViewCell+VDEnhance.h in Headers */ = {isa = PBXBuildFile; fileRef = FE615F7F1D2367B500AECD76 /* UICollectionViewCell+VDEnhance.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE615FC21D2367B500AECD76 /* UICollectionViewCell+VDEnhance.m in Sources */ = {isa = PBXBuildFile; fileRef = FE615F801D2367B500AECD76 /* UICollectionViewCell+VDEnhance.m */; };
+		FE615FC31D2367B500AECD76 /* UIColor+VDEnhance.h in Headers */ = {isa = PBXBuildFile; fileRef = FE615F821D2367B500AECD76 /* UIColor+VDEnhance.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE615FC41D2367B500AECD76 /* UIColor+VDEnhance.m in Sources */ = {isa = PBXBuildFile; fileRef = FE615F831D2367B500AECD76 /* UIColor+VDEnhance.m */; };
+		FE615FC51D2367B500AECD76 /* UIImage+VDEnhance.h in Headers */ = {isa = PBXBuildFile; fileRef = FE615F851D2367B500AECD76 /* UIImage+VDEnhance.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE615FC61D2367B500AECD76 /* UIImage+VDEnhance.m in Sources */ = {isa = PBXBuildFile; fileRef = FE615F861D2367B500AECD76 /* UIImage+VDEnhance.m */; };
+		FE615FC71D2367B500AECD76 /* UILabel+VDEnhance.h in Headers */ = {isa = PBXBuildFile; fileRef = FE615F881D2367B500AECD76 /* UILabel+VDEnhance.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE615FC81D2367B500AECD76 /* UILabel+VDEnhance.m in Sources */ = {isa = PBXBuildFile; fileRef = FE615F891D2367B500AECD76 /* UILabel+VDEnhance.m */; };
+		FE615FC91D2367B500AECD76 /* UILabel+VDVerticalAlignment.h in Headers */ = {isa = PBXBuildFile; fileRef = FE615F8A1D2367B500AECD76 /* UILabel+VDVerticalAlignment.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE615FCA1D2367B500AECD76 /* UILabel+VDVerticalAlignment.m in Sources */ = {isa = PBXBuildFile; fileRef = FE615F8B1D2367B500AECD76 /* UILabel+VDVerticalAlignment.m */; };
+		FE615FCB1D2367B500AECD76 /* UIScrollView+VDEnhance.h in Headers */ = {isa = PBXBuildFile; fileRef = FE615F8D1D2367B500AECD76 /* UIScrollView+VDEnhance.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE615FCC1D2367B500AECD76 /* UIScrollView+VDEnhance.m in Sources */ = {isa = PBXBuildFile; fileRef = FE615F8E1D2367B500AECD76 /* UIScrollView+VDEnhance.m */; };
+		FE615FCD1D2367B500AECD76 /* UIView+VDConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = FE615F901D2367B500AECD76 /* UIView+VDConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE615FCE1D2367B500AECD76 /* UIView+VDConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = FE615F911D2367B500AECD76 /* UIView+VDConstraint.m */; };
+		FE615FCF1D2367B500AECD76 /* UIView+VDEnhance.h in Headers */ = {isa = PBXBuildFile; fileRef = FE615F921D2367B500AECD76 /* UIView+VDEnhance.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE615FD01D2367B500AECD76 /* UIView+VDEnhance.m in Sources */ = {isa = PBXBuildFile; fileRef = FE615F931D2367B500AECD76 /* UIView+VDEnhance.m */; };
+		FE615FD11D2367B500AECD76 /* UIView+VDFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = FE615F941D2367B500AECD76 /* UIView+VDFrame.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE615FD21D2367B500AECD76 /* UIView+VDFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = FE615F951D2367B500AECD76 /* UIView+VDFrame.m */; };
+		FE615FD31D2367B500AECD76 /* UIView+VDGesture.h in Headers */ = {isa = PBXBuildFile; fileRef = FE615F961D2367B500AECD76 /* UIView+VDGesture.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE615FD41D2367B500AECD76 /* UIView+VDGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = FE615F971D2367B500AECD76 /* UIView+VDGesture.m */; };
+		FE615FD51D2367B500AECD76 /* UIViewController+VDEnhance.h in Headers */ = {isa = PBXBuildFile; fileRef = FE615F991D2367B500AECD76 /* UIViewController+VDEnhance.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE615FD61D2367B500AECD76 /* UIViewController+VDEnhance.m in Sources */ = {isa = PBXBuildFile; fileRef = FE615F9A1D2367B500AECD76 /* UIViewController+VDEnhance.m */; };
+		FE615FD71D2367B500AECD76 /* VDWeakRef.h in Headers */ = {isa = PBXBuildFile; fileRef = FE615F9C1D2367B500AECD76 /* VDWeakRef.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE615FD81D2367B500AECD76 /* VDWeakRef.m in Sources */ = {isa = PBXBuildFile; fileRef = FE615F9D1D2367B500AECD76 /* VDWeakRef.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +88,65 @@
 		FE615F411D23679B00AECD76 /* objcTempTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = objcTempTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE615F461D23679B00AECD76 /* objcTempTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = objcTempTests.m; sourceTree = "<group>"; };
 		FE615F481D23679B00AECD76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE615F521D2367B500AECD76 /* CALayer+VDEnhance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+VDEnhance.h"; sourceTree = "<group>"; };
+		FE615F531D2367B500AECD76 /* CALayer+VDEnhance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+VDEnhance.m"; sourceTree = "<group>"; };
+		FE615F551D2367B500AECD76 /* VDFingerPrintViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDFingerPrintViewController.h; sourceTree = "<group>"; };
+		FE615F561D2367B500AECD76 /* VDFingerPrintViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDFingerPrintViewController.m; sourceTree = "<group>"; };
+		FE615F581D2367B500AECD76 /* NSObject+VDHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+VDHook.h"; sourceTree = "<group>"; };
+		FE615F591D2367B500AECD76 /* NSObject+VDHook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+VDHook.m"; sourceTree = "<group>"; };
+		FE615F5A1D2367B500AECD76 /* VDHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDHook.h; sourceTree = "<group>"; };
+		FE615F5B1D2367B500AECD76 /* VDHook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDHook.m; sourceTree = "<group>"; };
+		FE615F5C1D2367B500AECD76 /* VDHookElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDHookElement.h; sourceTree = "<group>"; };
+		FE615F5D1D2367B500AECD76 /* VDHookElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDHookElement.m; sourceTree = "<group>"; };
+		FE615F5E1D2367B500AECD76 /* VDHookInvocationInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDHookInvocationInfo.h; sourceTree = "<group>"; };
+		FE615F5F1D2367B500AECD76 /* VDHookInvocationInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDHookInvocationInfo.m; sourceTree = "<group>"; };
+		FE615F601D2367B500AECD76 /* VDHookRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDHookRecorder.h; sourceTree = "<group>"; };
+		FE615F611D2367B500AECD76 /* VDHookRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDHookRecorder.m; sourceTree = "<group>"; };
+		FE615F631D2367B500AECD76 /* VDMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDMacros.h; sourceTree = "<group>"; };
+		FE615F651D2367B500AECD76 /* NSDictionary+VDEnhance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+VDEnhance.h"; sourceTree = "<group>"; };
+		FE615F661D2367B500AECD76 /* NSDictionary+VDEnhance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+VDEnhance.m"; sourceTree = "<group>"; };
+		FE615F681D2367B500AECD76 /* NSObject+VDEnhance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+VDEnhance.h"; sourceTree = "<group>"; };
+		FE615F691D2367B500AECD76 /* NSObject+VDEnhance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+VDEnhance.m"; sourceTree = "<group>"; };
+		FE615F6B1D2367B500AECD76 /* VDDelayOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDDelayOperation.h; sourceTree = "<group>"; };
+		FE615F6C1D2367B500AECD76 /* VDDelayOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDDelayOperation.m; sourceTree = "<group>"; };
+		FE615F6E1D2367B500AECD76 /* NSString+VDEnhance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+VDEnhance.h"; sourceTree = "<group>"; };
+		FE615F6F1D2367B500AECD76 /* NSString+VDEnhance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+VDEnhance.m"; sourceTree = "<group>"; };
+		FE615F701D2367B500AECD76 /* NSString+VDJavaScript.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+VDJavaScript.h"; sourceTree = "<group>"; };
+		FE615F711D2367B500AECD76 /* NSString+VDJavaScript.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+VDJavaScript.m"; sourceTree = "<group>"; };
+		FE615F721D2367B500AECD76 /* NSString+VDRegex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+VDRegex.h"; sourceTree = "<group>"; };
+		FE615F731D2367B500AECD76 /* NSString+VDRegex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+VDRegex.m"; sourceTree = "<group>"; };
+		FE615F751D2367B500AECD76 /* UIViewController+VDRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+VDRouter.h"; sourceTree = "<group>"; };
+		FE615F761D2367B500AECD76 /* UIViewController+VDRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+VDRouter.m"; sourceTree = "<group>"; };
+		FE615F771D2367B500AECD76 /* VDRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDRouter.h; sourceTree = "<group>"; };
+		FE615F781D2367B500AECD76 /* VDRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDRouter.m; sourceTree = "<group>"; };
+		FE615F791D2367B500AECD76 /* VDRouterNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDRouterNavigationViewController.h; sourceTree = "<group>"; };
+		FE615F7A1D2367B500AECD76 /* VDRouterNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDRouterNavigationViewController.m; sourceTree = "<group>"; };
+		FE615F7C1D2367B500AECD76 /* UIApplication+VDEnhance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+VDEnhance.h"; sourceTree = "<group>"; };
+		FE615F7D1D2367B500AECD76 /* UIApplication+VDEnhance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+VDEnhance.m"; sourceTree = "<group>"; };
+		FE615F7F1D2367B500AECD76 /* UICollectionViewCell+VDEnhance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionViewCell+VDEnhance.h"; sourceTree = "<group>"; };
+		FE615F801D2367B500AECD76 /* UICollectionViewCell+VDEnhance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionViewCell+VDEnhance.m"; sourceTree = "<group>"; };
+		FE615F821D2367B500AECD76 /* UIColor+VDEnhance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+VDEnhance.h"; sourceTree = "<group>"; };
+		FE615F831D2367B500AECD76 /* UIColor+VDEnhance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+VDEnhance.m"; sourceTree = "<group>"; };
+		FE615F851D2367B500AECD76 /* UIImage+VDEnhance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+VDEnhance.h"; sourceTree = "<group>"; };
+		FE615F861D2367B500AECD76 /* UIImage+VDEnhance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+VDEnhance.m"; sourceTree = "<group>"; };
+		FE615F881D2367B500AECD76 /* UILabel+VDEnhance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+VDEnhance.h"; sourceTree = "<group>"; };
+		FE615F891D2367B500AECD76 /* UILabel+VDEnhance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+VDEnhance.m"; sourceTree = "<group>"; };
+		FE615F8A1D2367B500AECD76 /* UILabel+VDVerticalAlignment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+VDVerticalAlignment.h"; sourceTree = "<group>"; };
+		FE615F8B1D2367B500AECD76 /* UILabel+VDVerticalAlignment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+VDVerticalAlignment.m"; sourceTree = "<group>"; };
+		FE615F8D1D2367B500AECD76 /* UIScrollView+VDEnhance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+VDEnhance.h"; sourceTree = "<group>"; };
+		FE615F8E1D2367B500AECD76 /* UIScrollView+VDEnhance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+VDEnhance.m"; sourceTree = "<group>"; };
+		FE615F901D2367B500AECD76 /* UIView+VDConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+VDConstraint.h"; sourceTree = "<group>"; };
+		FE615F911D2367B500AECD76 /* UIView+VDConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+VDConstraint.m"; sourceTree = "<group>"; };
+		FE615F921D2367B500AECD76 /* UIView+VDEnhance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+VDEnhance.h"; sourceTree = "<group>"; };
+		FE615F931D2367B500AECD76 /* UIView+VDEnhance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+VDEnhance.m"; sourceTree = "<group>"; };
+		FE615F941D2367B500AECD76 /* UIView+VDFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+VDFrame.h"; sourceTree = "<group>"; };
+		FE615F951D2367B500AECD76 /* UIView+VDFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+VDFrame.m"; sourceTree = "<group>"; };
+		FE615F961D2367B500AECD76 /* UIView+VDGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+VDGesture.h"; sourceTree = "<group>"; };
+		FE615F971D2367B500AECD76 /* UIView+VDGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+VDGesture.m"; sourceTree = "<group>"; };
+		FE615F991D2367B500AECD76 /* UIViewController+VDEnhance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+VDEnhance.h"; sourceTree = "<group>"; };
+		FE615F9A1D2367B500AECD76 /* UIViewController+VDEnhance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+VDEnhance.m"; sourceTree = "<group>"; };
+		FE615F9C1D2367B500AECD76 /* VDWeakRef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDWeakRef.h; sourceTree = "<group>"; };
+		FE615F9D1D2367B500AECD76 /* VDWeakRef.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDWeakRef.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +189,24 @@
 		FE615F391D23679B00AECD76 /* objcTemp */ = {
 			isa = PBXGroup;
 			children = (
+				FE615F511D2367B500AECD76 /* CALayer */,
+				FE615F541D2367B500AECD76 /* FingerPrint */,
+				FE615F571D2367B500AECD76 /* Hook */,
+				FE615F621D2367B500AECD76 /* Macros */,
+				FE615F641D2367B500AECD76 /* NSDictionary */,
+				FE615F671D2367B500AECD76 /* NSObject */,
+				FE615F6A1D2367B500AECD76 /* NSOperation */,
+				FE615F6D1D2367B500AECD76 /* NSString */,
+				FE615F741D2367B500AECD76 /* Router */,
+				FE615F7B1D2367B500AECD76 /* UIApplication */,
+				FE615F7E1D2367B500AECD76 /* UICollectionViewCell */,
+				FE615F811D2367B500AECD76 /* UIColor */,
+				FE615F841D2367B500AECD76 /* UIImage */,
+				FE615F871D2367B500AECD76 /* UILabel */,
+				FE615F8C1D2367B500AECD76 /* UIScrollView */,
+				FE615F8F1D2367B500AECD76 /* UIView */,
+				FE615F981D2367B500AECD76 /* UIViewController */,
+				FE615F9B1D2367B500AECD76 /* WeakRef */,
 				FE615F3A1D23679B00AECD76 /* objcTemp.h */,
 				FE615F3C1D23679B00AECD76 /* Info.plist */,
 			);
@@ -86,6 +222,191 @@
 			path = objcTempTests;
 			sourceTree = "<group>";
 		};
+		FE615F511D2367B500AECD76 /* CALayer */ = {
+			isa = PBXGroup;
+			children = (
+				FE615F521D2367B500AECD76 /* CALayer+VDEnhance.h */,
+				FE615F531D2367B500AECD76 /* CALayer+VDEnhance.m */,
+			);
+			path = CALayer;
+			sourceTree = "<group>";
+		};
+		FE615F541D2367B500AECD76 /* FingerPrint */ = {
+			isa = PBXGroup;
+			children = (
+				FE615F551D2367B500AECD76 /* VDFingerPrintViewController.h */,
+				FE615F561D2367B500AECD76 /* VDFingerPrintViewController.m */,
+			);
+			path = FingerPrint;
+			sourceTree = "<group>";
+		};
+		FE615F571D2367B500AECD76 /* Hook */ = {
+			isa = PBXGroup;
+			children = (
+				FE615F581D2367B500AECD76 /* NSObject+VDHook.h */,
+				FE615F591D2367B500AECD76 /* NSObject+VDHook.m */,
+				FE615F5A1D2367B500AECD76 /* VDHook.h */,
+				FE615F5B1D2367B500AECD76 /* VDHook.m */,
+				FE615F5C1D2367B500AECD76 /* VDHookElement.h */,
+				FE615F5D1D2367B500AECD76 /* VDHookElement.m */,
+				FE615F5E1D2367B500AECD76 /* VDHookInvocationInfo.h */,
+				FE615F5F1D2367B500AECD76 /* VDHookInvocationInfo.m */,
+				FE615F601D2367B500AECD76 /* VDHookRecorder.h */,
+				FE615F611D2367B500AECD76 /* VDHookRecorder.m */,
+			);
+			path = Hook;
+			sourceTree = "<group>";
+		};
+		FE615F621D2367B500AECD76 /* Macros */ = {
+			isa = PBXGroup;
+			children = (
+				FE615F631D2367B500AECD76 /* VDMacros.h */,
+			);
+			path = Macros;
+			sourceTree = "<group>";
+		};
+		FE615F641D2367B500AECD76 /* NSDictionary */ = {
+			isa = PBXGroup;
+			children = (
+				FE615F651D2367B500AECD76 /* NSDictionary+VDEnhance.h */,
+				FE615F661D2367B500AECD76 /* NSDictionary+VDEnhance.m */,
+			);
+			path = NSDictionary;
+			sourceTree = "<group>";
+		};
+		FE615F671D2367B500AECD76 /* NSObject */ = {
+			isa = PBXGroup;
+			children = (
+				FE615F681D2367B500AECD76 /* NSObject+VDEnhance.h */,
+				FE615F691D2367B500AECD76 /* NSObject+VDEnhance.m */,
+			);
+			path = NSObject;
+			sourceTree = "<group>";
+		};
+		FE615F6A1D2367B500AECD76 /* NSOperation */ = {
+			isa = PBXGroup;
+			children = (
+				FE615F6B1D2367B500AECD76 /* VDDelayOperation.h */,
+				FE615F6C1D2367B500AECD76 /* VDDelayOperation.m */,
+			);
+			path = NSOperation;
+			sourceTree = "<group>";
+		};
+		FE615F6D1D2367B500AECD76 /* NSString */ = {
+			isa = PBXGroup;
+			children = (
+				FE615F6E1D2367B500AECD76 /* NSString+VDEnhance.h */,
+				FE615F6F1D2367B500AECD76 /* NSString+VDEnhance.m */,
+				FE615F701D2367B500AECD76 /* NSString+VDJavaScript.h */,
+				FE615F711D2367B500AECD76 /* NSString+VDJavaScript.m */,
+				FE615F721D2367B500AECD76 /* NSString+VDRegex.h */,
+				FE615F731D2367B500AECD76 /* NSString+VDRegex.m */,
+			);
+			path = NSString;
+			sourceTree = "<group>";
+		};
+		FE615F741D2367B500AECD76 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				FE615F751D2367B500AECD76 /* UIViewController+VDRouter.h */,
+				FE615F761D2367B500AECD76 /* UIViewController+VDRouter.m */,
+				FE615F771D2367B500AECD76 /* VDRouter.h */,
+				FE615F781D2367B500AECD76 /* VDRouter.m */,
+				FE615F791D2367B500AECD76 /* VDRouterNavigationViewController.h */,
+				FE615F7A1D2367B500AECD76 /* VDRouterNavigationViewController.m */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		FE615F7B1D2367B500AECD76 /* UIApplication */ = {
+			isa = PBXGroup;
+			children = (
+				FE615F7C1D2367B500AECD76 /* UIApplication+VDEnhance.h */,
+				FE615F7D1D2367B500AECD76 /* UIApplication+VDEnhance.m */,
+			);
+			path = UIApplication;
+			sourceTree = "<group>";
+		};
+		FE615F7E1D2367B500AECD76 /* UICollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				FE615F7F1D2367B500AECD76 /* UICollectionViewCell+VDEnhance.h */,
+				FE615F801D2367B500AECD76 /* UICollectionViewCell+VDEnhance.m */,
+			);
+			path = UICollectionViewCell;
+			sourceTree = "<group>";
+		};
+		FE615F811D2367B500AECD76 /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				FE615F821D2367B500AECD76 /* UIColor+VDEnhance.h */,
+				FE615F831D2367B500AECD76 /* UIColor+VDEnhance.m */,
+			);
+			path = UIColor;
+			sourceTree = "<group>";
+		};
+		FE615F841D2367B500AECD76 /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				FE615F851D2367B500AECD76 /* UIImage+VDEnhance.h */,
+				FE615F861D2367B500AECD76 /* UIImage+VDEnhance.m */,
+			);
+			path = UIImage;
+			sourceTree = "<group>";
+		};
+		FE615F871D2367B500AECD76 /* UILabel */ = {
+			isa = PBXGroup;
+			children = (
+				FE615F881D2367B500AECD76 /* UILabel+VDEnhance.h */,
+				FE615F891D2367B500AECD76 /* UILabel+VDEnhance.m */,
+				FE615F8A1D2367B500AECD76 /* UILabel+VDVerticalAlignment.h */,
+				FE615F8B1D2367B500AECD76 /* UILabel+VDVerticalAlignment.m */,
+			);
+			path = UILabel;
+			sourceTree = "<group>";
+		};
+		FE615F8C1D2367B500AECD76 /* UIScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				FE615F8D1D2367B500AECD76 /* UIScrollView+VDEnhance.h */,
+				FE615F8E1D2367B500AECD76 /* UIScrollView+VDEnhance.m */,
+			);
+			path = UIScrollView;
+			sourceTree = "<group>";
+		};
+		FE615F8F1D2367B500AECD76 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				FE615F901D2367B500AECD76 /* UIView+VDConstraint.h */,
+				FE615F911D2367B500AECD76 /* UIView+VDConstraint.m */,
+				FE615F921D2367B500AECD76 /* UIView+VDEnhance.h */,
+				FE615F931D2367B500AECD76 /* UIView+VDEnhance.m */,
+				FE615F941D2367B500AECD76 /* UIView+VDFrame.h */,
+				FE615F951D2367B500AECD76 /* UIView+VDFrame.m */,
+				FE615F961D2367B500AECD76 /* UIView+VDGesture.h */,
+				FE615F971D2367B500AECD76 /* UIView+VDGesture.m */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		FE615F981D2367B500AECD76 /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FE615F991D2367B500AECD76 /* UIViewController+VDEnhance.h */,
+				FE615F9A1D2367B500AECD76 /* UIViewController+VDEnhance.m */,
+			);
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
+		FE615F9B1D2367B500AECD76 /* WeakRef */ = {
+			isa = PBXGroup;
+			children = (
+				FE615F9C1D2367B500AECD76 /* VDWeakRef.h */,
+				FE615F9D1D2367B500AECD76 /* VDWeakRef.m */,
+			);
+			path = WeakRef;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -94,6 +415,36 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE615F3B1D23679B00AECD76 /* objcTemp.h in Headers */,
+				FE615FA81D2367B500AECD76 /* VDHookInvocationInfo.h in Headers */,
+				FE615FBB1D2367B500AECD76 /* VDRouter.h in Headers */,
+				FE615FAC1D2367B500AECD76 /* VDMacros.h in Headers */,
+				FE615FC71D2367B500AECD76 /* UILabel+VDEnhance.h in Headers */,
+				FE615FA21D2367B500AECD76 /* NSObject+VDHook.h in Headers */,
+				FE615FB91D2367B500AECD76 /* UIViewController+VDRouter.h in Headers */,
+				FE615FCB1D2367B500AECD76 /* UIScrollView+VDEnhance.h in Headers */,
+				FE615FAD1D2367B500AECD76 /* NSDictionary+VDEnhance.h in Headers */,
+				FE615FBF1D2367B500AECD76 /* UIApplication+VDEnhance.h in Headers */,
+				FE615FC11D2367B500AECD76 /* UICollectionViewCell+VDEnhance.h in Headers */,
+				FE615FAF1D2367B500AECD76 /* NSObject+VDEnhance.h in Headers */,
+				FE615FA01D2367B500AECD76 /* VDFingerPrintViewController.h in Headers */,
+				FE615FA41D2367B500AECD76 /* VDHook.h in Headers */,
+				FE615FA61D2367B500AECD76 /* VDHookElement.h in Headers */,
+				FE615FD11D2367B500AECD76 /* UIView+VDFrame.h in Headers */,
+				FE615FB51D2367B500AECD76 /* NSString+VDJavaScript.h in Headers */,
+				FE615FCD1D2367B500AECD76 /* UIView+VDConstraint.h in Headers */,
+				FE615FD51D2367B500AECD76 /* UIViewController+VDEnhance.h in Headers */,
+				FE615FCF1D2367B500AECD76 /* UIView+VDEnhance.h in Headers */,
+				FE615FC91D2367B500AECD76 /* UILabel+VDVerticalAlignment.h in Headers */,
+				FE615FC31D2367B500AECD76 /* UIColor+VDEnhance.h in Headers */,
+				FE615FB31D2367B500AECD76 /* NSString+VDEnhance.h in Headers */,
+				FE615FD31D2367B500AECD76 /* UIView+VDGesture.h in Headers */,
+				FE615FB71D2367B500AECD76 /* NSString+VDRegex.h in Headers */,
+				FE615FBD1D2367B500AECD76 /* VDRouterNavigationViewController.h in Headers */,
+				FE615FD71D2367B500AECD76 /* VDWeakRef.h in Headers */,
+				FE615F9E1D2367B500AECD76 /* CALayer+VDEnhance.h in Headers */,
+				FE615FB11D2367B500AECD76 /* VDDelayOperation.h in Headers */,
+				FE615FAA1D2367B500AECD76 /* VDHookRecorder.h in Headers */,
+				FE615FC51D2367B500AECD76 /* UIImage+VDEnhance.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,6 +546,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE615FAB1D2367B500AECD76 /* VDHookRecorder.m in Sources */,
+				FE615FD41D2367B500AECD76 /* UIView+VDGesture.m in Sources */,
+				FE615FAE1D2367B500AECD76 /* NSDictionary+VDEnhance.m in Sources */,
+				FE615FD21D2367B500AECD76 /* UIView+VDFrame.m in Sources */,
+				FE615FCA1D2367B500AECD76 /* UILabel+VDVerticalAlignment.m in Sources */,
+				FE615FC61D2367B500AECD76 /* UIImage+VDEnhance.m in Sources */,
+				FE615FB41D2367B500AECD76 /* NSString+VDEnhance.m in Sources */,
+				FE615FD61D2367B500AECD76 /* UIViewController+VDEnhance.m in Sources */,
+				FE615FBE1D2367B500AECD76 /* VDRouterNavigationViewController.m in Sources */,
+				FE615FD01D2367B500AECD76 /* UIView+VDEnhance.m in Sources */,
+				FE615F9F1D2367B500AECD76 /* CALayer+VDEnhance.m in Sources */,
+				FE615FB01D2367B500AECD76 /* NSObject+VDEnhance.m in Sources */,
+				FE615FC81D2367B500AECD76 /* UILabel+VDEnhance.m in Sources */,
+				FE615FCC1D2367B500AECD76 /* UIScrollView+VDEnhance.m in Sources */,
+				FE615FBA1D2367B500AECD76 /* UIViewController+VDRouter.m in Sources */,
+				FE615FCE1D2367B500AECD76 /* UIView+VDConstraint.m in Sources */,
+				FE615FA31D2367B500AECD76 /* NSObject+VDHook.m in Sources */,
+				FE615FC41D2367B500AECD76 /* UIColor+VDEnhance.m in Sources */,
+				FE615FA91D2367B500AECD76 /* VDHookInvocationInfo.m in Sources */,
+				FE615FBC1D2367B500AECD76 /* VDRouter.m in Sources */,
+				FE615FC01D2367B500AECD76 /* UIApplication+VDEnhance.m in Sources */,
+				FE615FA51D2367B500AECD76 /* VDHook.m in Sources */,
+				FE615FB21D2367B500AECD76 /* VDDelayOperation.m in Sources */,
+				FE615FB81D2367B500AECD76 /* NSString+VDRegex.m in Sources */,
+				FE615FA71D2367B500AECD76 /* VDHookElement.m in Sources */,
+				FE615FB61D2367B500AECD76 /* NSString+VDJavaScript.m in Sources */,
+				FE615FC21D2367B500AECD76 /* UICollectionViewCell+VDEnhance.m in Sources */,
+				FE615FD81D2367B500AECD76 /* VDWeakRef.m in Sources */,
+				FE615FA11D2367B500AECD76 /* VDFingerPrintViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +636,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MODULEMAP_FILE = "";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -298,6 +679,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MODULEMAP_FILE = "";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -317,6 +699,8 @@
 				INFOPLIST_FILE = objcTemp/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = mh_dylib;
+				MODULEMAP_FILE = "";
 				PRODUCT_BUNDLE_IDENTIFIER = vilyever.objcTemp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -333,6 +717,8 @@
 				INFOPLIST_FILE = objcTemp/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = mh_dylib;
+				MODULEMAP_FILE = "";
 				PRODUCT_BUNDLE_IDENTIFIER = vilyever.objcTemp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -378,6 +764,7 @@
 				FE615F4D1D23679B00AECD76 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FE615F4E1D23679B00AECD76 /* Build configuration list for PBXNativeTarget "objcTempTests" */ = {
 			isa = XCConfigurationList;
@@ -386,6 +773,7 @@
 				FE615F501D23679B00AECD76 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>objcTemp.xcscheme_^#shared#^_</key>
+		<key>objcTempDemo.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,12 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>FE615F361D23679B00AECD76</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FE615F401D23679B00AECD76</key>
+		<key>FE615FE11D2367FF00AECD76</key>
 		<dict>
 			<key>primary</key>
 			<true/>
