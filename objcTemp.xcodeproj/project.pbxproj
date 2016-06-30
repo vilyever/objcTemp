@@ -69,6 +69,8 @@
 		FE615FD61D2367B500AECD76 /* UIViewController+VDEnhance.m in Sources */ = {isa = PBXBuildFile; fileRef = FE615F9A1D2367B500AECD76 /* UIViewController+VDEnhance.m */; };
 		FE615FD71D2367B500AECD76 /* VDWeakRef.h in Headers */ = {isa = PBXBuildFile; fileRef = FE615F9C1D2367B500AECD76 /* VDWeakRef.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FE615FD81D2367B500AECD76 /* VDWeakRef.m in Sources */ = {isa = PBXBuildFile; fileRef = FE615F9D1D2367B500AECD76 /* VDWeakRef.m */; };
+		FECA263D1D25030B00ED8FDD /* objcTemp.podspec in Resources */ = {isa = PBXBuildFile; fileRef = FECA263B1D25030B00ED8FDD /* objcTemp.podspec */; };
+		FECA263E1D25030B00ED8FDD /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = FECA263C1D25030B00ED8FDD /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -147,6 +149,8 @@
 		FE615F9A1D2367B500AECD76 /* UIViewController+VDEnhance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+VDEnhance.m"; sourceTree = "<group>"; };
 		FE615F9C1D2367B500AECD76 /* VDWeakRef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDWeakRef.h; sourceTree = "<group>"; };
 		FE615F9D1D2367B500AECD76 /* VDWeakRef.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDWeakRef.m; sourceTree = "<group>"; };
+		FECA263B1D25030B00ED8FDD /* objcTemp.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = objcTemp.podspec; sourceTree = "<group>"; };
+		FECA263C1D25030B00ED8FDD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +178,8 @@
 				FE615F391D23679B00AECD76 /* objcTemp */,
 				FE615F451D23679B00AECD76 /* objcTempTests */,
 				FE615F381D23679B00AECD76 /* Products */,
+				FECA263B1D25030B00ED8FDD /* objcTemp.podspec */,
+				FECA263C1D25030B00ED8FDD /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -529,6 +535,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FECA263D1D25030B00ED8FDD /* objcTemp.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -558,6 +565,7 @@
 				FE615FD01D2367B500AECD76 /* UIView+VDEnhance.m in Sources */,
 				FE615F9F1D2367B500AECD76 /* CALayer+VDEnhance.m in Sources */,
 				FE615FB01D2367B500AECD76 /* NSObject+VDEnhance.m in Sources */,
+				FECA263E1D25030B00ED8FDD /* README.md in Sources */,
 				FE615FC81D2367B500AECD76 /* UILabel+VDEnhance.m in Sources */,
 				FE615FCC1D2367B500AECD76 /* UIScrollView+VDEnhance.m in Sources */,
 				FE615FBA1D2367B500AECD76 /* UIViewController+VDRouter.m in Sources */,
