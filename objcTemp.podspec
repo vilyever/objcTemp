@@ -25,9 +25,9 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.source_files = 'objcTemp/**/*.{h,m}'
-  s.resource_bundles = {
-    'objcTemp' => ['objcTemp/**/*.png']
-  }
+#s.resource_bundles = {
+#   'objcTemp' => ['objcTemp/**/*.png']
+# }
 
   s.public_header_files = 'objcTemp/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
