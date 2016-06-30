@@ -26,7 +26,7 @@ Pod::Spec.new do |s|
 
   s.source_files = 'objcTemp/**/*.{h,m}'
   s.resource_bundles = {
-    'objcTemp' => ['objcTemp/Assets/*.png']
+    'objcTemp' => ['objcTemp/**/*.png']
   }
 
   s.public_header_files = 'objcTemp/**/*.h'
