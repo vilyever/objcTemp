@@ -13,6 +13,9 @@
 
 #pragma mark Public Method
 + (NSString *)vd_className;
++ (instancetype)vd_sharedInstance;
++ (instancetype)vd_sharedInstance:(id(^)(void))initBlock;
++ (void)vd_destroySharedInstance;
 
 - (void)vd_performActionDelay:(float)second action:(void (^)(void) )block;
 - (void)vd_performSelector:(SEL)aSelector;
