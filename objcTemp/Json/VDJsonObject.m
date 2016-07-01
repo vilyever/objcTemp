@@ -22,19 +22,19 @@
 @implementation VDJsonObject
 
 #pragma mark Public Method
-+ (instancetype)modelWithJSONString:(NSString *)jsonString
++ (instancetype)modelWithJsonString:(NSString *)jsonString
 {
-    return [self modelWithJSONString:jsonString usingEncoding:NSUTF8StringEncoding];
+    return [self modelWithJsonString:jsonString usingEncoding:NSUTF8StringEncoding];
 }
 
-+ (instancetype)modelWithJSONString:(NSString *)jsonString usingEncoding:(NSStringEncoding)encoding
++ (instancetype)modelWithJsonString:(NSString *)jsonString usingEncoding:(NSStringEncoding)encoding
 {
     NSError *error;
     NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:[jsonString dataUsingEncoding:encoding]
                                                                options:kNilOptions
                                                                  error:&error];
     if (error) {
-        NSLog(@"modelWithJSONString error %@", error);
+        NSLog(@"modelWithJsonString error %@", error);
         return nil;
     }
     return [self modelWithDictionary:dictionary];
@@ -62,19 +62,19 @@
     return model;
 }
 
-+ (NSArray *)arrayWithJSONString:(NSString *)jsonString
++ (NSArray *)arrayWithJsonString:(NSString *)jsonString
 {
-    return [self arrayWithJSONString:jsonString usingEncoding:NSUTF8StringEncoding];
+    return [self arrayWithJsonString:jsonString usingEncoding:NSUTF8StringEncoding];
 }
 
-+ (NSArray *)arrayWithJSONString:(NSString *)jsonString usingEncoding:(NSStringEncoding)encoding
++ (NSArray *)arrayWithJsonString:(NSString *)jsonString usingEncoding:(NSStringEncoding)encoding
 {
     NSError *error;
     NSArray *dictionaries = [NSJSONSerialization JSONObjectWithData:[jsonString dataUsingEncoding:encoding]
                                                             options:kNilOptions
                                                               error:&error];
     if (error) {
-        NSLog(@"arrayWithJSONString error %@", error);
+        NSLog(@"arrayWithJsonString error %@", error);
         return nil;
     }
     return [self arrayWithDictionaries:dictionaries];
