@@ -71,6 +71,12 @@
 		FE615FD81D2367B500AECD76 /* VDWeakRef.m in Sources */ = {isa = PBXBuildFile; fileRef = FE615F9D1D2367B500AECD76 /* VDWeakRef.m */; };
 		FECA263D1D25030B00ED8FDD /* objcTemp.podspec in Resources */ = {isa = PBXBuildFile; fileRef = FECA263B1D25030B00ED8FDD /* objcTemp.podspec */; };
 		FECA263E1D25030B00ED8FDD /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = FECA263C1D25030B00ED8FDD /* README.md */; };
+		FECA268A1D25147000ED8FDD /* VDProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = FECA26881D25147000ED8FDD /* VDProperty.h */; };
+		FECA268B1D25147000ED8FDD /* VDProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = FECA26891D25147000ED8FDD /* VDProperty.m */; };
+		FECA268E1D2516FD00ED8FDD /* NSObject+VDProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = FECA268C1D2516FD00ED8FDD /* NSObject+VDProperty.h */; };
+		FECA268F1D2516FD00ED8FDD /* NSObject+VDProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = FECA268D1D2516FD00ED8FDD /* NSObject+VDProperty.m */; };
+		FECA26931D25215F00ED8FDD /* VDJsonObject.h in Headers */ = {isa = PBXBuildFile; fileRef = FECA26911D25215F00ED8FDD /* VDJsonObject.h */; };
+		FECA26941D25215F00ED8FDD /* VDJsonObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FECA26921D25215F00ED8FDD /* VDJsonObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -151,6 +157,12 @@
 		FE615F9D1D2367B500AECD76 /* VDWeakRef.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDWeakRef.m; sourceTree = "<group>"; };
 		FECA263B1D25030B00ED8FDD /* objcTemp.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = objcTemp.podspec; sourceTree = "<group>"; };
 		FECA263C1D25030B00ED8FDD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		FECA26881D25147000ED8FDD /* VDProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDProperty.h; sourceTree = "<group>"; };
+		FECA26891D25147000ED8FDD /* VDProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDProperty.m; sourceTree = "<group>"; };
+		FECA268C1D2516FD00ED8FDD /* NSObject+VDProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+VDProperty.h"; sourceTree = "<group>"; };
+		FECA268D1D2516FD00ED8FDD /* NSObject+VDProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+VDProperty.m"; sourceTree = "<group>"; };
+		FECA26911D25215F00ED8FDD /* VDJsonObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDJsonObject.h; sourceTree = "<group>"; };
+		FECA26921D25215F00ED8FDD /* VDJsonObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDJsonObject.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +207,8 @@
 		FE615F391D23679B00AECD76 /* objcTemp */ = {
 			isa = PBXGroup;
 			children = (
+				FECA26901D251A9A00ED8FDD /* Json */,
+				FECA26871D25146300ED8FDD /* Property */,
 				FE615F511D2367B500AECD76 /* CALayer */,
 				FE615F541D2367B500AECD76 /* FingerPrint */,
 				FE615F571D2367B500AECD76 /* Hook */,
@@ -413,6 +427,26 @@
 			path = WeakRef;
 			sourceTree = "<group>";
 		};
+		FECA26871D25146300ED8FDD /* Property */ = {
+			isa = PBXGroup;
+			children = (
+				FECA26881D25147000ED8FDD /* VDProperty.h */,
+				FECA26891D25147000ED8FDD /* VDProperty.m */,
+				FECA268C1D2516FD00ED8FDD /* NSObject+VDProperty.h */,
+				FECA268D1D2516FD00ED8FDD /* NSObject+VDProperty.m */,
+			);
+			path = Property;
+			sourceTree = "<group>";
+		};
+		FECA26901D251A9A00ED8FDD /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				FECA26911D25215F00ED8FDD /* VDJsonObject.h */,
+				FECA26921D25215F00ED8FDD /* VDJsonObject.m */,
+			);
+			path = Json;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -421,6 +455,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE615F3B1D23679B00AECD76 /* objcTemp.h in Headers */,
+				FECA268A1D25147000ED8FDD /* VDProperty.h in Headers */,
 				FE615FA81D2367B500AECD76 /* VDHookInvocationInfo.h in Headers */,
 				FE615FBB1D2367B500AECD76 /* VDRouter.h in Headers */,
 				FE615FAC1D2367B500AECD76 /* VDMacros.h in Headers */,
@@ -438,10 +473,12 @@
 				FE615FD11D2367B500AECD76 /* UIView+VDFrame.h in Headers */,
 				FE615FB51D2367B500AECD76 /* NSString+VDJavaScript.h in Headers */,
 				FE615FCD1D2367B500AECD76 /* UIView+VDConstraint.h in Headers */,
+				FECA26931D25215F00ED8FDD /* VDJsonObject.h in Headers */,
 				FE615FD51D2367B500AECD76 /* UIViewController+VDEnhance.h in Headers */,
 				FE615FCF1D2367B500AECD76 /* UIView+VDEnhance.h in Headers */,
 				FE615FC91D2367B500AECD76 /* UILabel+VDVerticalAlignment.h in Headers */,
 				FE615FC31D2367B500AECD76 /* UIColor+VDEnhance.h in Headers */,
+				FECA268E1D2516FD00ED8FDD /* NSObject+VDProperty.h in Headers */,
 				FE615FB31D2367B500AECD76 /* NSString+VDEnhance.h in Headers */,
 				FE615FD31D2367B500AECD76 /* UIView+VDGesture.h in Headers */,
 				FE615FB71D2367B500AECD76 /* NSString+VDRegex.h in Headers */,
@@ -566,12 +603,15 @@
 				FE615F9F1D2367B500AECD76 /* CALayer+VDEnhance.m in Sources */,
 				FE615FB01D2367B500AECD76 /* NSObject+VDEnhance.m in Sources */,
 				FECA263E1D25030B00ED8FDD /* README.md in Sources */,
+				FECA268B1D25147000ED8FDD /* VDProperty.m in Sources */,
 				FE615FC81D2367B500AECD76 /* UILabel+VDEnhance.m in Sources */,
 				FE615FCC1D2367B500AECD76 /* UIScrollView+VDEnhance.m in Sources */,
 				FE615FBA1D2367B500AECD76 /* UIViewController+VDRouter.m in Sources */,
 				FE615FCE1D2367B500AECD76 /* UIView+VDConstraint.m in Sources */,
+				FECA268F1D2516FD00ED8FDD /* NSObject+VDProperty.m in Sources */,
 				FE615FA31D2367B500AECD76 /* NSObject+VDHook.m in Sources */,
 				FE615FC41D2367B500AECD76 /* UIColor+VDEnhance.m in Sources */,
+				FECA26941D25215F00ED8FDD /* VDJsonObject.m in Sources */,
 				FE615FA91D2367B500AECD76 /* VDHookInvocationInfo.m in Sources */,
 				FE615FBC1D2367B500AECD76 /* VDRouter.m in Sources */,
 				FE615FC01D2367B500AECD76 /* UIApplication+VDEnhance.m in Sources */,

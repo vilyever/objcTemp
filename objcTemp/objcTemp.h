@@ -46,3 +46,6 @@ FOUNDATION_EXPORT const unsigned char objcTempVersionString[];
 #import <objcTemp/UIView+VDGesture.h>
 #import <objcTemp/UIViewController+VDEnhance.h>
 #import <objcTemp/VDWeakRef.h>
+#import <objcTemp/VDProperty.h>
+#import <objcTemp/NSObject+VDProperty.h>
+#import <objcTemp/VDJsonObject.h>
