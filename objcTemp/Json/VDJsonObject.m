@@ -109,7 +109,7 @@
     
     NSArray *properties = [[self class] vd_propertiesTraceToAncestorClass:[VDJsonObject class]];
     
-    NSDictionary *jsonKeyDictionary = [[self class] toJsonDictionary];
+    NSDictionary *jsonKeyDictionary = [[self class] jsonKeyDictionary];
     
     for (VDProperty *property in properties)
     {
