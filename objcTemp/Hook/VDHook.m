@@ -143,7 +143,7 @@ static void VDHookedForwardInvocationMethod(__unsafe_unretained NSObject *target
     Class hookClazz = [self internalHookClassForInstance:instance error:nil];
     
     Method targetMethod = class_getInstanceMethod(hookClazz, selector);
-    IMP targetMethodIMP = method_getImplementation(targetMethod);
+//    IMP targetMethodIMP = method_getImplementation(targetMethod);
     
     // 是否hook过
     if (![self internalCheckIsHookedTarget:instance selector:selector]) {
