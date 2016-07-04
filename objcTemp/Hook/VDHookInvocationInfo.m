@@ -41,7 +41,7 @@
 }
 
 - (id)getArgumentAtIndex:(NSInteger)idx {
-    NSObject *argument;
+    id argument;
     [self getArgument:&argument atIndex:idx];
     return argument;
 }

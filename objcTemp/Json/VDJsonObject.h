@@ -28,7 +28,7 @@
 
 + (NSArray *)arrayWithDictionaries:(NSArray *)dictionaries;
 
-+ (NSMutableDictionary *)jsonKeyDictionary;
++ (NSDictionary *)jsonKeyDictionary;
 + (NSDateFormatter *)jsonDateFormatter;
 
 - (NSDictionary *)toJsonDictionary;

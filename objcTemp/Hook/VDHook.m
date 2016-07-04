@@ -151,22 +151,22 @@ static void VDHookedForwardInvocationMethod(__unsafe_unretained NSObject *target
         
         NSCAssert(![hookClazz instancesRespondToSelector:swizzleSelector], @"Alias method name %@ to hook selctor %@ on %@ is being possessed", NSStringFromSelector(swizzleSelector),  NSStringFromSelector(selector), hookClazz);
         
-        BOOL isHookedByOther = ![self internalCheckIsImp:targetMethodIMP fitSelector:selector];
-        
-        // 是否selector的实现imp被替换，若是，查找所有方法的实现imp尝试找出selector的原imp
-        if (isHookedByOther) {
-            targetMethod = nil;
-            unsigned int methodsCount;
-            Method *methods = class_copyMethodList(hookClazz, &methodsCount);
-            while (methodsCount--) {
-                Method method = methods[methodsCount];
-                IMP imp = method_getImplementation(method);
-                if ([self internalCheckIsImp:imp fitSelector:selector]) {
-                    targetMethod = method;
-                    break;
-                }
-            }
-        }
+        // 原先考虑到Aspectes冲突，现发现Category中替换方法后不能使用下述算法。若selector的实现imp为_objc_msgForward,将导致此hook失效，考虑其它解决方案
+//        BOOL isHookedByOther = ![self internalCheckIsImp:targetMethodIMP fitSelector:selector];        
+//        // 是否selector的实现imp被替换，若是，查找所有方法的实现imp尝试找出selector的原imp
+//        if (isHookedByOther) {
+//            targetMethod = nil;
+//            unsigned int methodsCount;
+//            Method *methods = class_copyMethodList(hookClazz, &methodsCount);
+//            while (methodsCount--) {
+//                Method method = methods[methodsCount];
+//                IMP imp = method_getImplementation(method);
+//                if ([self internalCheckIsImp:imp fitSelector:selector]) {
+//                    targetMethod = method;
+//                    break;
+//                }
+//            }
+//        }
         
         NSCAssert(targetMethod, @"Original implementation for %@ cannot find, maybe swizzle by others and no make a alias method on %@", NSStringFromSelector(selector), hookClazz);
         

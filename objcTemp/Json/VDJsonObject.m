@@ -92,9 +92,9 @@
     return [NSArray arrayWithArray:array];
 }
 
-+ (NSMutableDictionary *)jsonKeyDictionary
++ (NSDictionary *)jsonKeyDictionary
 {
-    return [NSMutableDictionary new];
+    return [NSDictionary new];
 }
 
 + (NSDateFormatter *)jsonDateFormatter {

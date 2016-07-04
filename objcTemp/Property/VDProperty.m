@@ -293,6 +293,19 @@ NSString * const PropertyUnionSuffix = @")";
     return !self.isStrong && !self.isWeak && !self.isCopy;
 }
 
+- (NSString *)setterSelectorName {
+    if (!_setterSelectorName
+        && self.setterType == VDPropertyAccessorTypeOriginal) {
+        NSLocale *locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en-US"];
+        NSString *firstChar = [self.name substringToIndex:1];
+        NSString *folded = [firstChar stringByFoldingWithOptions:NSDiacriticInsensitiveSearch locale:locale];
+        NSString *result = [NSString stringWithFormat:@"%@%@", [folded uppercaseString], [self.name substringFromIndex:1]];
+        _setterSelectorName = [NSString stringWithFormat:@"set%@:", result];
+    }
+    
+    return _setterSelectorName;
+}
+
 - (NSString *)getterSelectorName {
     if (!_getterSelectorName
         && self.getterType == VDPropertyAccessorTypeOriginal) {
