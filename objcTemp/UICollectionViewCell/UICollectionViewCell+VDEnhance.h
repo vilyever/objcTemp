@@ -12,8 +12,10 @@
 @interface UICollectionViewCell (VDEnhance)
 
 #pragma mark Public Method
-+ (void)vd_registerNibByCollectionView:(UICollectionView *)collectionView;
++ (void)vd_registerNibWithCollectionView:(UICollectionView *)collectionView;
 
-+ (void)vd_registerClassByCollectionView:(UICollectionView *)collectionView;
++ (void)vd_registerClassWithCollectionView:(UICollectionView *)collectionView;
+
++ (instancetype)vd_dequeueCellWithCollectionView:(UICollectionView *)collectionView forIndexPath:(NSIndexPath *)indexPath;
 
 @end

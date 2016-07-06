@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE416F6F1D2CA6CE00518C78 /* UITableViewCell+VDEnhance.h in Headers */ = {isa = PBXBuildFile; fileRef = FE416F6D1D2CA6CE00518C78 /* UITableViewCell+VDEnhance.h */; };
+		FE416F701D2CA6CE00518C78 /* UITableViewCell+VDEnhance.m in Sources */ = {isa = PBXBuildFile; fileRef = FE416F6E1D2CA6CE00518C78 /* UITableViewCell+VDEnhance.m */; };
 		FE615F3B1D23679B00AECD76 /* objcTemp.h in Headers */ = {isa = PBXBuildFile; fileRef = FE615F3A1D23679B00AECD76 /* objcTemp.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FE615F421D23679B00AECD76 /* objcTemp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE615F371D23679B00AECD76 /* objcTemp.framework */; };
 		FE615F471D23679B00AECD76 /* objcTempTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FE615F461D23679B00AECD76 /* objcTempTests.m */; };
@@ -92,6 +94,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FE416F6D1D2CA6CE00518C78 /* UITableViewCell+VDEnhance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+VDEnhance.h"; sourceTree = "<group>"; };
+		FE416F6E1D2CA6CE00518C78 /* UITableViewCell+VDEnhance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+VDEnhance.m"; sourceTree = "<group>"; };
 		FE615F371D23679B00AECD76 /* objcTemp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = objcTemp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE615F3A1D23679B00AECD76 /* objcTemp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = objcTemp.h; sourceTree = "<group>"; };
 		FE615F3C1D23679B00AECD76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -188,6 +192,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FE416F6C1D2CA69F00518C78 /* UITableView */ = {
+			isa = PBXGroup;
+			children = (
+				FE416F6D1D2CA6CE00518C78 /* UITableViewCell+VDEnhance.h */,
+				FE416F6E1D2CA6CE00518C78 /* UITableViewCell+VDEnhance.m */,
+			);
+			path = UITableView;
+			sourceTree = "<group>";
+		};
 		FE615F2D1D23679B00AECD76 = {
 			isa = PBXGroup;
 			children = (
@@ -211,6 +224,7 @@
 		FE615F391D23679B00AECD76 /* objcTemp */ = {
 			isa = PBXGroup;
 			children = (
+				FE416F6C1D2CA69F00518C78 /* UITableView */,
 				FECA26AC1D2653D200ED8FDD /* Persistent */,
 				FECA26901D251A9A00ED8FDD /* Json */,
 				FECA26871D25146300ED8FDD /* Property */,
@@ -493,6 +507,7 @@
 				FE615FB31D2367B500AECD76 /* NSString+VDEnhance.h in Headers */,
 				FE615FD31D2367B500AECD76 /* UIView+VDGesture.h in Headers */,
 				FE615FB71D2367B500AECD76 /* NSString+VDRegex.h in Headers */,
+				FE416F6F1D2CA6CE00518C78 /* UITableViewCell+VDEnhance.h in Headers */,
 				FE615FBD1D2367B500AECD76 /* VDRouterNavigationViewController.h in Headers */,
 				FECA268A1D25147000ED8FDD /* VDProperty.h in Headers */,
 				FECA26931D25215F00ED8FDD /* VDJsonObject.h in Headers */,
@@ -618,6 +633,7 @@
 				FE615FD01D2367B500AECD76 /* UIView+VDEnhance.m in Sources */,
 				FE615F9F1D2367B500AECD76 /* CALayer+VDEnhance.m in Sources */,
 				FE615FB01D2367B500AECD76 /* NSObject+VDEnhance.m in Sources */,
+				FE416F701D2CA6CE00518C78 /* UITableViewCell+VDEnhance.m in Sources */,
 				FECA263E1D25030B00ED8FDD /* README.md in Sources */,
 				FECA268B1D25147000ED8FDD /* VDProperty.m in Sources */,
 				FE615FC81D2367B500AECD76 /* UILabel+VDEnhance.m in Sources */,

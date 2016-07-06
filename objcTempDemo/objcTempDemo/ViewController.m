@@ -42,6 +42,8 @@
     NSLog(@"test %@", self.test);
     NSLog(@"x %@", @(self.__x));
     NSLog(@"array %@", self._array);
+    
+    NSLog(@"close %@", @(Close));
 }
 
 - (void)didReceiveMemoryWarning {

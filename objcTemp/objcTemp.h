@@ -50,3 +50,4 @@ FOUNDATION_EXPORT const unsigned char objcTempVersionString[];
 #import <objcTemp/VDProperty.h>
 #import <objcTemp/VDJsonObject.h>
 #import <objcTemp/NSObject+VDPersistent.h>
+#import <objcTemp/UITableViewCell+VDEnhance.h>
