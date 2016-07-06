@@ -34,20 +34,40 @@
 }
 
 - (void)forwardInvocation:(NSInvocation *)invocation {
-    invocation.target = self.object;
-    [invocation invoke];
+    if (self.object) {
+        invocation.target = self.object;
+        [invocation invoke];
+    }
+    else {
+        [super forwardInvocation:invocation];
+    }
 }
 
 - (NSMethodSignature *)methodSignatureForSelector:(SEL)sel {
-    return [self.object methodSignatureForSelector:sel];
+    if (self.object) {
+        return [self.object methodSignatureForSelector:sel];
+    }
+    else {
+        return [super methodSignatureForSelector:sel];
+    }
 }
 
 - (NSString *)description {
-    return [self.object description];
+    if (self.object) {
+        return [self.object description];
+    }
+    else {
+        return [super description];
+    }
 }
 
 - (BOOL)isEqual:(id)object {
-    return [object isEqual:self.object];
+    if (self.object) {
+        return [object isEqual:self.object];
+    }
+    else {
+        return [super isEqual:object];
+    }
 }
 
 
