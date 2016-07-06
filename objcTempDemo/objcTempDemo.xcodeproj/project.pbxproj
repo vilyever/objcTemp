@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FE416F9E1D2D0AD000518C78 /* objcTemp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE416F9D1D2D0AD000518C78 /* objcTemp.framework */; };
-		FE416F9F1D2D0AD000518C78 /* objcTemp.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FE416F9D1D2D0AD000518C78 /* objcTemp.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FE416FA11D2D0C1300518C78 /* objcTemp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE416FA01D2D0C1300518C78 /* objcTemp.framework */; };
+		FE416FA21D2D0C1300518C78 /* objcTemp.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FE416FA01D2D0C1300518C78 /* objcTemp.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FE615FE71D2367FF00AECD76 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FE615FE61D2367FF00AECD76 /* main.m */; };
 		FE615FEA1D2367FF00AECD76 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FE615FE91D2367FF00AECD76 /* AppDelegate.m */; };
 		FE615FED1D2367FF00AECD76 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE615FEC1D2367FF00AECD76 /* ViewController.m */; };
@@ -18,13 +18,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		FE416F9C1D2D095700518C78 /* Embed Frameworks */ = {
+		FE416FA31D2D0C1300518C78 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				FE416F9F1D2D0AD000518C78 /* objcTemp.framework in Embed Frameworks */,
+				FE416FA21D2D0C1300518C78 /* objcTemp.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -32,7 +32,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		FE416F9D1D2D0AD000518C78 /* objcTemp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = objcTemp.framework; path = "/Users/ftet/Library/Developer/Xcode/DerivedData/objcTemp-dsvrfefekloeavfmbfjuecgqqsko/Build/Products/Debug-iphoneos/objcTemp.framework"; sourceTree = "<absolute>"; };
+		FE416FA01D2D0C1300518C78 /* objcTemp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = objcTemp.framework; path = "/Users/ftet/Library/Developer/Xcode/DerivedData/objcTemp-dsvrfefekloeavfmbfjuecgqqsko/Build/Products/Debug-iphoneos/objcTemp.framework"; sourceTree = "<absolute>"; };
 		FE615FE21D2367FF00AECD76 /* objcTempDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = objcTempDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE615FE61D2367FF00AECD76 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FE615FE81D2367FF00AECD76 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -50,7 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE416F9E1D2D0AD000518C78 /* objcTemp.framework in Frameworks */,
+				FE416FA11D2D0C1300518C78 /* objcTemp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,7 +60,7 @@
 		FE615FD91D2367FF00AECD76 = {
 			isa = PBXGroup;
 			children = (
-				FE416F9D1D2D0AD000518C78 /* objcTemp.framework */,
+				FE416FA01D2D0C1300518C78 /* objcTemp.framework */,
 				FE615FE41D2367FF00AECD76 /* objcTempDemo */,
 				FE615FE31D2367FF00AECD76 /* Products */,
 			);
@@ -108,7 +108,7 @@
 				FE615FDE1D2367FF00AECD76 /* Sources */,
 				FE615FDF1D2367FF00AECD76 /* Frameworks */,
 				FE615FE01D2367FF00AECD76 /* Resources */,
-				FE416F9C1D2D095700518C78 /* Embed Frameworks */,
+				FE416FA31D2D0C1300518C78 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

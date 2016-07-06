@@ -53,37 +53,37 @@
                     break;
                 }
                 case VDSelectorArgumentTypeLong: {
-                    int a = argument.longArgument;
+                    long a = argument.longArgument;
                     [invocation setArgument:&a atIndex:index];
                     break;
                 }
                 case VDSelectorArgumentTypeChar: {
-                    int a = argument.charArgument;
+                    char a = argument.charArgument;
                     [invocation setArgument:&a atIndex:index];
                     break;
                 }
                 case VDSelectorArgumentTypeBool: {
-                    int a = argument.boolArgument;
+                    BOOL a = argument.boolArgument;
                     [invocation setArgument:&a atIndex:index];
                     break;
                 }
                 case VDSelectorArgumentTypeFloat: {
-                    int a = argument.floatArgument;
+                    float a = argument.floatArgument;
                     [invocation setArgument:&a atIndex:index];
                     break;
                 }
                 case VDSelectorArgumentTypeDouble: {
-                    int a = argument.doubleArgument;
+                    double a = argument.doubleArgument;
                     [invocation setArgument:&a atIndex:index];
                     break;
                 }
                 case VDSelectorArgumentTypeNSInteger: {
-                    int a = argument.integerArgument;
+                    NSInteger a = argument.integerArgument;
                     [invocation setArgument:&a atIndex:index];
                     break;
                 }
                 case VDSelectorArgumentTypeNSUInteger: {
-                    int a = argument.uintegerArgument;
+                    NSUInteger a = argument.uintegerArgument;
                     [invocation setArgument:&a atIndex:index];
                     break;
                 }
