@@ -29,17 +29,10 @@
 
 
 #pragma mark Overrides
-- (void)dealloc {
-    
-}
-
 - (void)forwardInvocation:(NSInvocation *)invocation {
     if (self.object) {
         invocation.target = self.object;
         [invocation invoke];
-    }
-    else {
-        [super forwardInvocation:invocation];
     }
 }
 
@@ -48,7 +41,7 @@
         return [self.object methodSignatureForSelector:sel];
     }
     else {
-        return [super methodSignatureForSelector:sel];
+        return [NSObject methodSignatureForSelector:sel];;
     }
 }
 
@@ -66,7 +59,7 @@
         return [object isEqual:self.object];
     }
     else {
-        return [super isEqual:object];
+        return NO;
     }
 }
 

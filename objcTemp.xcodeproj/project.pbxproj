@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FE416F6F1D2CA6CE00518C78 /* UITableViewCell+VDEnhance.h in Headers */ = {isa = PBXBuildFile; fileRef = FE416F6D1D2CA6CE00518C78 /* UITableViewCell+VDEnhance.h */; };
+		FE416F6F1D2CA6CE00518C78 /* UITableViewCell+VDEnhance.h in Headers */ = {isa = PBXBuildFile; fileRef = FE416F6D1D2CA6CE00518C78 /* UITableViewCell+VDEnhance.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FE416F701D2CA6CE00518C78 /* UITableViewCell+VDEnhance.m in Sources */ = {isa = PBXBuildFile; fileRef = FE416F6E1D2CA6CE00518C78 /* UITableViewCell+VDEnhance.m */; };
+		FE416F8C1D2CFFA900518C78 /* VDSelectorArgument.h in Headers */ = {isa = PBXBuildFile; fileRef = FE416F8A1D2CFFA900518C78 /* VDSelectorArgument.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE416F8D1D2CFFA900518C78 /* VDSelectorArgument.m in Sources */ = {isa = PBXBuildFile; fileRef = FE416F8B1D2CFFA900518C78 /* VDSelectorArgument.m */; };
+		FE416F901D2D030600518C78 /* NSObject+VDSelectorArgument.h in Headers */ = {isa = PBXBuildFile; fileRef = FE416F8E1D2D030600518C78 /* NSObject+VDSelectorArgument.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE416F911D2D030600518C78 /* NSObject+VDSelectorArgument.m in Sources */ = {isa = PBXBuildFile; fileRef = FE416F8F1D2D030600518C78 /* NSObject+VDSelectorArgument.m */; };
 		FE615F3B1D23679B00AECD76 /* objcTemp.h in Headers */ = {isa = PBXBuildFile; fileRef = FE615F3A1D23679B00AECD76 /* objcTemp.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FE615F421D23679B00AECD76 /* objcTemp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE615F371D23679B00AECD76 /* objcTemp.framework */; };
 		FE615F471D23679B00AECD76 /* objcTempTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FE615F461D23679B00AECD76 /* objcTempTests.m */; };
@@ -96,6 +100,10 @@
 /* Begin PBXFileReference section */
 		FE416F6D1D2CA6CE00518C78 /* UITableViewCell+VDEnhance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+VDEnhance.h"; sourceTree = "<group>"; };
 		FE416F6E1D2CA6CE00518C78 /* UITableViewCell+VDEnhance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+VDEnhance.m"; sourceTree = "<group>"; };
+		FE416F8A1D2CFFA900518C78 /* VDSelectorArgument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDSelectorArgument.h; sourceTree = "<group>"; };
+		FE416F8B1D2CFFA900518C78 /* VDSelectorArgument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDSelectorArgument.m; sourceTree = "<group>"; };
+		FE416F8E1D2D030600518C78 /* NSObject+VDSelectorArgument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+VDSelectorArgument.h"; sourceTree = "<group>"; };
+		FE416F8F1D2D030600518C78 /* NSObject+VDSelectorArgument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+VDSelectorArgument.m"; sourceTree = "<group>"; };
 		FE615F371D23679B00AECD76 /* objcTemp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = objcTemp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE615F3A1D23679B00AECD76 /* objcTemp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = objcTemp.h; sourceTree = "<group>"; };
 		FE615F3C1D23679B00AECD76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -201,6 +209,17 @@
 			path = UITableView;
 			sourceTree = "<group>";
 		};
+		FE416F891D2CFF9E00518C78 /* SelectorArgument */ = {
+			isa = PBXGroup;
+			children = (
+				FE416F8A1D2CFFA900518C78 /* VDSelectorArgument.h */,
+				FE416F8B1D2CFFA900518C78 /* VDSelectorArgument.m */,
+				FE416F8E1D2D030600518C78 /* NSObject+VDSelectorArgument.h */,
+				FE416F8F1D2D030600518C78 /* NSObject+VDSelectorArgument.m */,
+			);
+			path = SelectorArgument;
+			sourceTree = "<group>";
+		};
 		FE615F2D1D23679B00AECD76 = {
 			isa = PBXGroup;
 			children = (
@@ -224,6 +243,7 @@
 		FE615F391D23679B00AECD76 /* objcTemp */ = {
 			isa = PBXGroup;
 			children = (
+				FE416F891D2CFF9E00518C78 /* SelectorArgument */,
 				FE416F6C1D2CA69F00518C78 /* UITableView */,
 				FECA26AC1D2653D200ED8FDD /* Persistent */,
 				FECA26901D251A9A00ED8FDD /* Json */,
@@ -507,13 +527,15 @@
 				FE615FB31D2367B500AECD76 /* NSString+VDEnhance.h in Headers */,
 				FE615FD31D2367B500AECD76 /* UIView+VDGesture.h in Headers */,
 				FE615FB71D2367B500AECD76 /* NSString+VDRegex.h in Headers */,
-				FE416F6F1D2CA6CE00518C78 /* UITableViewCell+VDEnhance.h in Headers */,
 				FE615FBD1D2367B500AECD76 /* VDRouterNavigationViewController.h in Headers */,
 				FECA268A1D25147000ED8FDD /* VDProperty.h in Headers */,
 				FECA26931D25215F00ED8FDD /* VDJsonObject.h in Headers */,
 				FECA268E1D2516FD00ED8FDD /* NSObject+VDProperty.h in Headers */,
 				FE615FD71D2367B500AECD76 /* VDWeakRef.h in Headers */,
 				FE615F9E1D2367B500AECD76 /* CALayer+VDEnhance.h in Headers */,
+				FE416F8C1D2CFFA900518C78 /* VDSelectorArgument.h in Headers */,
+				FE416F901D2D030600518C78 /* NSObject+VDSelectorArgument.h in Headers */,
+				FE416F6F1D2CA6CE00518C78 /* UITableViewCell+VDEnhance.h in Headers */,
 				FE615FB11D2367B500AECD76 /* VDDelayOperation.h in Headers */,
 				FE615FAA1D2367B500AECD76 /* VDHookRecorder.h in Headers */,
 				FECA26AF1D26556800ED8FDD /* NSObject+VDPersistent.h in Headers */,
@@ -628,6 +650,7 @@
 				FE615FCA1D2367B500AECD76 /* UILabel+VDVerticalAlignment.m in Sources */,
 				FE615FC61D2367B500AECD76 /* UIImage+VDEnhance.m in Sources */,
 				FE615FB41D2367B500AECD76 /* NSString+VDEnhance.m in Sources */,
+				FE416F911D2D030600518C78 /* NSObject+VDSelectorArgument.m in Sources */,
 				FE615FD61D2367B500AECD76 /* UIViewController+VDEnhance.m in Sources */,
 				FE615FBE1D2367B500AECD76 /* VDRouterNavigationViewController.m in Sources */,
 				FE615FD01D2367B500AECD76 /* UIView+VDEnhance.m in Sources */,
@@ -645,6 +668,7 @@
 				FE615FC41D2367B500AECD76 /* UIColor+VDEnhance.m in Sources */,
 				FECA26941D25215F00ED8FDD /* VDJsonObject.m in Sources */,
 				FE615FA91D2367B500AECD76 /* VDHookInvocationInfo.m in Sources */,
+				FE416F8D1D2CFFA900518C78 /* VDSelectorArgument.m in Sources */,
 				FE615FBC1D2367B500AECD76 /* VDRouter.m in Sources */,
 				FE615FC01D2367B500AECD76 /* UIApplication+VDEnhance.m in Sources */,
 				FE615FA51D2367B500AECD76 /* VDHook.m in Sources */,

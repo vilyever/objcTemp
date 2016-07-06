@@ -24,21 +24,28 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [self test];
+//    [self test];
+//    
+//    [self vd_hookSelector:@selector(test) afterBlock:^(VDHookInvocationInfo *info) {
+//        VDLog(@"hook affter ");
+//    }];
+//    
+//    [self vd_performSelector:@selector(test)];
+//    
+//    [self test];
     
-    [self vd_hookSelector:@selector(test) afterBlock:^(VDHookInvocationInfo *info) {
-        VDLog(@"hook affter ");
-    }];
-    
-    [self vd_performSelector:@selector(test)];
-    
-    [self test];
+//    VDSelectorArgument *argument;
+    [self vd_performSelector:@selector(test) withArguments:nil];
     
     return YES;
 }
 
 - (void)test {
     NSLog(@"teat");
+}
+
+- (void)test123:(NSString *)string {
+    NSLog(@"ttt %@", string);
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
