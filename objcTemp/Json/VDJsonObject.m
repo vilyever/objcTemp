@@ -183,9 +183,6 @@
 #pragma mark Overrides
 - (instancetype)init {
     self = [super init];
-    if (self) {
-        [self internalInit];
-    }
     
     return self;
 }
@@ -238,10 +235,6 @@
 
 
 #pragma mark Private Method
-- (void)internalInit {
-    
-}
-
 + (void)insertJsonValue:(NSDictionary *)jsonDictionary jsonKey:(NSString *)jsonKey model:(id)model property:(VDProperty *)property {
     
     if (![jsonDictionary objectForKey:jsonKey]) {

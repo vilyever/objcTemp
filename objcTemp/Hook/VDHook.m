@@ -119,9 +119,6 @@ static void VDHookedForwardInvocationMethod(__unsafe_unretained NSObject *target
 #pragma mark Overrides
 - (instancetype)init {
     self = [super init];
-    if (self) {
-        [self internalInit];
-    }
     
     return self;
 }
@@ -135,10 +132,6 @@ static void VDHookedForwardInvocationMethod(__unsafe_unretained NSObject *target
 
 
 #pragma mark Private Method
-- (void)internalInit {
-    
-}
-
 + (void)internalHookInstance:(id)instance selector:(SEL)selector {
     Class hookClazz = [self internalHookClassForInstance:instance error:nil];
     

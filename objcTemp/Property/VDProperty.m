@@ -319,10 +319,7 @@ NSString * const PropertyUnionSuffix = @")";
 #pragma mark Overrides
 - (instancetype)init {
     self = [super init];
-    if (self) {
-        [self internalInit];
-    }
-    
+
     return self;
 }
 
@@ -365,8 +362,5 @@ NSString * const PropertyUnionSuffix = @")";
 
 
 #pragma mark Private Method
-- (void)internalInit {
-    
-}
 
 @end

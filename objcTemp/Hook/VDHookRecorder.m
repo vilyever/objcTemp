@@ -106,9 +106,6 @@ static char VDHookRecordersAssociatedObjectKey;
 #pragma mark Overrides
 - (instancetype)init {
     self = [super init];
-    if (self) {
-        [self internalInit];
-    }
     
     return self;
 }
@@ -125,10 +122,6 @@ static char VDHookRecordersAssociatedObjectKey;
 
 
 #pragma mark Private Method
-- (void)internalInit {
-    
-}
-
 - (void)internalRemoveDisposedElements:(NSMutableArray *)elements {
     NSMutableArray *willRemovedElements = [NSMutableArray new];
     for (VDHookElement *element in elements) {

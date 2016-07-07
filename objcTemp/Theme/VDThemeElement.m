@@ -43,10 +43,7 @@
 #pragma mark Overrides
 - (instancetype)init {
     self = [super init];
-    if (self) {
-        [self internalInit];
-    }
-    
+
     return self;
 }
 
@@ -59,8 +56,5 @@
 
 
 #pragma mark Private Method
-- (void)internalInit {
-    
-}
 
 @end

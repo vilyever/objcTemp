@@ -82,8 +82,12 @@ NSString *const VDFingerPrintViewControllerUnlock = @"VDFingerPrintViewControlle
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(internalAppWillResignActive:) name:UIApplicationWillResignActiveNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(internalAppDidEnterBackground:) name:UIApplicationDidEnterBackgroundNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(internalAppWillEnterForeground:) name:UIApplicationWillEnterForegroundNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(internalAppDidBecomeActive:) name:UIApplicationDidBecomeActiveNotification object:nil];
     
-    [self internalInit];
+    [self.view vd_performSelectorOnTapWithTarget:self selector:@selector(internalOnTap)];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -96,7 +100,7 @@ NSString *const VDFingerPrintViewControllerUnlock = @"VDFingerPrintViewControlle
 }
 
 - (void)dealloc {
-    
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 
@@ -107,15 +111,6 @@ NSString *const VDFingerPrintViewControllerUnlock = @"VDFingerPrintViewControlle
 
 
 #pragma mark Private Method
-- (void)internalInit {
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(internalAppWillResignActive:) name:UIApplicationWillResignActiveNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(internalAppDidEnterBackground:) name:UIApplicationDidEnterBackgroundNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(internalAppWillEnterForeground:) name:UIApplicationWillEnterForegroundNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(internalAppDidBecomeActive:) name:UIApplicationDidBecomeActiveNotification object:nil];
-    
-    [self.view vd_performSelectorOnTapWithTarget:self selector:@selector(internalOnTap)];
-}
-
 - (void)internalAppWillResignActive:(NSNotification *)notification {
     if (self.registerCount <= 0) {
         return;

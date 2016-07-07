@@ -118,8 +118,11 @@ NSString * const VDThemeManagerThemeTypeDidChangeNotificationUserInfoOldThemeTyp
 #pragma mark Overrides
 - (instancetype)init {
     self = [super init];
-    if (self) {
-        [self internalInit];
+    
+    NSNumber *themeType = [[NSUserDefaults standardUserDefaults] objectForKey:VDThemeManagerThemeTypeKey];
+    if (themeType) {
+        self.isThemeChangedBefore = YES;
+        self.themeType = [themeType integerValue];
     }
     
     return self;
@@ -133,15 +136,7 @@ NSString * const VDThemeManagerThemeTypeDidChangeNotificationUserInfoOldThemeTyp
 #pragma mark Delegates
 
 
-#pragma mark Private Method
-- (void)internalInit {
-    NSNumber *themeType = [[NSUserDefaults standardUserDefaults] objectForKey:VDThemeManagerThemeTypeKey];
-    if (themeType) {
-        self.isThemeChangedBefore = YES;
-        self.themeType = [themeType integerValue];
-    }
-}
-        
+#pragma mark Private Method      
 - (void)internalAddTarget:(id)target {
     if (![self.themeTargets containsObject:target]) {
         [self.themeTargets addObject:[VDWeakRef refWithObject:target]];

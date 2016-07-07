@@ -54,9 +54,6 @@
 #pragma mark Overrides
 - (instancetype)init {
     self = [super init];
-    if (self) {
-        [self internalInit];
-    }
     
     return self;
 }
@@ -93,10 +90,6 @@
 
 
 #pragma mark Private Method
-- (void)internalInit {
-    
-}
-
 - (void)excute
 {
     if (self.target && self.selector)
