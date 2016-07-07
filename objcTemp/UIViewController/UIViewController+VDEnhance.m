@@ -42,7 +42,7 @@
 }
 
 + (UIViewController *)vd_topViewController {
-    return [self vd_topViewControllerWithRootViewController:nil];
+    return [self vd_internalTopViewControllerWithRootViewController:nil];
 }
 
 + (void)vd_backToRootViewController
@@ -135,7 +135,7 @@
 }
 
 #pragma mark Private Method
-+ (UIViewController*)vd_topViewControllerWithRootViewController:(UIViewController*)rootViewController
++ (UIViewController*)vd_internalTopViewControllerWithRootViewController:(UIViewController*)rootViewController
 {
     if (!rootViewController)
     {
@@ -145,17 +145,17 @@
     if ( [rootViewController isKindOfClass:[UITabBarController class] ] )
     {
         UITabBarController* tabBarController = (UITabBarController*)rootViewController;
-        return [self vd_topViewControllerWithRootViewController:tabBarController.selectedViewController];
+        return [self vd_internalTopViewControllerWithRootViewController:tabBarController.selectedViewController];
     }
     else if ( [rootViewController isKindOfClass:[UINavigationController class] ] )
     {
         UINavigationController* navigationController = (UINavigationController*)rootViewController;
-        return [self vd_topViewControllerWithRootViewController:navigationController.visibleViewController];
+        return [self vd_internalTopViewControllerWithRootViewController:navigationController.visibleViewController];
     }
     else if (rootViewController.presentedViewController)
     {
         UIViewController* presentedViewController = rootViewController.presentedViewController;
-        return [self vd_topViewControllerWithRootViewController:presentedViewController];
+        return [self vd_internalTopViewControllerWithRootViewController:presentedViewController];
     }
     else
     {

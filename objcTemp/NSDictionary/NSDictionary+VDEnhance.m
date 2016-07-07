@@ -39,7 +39,6 @@
     return [NSDictionary dictionaryWithDictionary:resultDictionary];
 }
 
-#pragma Public Instance Method
 - (NSDictionary *)vd_mergeWithDictionary:(NSDictionary *)dictionary
 {
     return [self.class vd_dictionaryWithDictionary:self mergeWithDictionary:dictionary];

@@ -36,5 +36,13 @@
 
 #pragma mark Properties
 
-
+#pragma mark Private Method
++ (void)internalHookInstance:(id)instance selector:(SEL)selector;
++ (Class)internalHookClassForInstance:(NSObject *)instance error:(NSError **)error;
++ (void)internalSwizzleForwardInvocation:(Class)clazz;
++ (void)internalUnswizzleForwardInvocation:(Class)clazz;
++ (void)internalHookClassMethodForClass:(Class)clazz replacedClass:(Class)replacedClazz;
++ (BOOL)internalCheckIsHookedTarget:(id)target selector:(SEL)selector;
++ (void)internalMarkHookedTarget:(id)target selector:(SEL)selector;
++ (BOOL)internalCheckIsImp:(IMP)imp fitSelector:(SEL)selector;
 @end

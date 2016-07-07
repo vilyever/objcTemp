@@ -34,5 +34,8 @@
 @property (nonatomic, copy) NSMutableArray *insteadElements;
 @property (nonatomic, copy) NSMutableArray *afterElements;
 
+#pragma mark Private Method
+- (void)internalRemoveDisposedElements:(NSMutableArray *)elements;
+- (void)internalInvokeElements:(NSMutableArray *)elements invocationInfo:(VDHookInvocationInfo *)invocationInfo;
 
 @end

@@ -35,7 +35,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self internalInit];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -75,8 +74,5 @@
 
 
 #pragma mark Private Method
-- (void)internalInit {
-    
-}
 
 @end

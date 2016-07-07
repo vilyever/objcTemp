@@ -28,4 +28,13 @@ extern NSString *const VDFingerPrintViewControllerUnlock;
 @property (nonatomic, assign) BOOL isLock;
 @property (nonatomic, copy) NSString *checkReason;
 
+#pragma mark Private Method
+- (void)internalAppWillResignActive:(NSNotification *)notification;
+- (void)internalAppDidEnterBackground:(NSNotification *)notification;
+- (void)internalAppWillEnterForeground:(NSNotification *)notification;
+- (void)internalAppDidBecomeActive:(NSNotification *)notification;
+- (void)internalOnTap;
+- (void)internalShow;
+- (void)internalCheckFingerPrint;
+
 @end

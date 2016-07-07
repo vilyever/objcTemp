@@ -16,4 +16,8 @@
 - (void)vd_setVerticalAligmentToCenter;
 - (void)vd_setVerticalAligmentToBottom;
 
+#pragma mark Private Method
+- (CGRect)vd_verticalAlignmentTextRectForBounds:(CGRect)bounds limitedToNumberOfLines:(NSInteger)numberOfLines;
+- (void)vd_verticalAlignmentDrawTextInRect:(CGRect)rect;
+
 @end

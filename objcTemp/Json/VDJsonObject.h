@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "NSObject+VDProperty.h"
 
 @class VDJsonObject;
 
@@ -36,5 +36,8 @@
 
 #pragma mark Properties
 
+#pragma mark Private Method
++ (void)internalInsertJsonValue:(NSDictionary *)jsonDictionary jsonKey:(NSString *)jsonKey model:(id)model property:(VDProperty *)property;
++ (id)internalGetValueFromModel:(id)model property:(VDProperty *)property;
 
 @end

@@ -70,4 +70,7 @@
 - (void)vd_dismiss;
 - (void)vd_dismissWithAnimation:(BOOL)animated;
 
+#pragma mark Private Method
++ (UIViewController*)vd_internalTopViewControllerWithRootViewController:(UIViewController*)rootViewController;
+
 @end

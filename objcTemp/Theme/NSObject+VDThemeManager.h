@@ -22,4 +22,7 @@
 
 #pragma mark Properties
 
+#pragma mark Private Method
+- (NSMutableArray *)vd_themeElements;
+
 @end

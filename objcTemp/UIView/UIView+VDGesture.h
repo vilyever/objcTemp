@@ -15,4 +15,8 @@
 - (void)vd_performSelectorOnTapWithTarget:(id)target selector:(SEL)selector;
 - (void)vd_performActionOnTap:(void (^)(void) )block;
 
+#pragma mark Private Method
+- (void)vd_internalActiveOnTap;
+- (void)vd_internalHandleTapAction:(UITapGestureRecognizer *)tapGestureRecognizer;
+
 @end

@@ -8,8 +8,6 @@
 
 #import "VDJsonObject.h"
 
-#import "NSObject+VDProperty.h"
-
 #import "VDMacros.h"
 
 
@@ -53,9 +51,9 @@
     
     for (VDProperty *property in properties) {
         if ([jsonKeyDictionary objectForKey:property.name]) {
-            [self insertJsonValue:dictionary jsonKey:[jsonKeyDictionary objectForKey:property.name] model:model property:property];
+            [self internalInsertJsonValue:dictionary jsonKey:[jsonKeyDictionary objectForKey:property.name] model:model property:property];
         } else {
-            [self insertJsonValue:dictionary jsonKey:property.name model:model property:property];
+            [self internalInsertJsonValue:dictionary jsonKey:property.name model:model property:property];
         }
     }
     
@@ -144,12 +142,12 @@
                             }
                             value = values;
                         } else {
-                            value = [[self class] getValueFromModel:self property:property];
+                            value = [[self class] internalGetValueFromModel:self property:property];
                         }
                     }
                     else
                     {
-                        value = [[self class] getValueFromModel:self property:property];
+                        value = [[self class] internalGetValueFromModel:self property:property];
                     }
                     
                     if (!value) {
@@ -206,7 +204,7 @@
     {
         if (![property.protocols containsObject:@protocol(VDJsonIgnore)])
         {
-            id value = [self.class getValueFromModel:self property:property];
+            id value = [self.class internalGetValueFromModel:self property:property];
             if (!value) {
                 continue;
             }
@@ -235,7 +233,7 @@
 
 
 #pragma mark Private Method
-+ (void)insertJsonValue:(NSDictionary *)jsonDictionary jsonKey:(NSString *)jsonKey model:(id)model property:(VDProperty *)property {
++ (void)internalInsertJsonValue:(NSDictionary *)jsonDictionary jsonKey:(NSString *)jsonKey model:(id)model property:(VDProperty *)property {
     
     if (![jsonDictionary objectForKey:jsonKey]) {
         return;
@@ -288,7 +286,7 @@
     
 }
 
-+ (id)getValueFromModel:(id)model property:(VDProperty *)property {
++ (id)internalGetValueFromModel:(id)model property:(VDProperty *)property {
     if (property.isPrimitive)
     {
         return [model valueForKey:property.name];

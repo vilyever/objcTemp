@@ -47,4 +47,8 @@ extern NSString * const VDThemeManagerThemeTypeDidChangeNotificationUserInfoOldT
 
 @property (nonatomic, assign) NSInteger themeType;
 
+#pragma mark Private Method
+- (void)internalAddTarget:(id)target;
+- (void)internalOnThemeChange:(NSInteger)newThemeType withOldThemeType:(NSInteger)oldThemeType;
+
 @end
