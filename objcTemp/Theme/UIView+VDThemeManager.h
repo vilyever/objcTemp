@@ -12,6 +12,6 @@
 @interface UIView (VDThemeManager)
 
 #pragma mark Public Method
-
+- (void)vd_setBackgroundColorWithThemeKey:(NSString *)key;
 
 @end
