@@ -9,6 +9,10 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+extern NSString * const VDThemeManagerThemeTypeDidChangeNotification;
+extern NSString * const VDThemeManagerThemeTypeDidChangeNotificationUserInfoNewThemeTypeKey;
+extern NSString * const VDThemeManagerThemeTypeDidChangeNotificationUserInfoOldThemeTypeKey;
+
 @class VDThemeManager;
 
 @protocol VDThemeManagerDatasource <NSObject>
@@ -24,6 +28,9 @@
 @interface VDThemeManager : NSObject
 
 #pragma mark Public Method
++ (void)changeThemeType:(NSInteger)themeType;
++ (void)setDefaultThemeType:(NSInteger)defaultThemeType;
+
 + (UIColor *)colorForKey:(NSString *)key;
 + (UIImage *)imageForKey:(NSString *)key;
 + (UIFont *)fontForKey:(NSString *)key;

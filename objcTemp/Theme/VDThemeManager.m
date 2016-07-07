@@ -11,7 +11,18 @@
 #import "NSObject+VDThemeManager.h"
 #import "VDWeakRef.h"
 
+#if !VDThemeManagerThemeTypeKey
+#define VDThemeManagerThemeTypeKey \
+[NSString stringWithFormat:@"VDThemeManagerThemeTypeKey"]
+#endif
+
+NSString * const VDThemeManagerThemeTypeDidChangeNotification = @"VDThemeManagerThemeTypeDidChangeNotification";
+NSString * const VDThemeManagerThemeTypeDidChangeNotificationUserInfoNewThemeTypeKey = @"VDThemeManagerThemeTypeDidChangeNotificationUserInfoNewThemeTypeKey";
+NSString * const VDThemeManagerThemeTypeDidChangeNotificationUserInfoOldThemeTypeKey = @"VDThemeManagerThemeTypeDidChangeNotificationUserInfoOldThemeTypeKey";
+
 @interface VDThemeManager ()
+
+@property (nonatomic, assign) BOOL isThemeChangedBefore;
 
 @property (nonatomic, strong) NSMutableArray *themeTargets;
 
@@ -21,6 +32,16 @@
 @implementation VDThemeManager
 
 #pragma mark Public Method
++ (void)changeThemeType:(NSInteger)themeType {
+    [VDThemeManager vd_sharedInstance].themeType = themeType;
+}
+
++ (void)setDefaultThemeType:(NSInteger)defaultThemeType {
+    if (![VDThemeManager vd_sharedInstance].isThemeChangedBefore) {
+        [self changeThemeType:defaultThemeType];
+    }
+}
+
 + (UIColor *)colorForKey:(NSString *)key {
     if ([[VDThemeManager vd_sharedInstance].datasource respondsToSelector:@selector(colorForThemeType:withKey:)]) {
         return [[VDThemeManager vd_sharedInstance].datasource colorForThemeType:[VDThemeManager vd_sharedInstance].themeType withKey:key];
@@ -77,6 +98,7 @@
     if (_themeType != themeType) {
         [self internalOnThemeChange:themeType withOldThemeType:_themeType];
         _themeType = themeType;
+        [[NSUserDefaults standardUserDefaults] setObject:@(_themeType) forKey:VDThemeManagerThemeTypeKey];
     }
 }
 
@@ -108,7 +130,11 @@
 
 #pragma mark Private Method
 - (void)internalInit {
-    
+    NSNumber *themeType = [[NSUserDefaults standardUserDefaults] objectForKey:VDThemeManagerThemeTypeKey];
+    if (themeType) {
+        self.isThemeChangedBefore = YES;
+        self.themeType = [themeType integerValue];
+    }
 }
         
 - (void)internalAddTarget:(id)target {
@@ -123,6 +149,11 @@
             [target vd_onThemeChange:newThemeType withOldThemeType:oldThemeType];
         }
     }
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:VDThemeManagerThemeTypeDidChangeNotification object:nil userInfo:@{
+                                                                                                                            VDThemeManagerThemeTypeDidChangeNotificationUserInfoNewThemeTypeKey:@(newThemeType),
+                                                                                                                            VDThemeManagerThemeTypeDidChangeNotificationUserInfoNewThemeTypeKey:@(oldThemeType),
+                                                                                                                                  }];
 }
 
 @end
