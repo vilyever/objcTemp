@@ -100,9 +100,10 @@ NSString * const VDThemeManagerThemeTypeDidChangeNotificationUserInfoOldThemeTyp
 #pragma mark Properties
 - (void)setThemeType:(NSInteger)themeType {
     if (_themeType != themeType) {
-        [self internalOnThemeChange:themeType withOldThemeType:_themeType];
+        NSInteger oldThemeType = _themeType;
         _themeType = themeType;
         [[NSUserDefaults standardUserDefaults] setObject:@(_themeType) forKey:VDThemeManagerThemeTypeKey];
+        [self internalOnThemeChange:_themeType withOldThemeType:oldThemeType];
     }
 }
 
