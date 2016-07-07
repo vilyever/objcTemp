@@ -119,7 +119,9 @@
 
 - (void)internalOnThemeChange:(NSInteger)newThemeType withOldThemeType:(NSInteger)oldThemeType {
     for (id target in self.themeTargets) {
-        [target vd_onThemeChange:newThemeType withOldThemeType:oldThemeType];
+        if ([target respondsToSelector:@selector(vd_onThemeChange:withOldThemeType:)]) {
+            [target vd_onThemeChange:newThemeType withOldThemeType:oldThemeType];
+        }
     }
 }
 

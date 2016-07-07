@@ -54,6 +54,15 @@
     }
 }
 
+- (BOOL)respondsToSelector:(SEL)aSelector {
+    if (self.object) {
+        return [self.object respondsToSelector:aSelector];
+    }
+    else {
+        return NO;
+    }
+}
+
 - (BOOL)isEqual:(id)object {
     if (self.object) {
         return [object isEqual:self.object];
