@@ -13,15 +13,15 @@
 		FE416F8D1D2CFFA900518C78 /* VDSelectorArgument.m in Sources */ = {isa = PBXBuildFile; fileRef = FE416F8B1D2CFFA900518C78 /* VDSelectorArgument.m */; };
 		FE416F901D2D030600518C78 /* NSObject+VDSelectorArgument.h in Headers */ = {isa = PBXBuildFile; fileRef = FE416F8E1D2D030600518C78 /* NSObject+VDSelectorArgument.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FE416F911D2D030600518C78 /* NSObject+VDSelectorArgument.m in Sources */ = {isa = PBXBuildFile; fileRef = FE416F8F1D2D030600518C78 /* NSObject+VDSelectorArgument.m */; };
-		FE416FA71D2DE7E000518C78 /* VDThemeManager.h in Headers */ = {isa = PBXBuildFile; fileRef = FE416FA51D2DE7E000518C78 /* VDThemeManager.h */; };
+		FE416FA71D2DE7E000518C78 /* VDThemeManager.h in Headers */ = {isa = PBXBuildFile; fileRef = FE416FA51D2DE7E000518C78 /* VDThemeManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FE416FA81D2DE7E000518C78 /* VDThemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FE416FA61D2DE7E000518C78 /* VDThemeManager.m */; };
-		FE416FAB1D2DED9400518C78 /* NSObject+VDThemeManager.h in Headers */ = {isa = PBXBuildFile; fileRef = FE416FA91D2DED9400518C78 /* NSObject+VDThemeManager.h */; };
+		FE416FAB1D2DED9400518C78 /* NSObject+VDThemeManager.h in Headers */ = {isa = PBXBuildFile; fileRef = FE416FA91D2DED9400518C78 /* NSObject+VDThemeManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FE416FAC1D2DED9400518C78 /* NSObject+VDThemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FE416FAA1D2DED9400518C78 /* NSObject+VDThemeManager.m */; };
-		FE416FB31D2DEDC800518C78 /* VDThemeElement.h in Headers */ = {isa = PBXBuildFile; fileRef = FE416FB11D2DEDC800518C78 /* VDThemeElement.h */; };
+		FE416FB31D2DEDC800518C78 /* VDThemeElement.h in Headers */ = {isa = PBXBuildFile; fileRef = FE416FB11D2DEDC800518C78 /* VDThemeElement.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FE416FB41D2DEDC800518C78 /* VDThemeElement.m in Sources */ = {isa = PBXBuildFile; fileRef = FE416FB21D2DEDC800518C78 /* VDThemeElement.m */; };
-		FE416FB71D2DEE1700518C78 /* VDThemeSelectorArgument.h in Headers */ = {isa = PBXBuildFile; fileRef = FE416FB51D2DEE1700518C78 /* VDThemeSelectorArgument.h */; };
+		FE416FB71D2DEE1700518C78 /* VDThemeSelectorArgument.h in Headers */ = {isa = PBXBuildFile; fileRef = FE416FB51D2DEE1700518C78 /* VDThemeSelectorArgument.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FE416FB81D2DEE1700518C78 /* VDThemeSelectorArgument.m in Sources */ = {isa = PBXBuildFile; fileRef = FE416FB61D2DEE1700518C78 /* VDThemeSelectorArgument.m */; };
-		FE416FBB1D2DF50300518C78 /* UIView+VDThemeManager.h in Headers */ = {isa = PBXBuildFile; fileRef = FE416FB91D2DF50300518C78 /* UIView+VDThemeManager.h */; };
+		FE416FBB1D2DF50300518C78 /* UIView+VDThemeManager.h in Headers */ = {isa = PBXBuildFile; fileRef = FE416FB91D2DF50300518C78 /* UIView+VDThemeManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FE416FBC1D2DF50300518C78 /* UIView+VDThemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FE416FBA1D2DF50300518C78 /* UIView+VDThemeManager.m */; };
 		FE615F3B1D23679B00AECD76 /* objcTemp.h in Headers */ = {isa = PBXBuildFile; fileRef = FE615F3A1D23679B00AECD76 /* objcTemp.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FE615F421D23679B00AECD76 /* objcTemp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE615F371D23679B00AECD76 /* objcTemp.framework */; };
@@ -542,7 +542,6 @@
 			files = (
 				FE615F3B1D23679B00AECD76 /* objcTemp.h in Headers */,
 				FE615FA81D2367B500AECD76 /* VDHookInvocationInfo.h in Headers */,
-				FE416FAB1D2DED9400518C78 /* NSObject+VDThemeManager.h in Headers */,
 				FE615FBB1D2367B500AECD76 /* VDRouter.h in Headers */,
 				FE615FAC1D2367B500AECD76 /* VDMacros.h in Headers */,
 				FE615FC71D2367B500AECD76 /* UILabel+VDEnhance.h in Headers */,
@@ -553,15 +552,12 @@
 				FE615FBF1D2367B500AECD76 /* UIApplication+VDEnhance.h in Headers */,
 				FE615FC11D2367B500AECD76 /* UICollectionViewCell+VDEnhance.h in Headers */,
 				FE615FAF1D2367B500AECD76 /* NSObject+VDEnhance.h in Headers */,
-				FE416FBB1D2DF50300518C78 /* UIView+VDThemeManager.h in Headers */,
 				FE615FA01D2367B500AECD76 /* VDFingerPrintViewController.h in Headers */,
 				FE615FA41D2367B500AECD76 /* VDHook.h in Headers */,
 				FE615FA61D2367B500AECD76 /* VDHookElement.h in Headers */,
 				FE615FD11D2367B500AECD76 /* UIView+VDFrame.h in Headers */,
-				FE416FA71D2DE7E000518C78 /* VDThemeManager.h in Headers */,
 				FE615FB51D2367B500AECD76 /* NSString+VDJavaScript.h in Headers */,
 				FE615FCD1D2367B500AECD76 /* UIView+VDConstraint.h in Headers */,
-				FE416FB71D2DEE1700518C78 /* VDThemeSelectorArgument.h in Headers */,
 				FE615FD51D2367B500AECD76 /* UIViewController+VDEnhance.h in Headers */,
 				FE615FCF1D2367B500AECD76 /* UIView+VDEnhance.h in Headers */,
 				FE615FC91D2367B500AECD76 /* UILabel+VDVerticalAlignment.h in Headers */,
@@ -576,6 +572,10 @@
 				FE615FD71D2367B500AECD76 /* VDWeakRef.h in Headers */,
 				FE615F9E1D2367B500AECD76 /* CALayer+VDEnhance.h in Headers */,
 				FE416F8C1D2CFFA900518C78 /* VDSelectorArgument.h in Headers */,
+				FE416FAB1D2DED9400518C78 /* NSObject+VDThemeManager.h in Headers */,
+				FE416FBB1D2DF50300518C78 /* UIView+VDThemeManager.h in Headers */,
+				FE416FA71D2DE7E000518C78 /* VDThemeManager.h in Headers */,
+				FE416FB71D2DEE1700518C78 /* VDThemeSelectorArgument.h in Headers */,
 				FE416FB31D2DEDC800518C78 /* VDThemeElement.h in Headers */,
 				FE416F901D2D030600518C78 /* NSObject+VDSelectorArgument.h in Headers */,
 				FE416F6F1D2CA6CE00518C78 /* UITableViewCell+VDEnhance.h in Headers */,

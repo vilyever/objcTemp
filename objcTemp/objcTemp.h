@@ -53,3 +53,8 @@ FOUNDATION_EXPORT const unsigned char objcTempVersionString[];
 #import <objcTemp/UITableViewCell+VDEnhance.h>
 #import <objcTemp/VDSelectorArgument.h>
 #import <objcTemp/NSObject+VDSelectorArgument.h>
+#import <objcTemp/VDThemeManager.h>
+#import <objcTemp/NSObject+VDThemeManager.h>
+#import <objcTemp/VDThemeElement.h>
+#import <objcTemp/VDThemeSelectorArgument.h>
+#import <objcTemp/UIView+VDThemeManager.h>
