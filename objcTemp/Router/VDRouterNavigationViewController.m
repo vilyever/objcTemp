@@ -63,6 +63,10 @@
     return [self.topViewController preferredInterfaceOrientationForPresentation];
 }
 
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return [self.topViewController preferredStatusBarStyle];;
+}
+
 
 #pragma mark IBActions
 
