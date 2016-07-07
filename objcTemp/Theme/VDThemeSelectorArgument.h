@@ -6,7 +6,8 @@
 //  Copyright © Deng. All rights reserved.
 //
 
-#import <objcTemp/objcTemp.h>
+#import <Foundation/Foundation.h>
+#import "VDSelectorArgument.h"
 
 
 @class VDThemeSelectorArgument;
