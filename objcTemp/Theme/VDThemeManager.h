@@ -28,6 +28,7 @@ extern NSString * const VDThemeManagerThemeTypeDidChangeNotificationUserInfoOldT
 @interface VDThemeManager : NSObject
 
 #pragma mark Public Method
++ (void)bindDatasource:(id<VDThemeManagerDatasource>)datasource;
 + (void)changeThemeType:(NSInteger)themeType;
 + (void)setDefaultThemeType:(NSInteger)defaultThemeType;
 

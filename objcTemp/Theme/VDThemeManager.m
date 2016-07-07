@@ -32,6 +32,10 @@ NSString * const VDThemeManagerThemeTypeDidChangeNotificationUserInfoOldThemeTyp
 @implementation VDThemeManager
 
 #pragma mark Public Method
++ (void)bindDatasource:(id<VDThemeManagerDatasource>)datasource {
+    [VDThemeManager vd_sharedInstance].datasource = datasource;
+}
+
 + (void)changeThemeType:(NSInteger)themeType {
     [VDThemeManager vd_sharedInstance].themeType = themeType;
 }

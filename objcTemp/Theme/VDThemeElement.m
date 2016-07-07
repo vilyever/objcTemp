@@ -28,16 +28,16 @@
 
 #pragma mark Properties
 - (void)setArguments:(NSArray *)arguments {
-    BOOL hasThemeArgument = NO;
     for (id argument in arguments) {
         if ([argument isKindOfClass:[VDThemeSelectorArgument class]]) {
             self.themeSelectorArgument = argument;
-            hasThemeArgument = YES;
             break;
         }
     }
     
-    NSCAssert(!hasThemeArgument, @"ThemeManager requires arguments with a VDThemeSelectorArgument argument.");
+    NSCAssert(self.themeSelectorArgument, @"ThemeManager requires arguments with a VDThemeSelectorArgument argument.");
+    
+    _arguments = arguments;
 }
 
 #pragma mark Overrides
