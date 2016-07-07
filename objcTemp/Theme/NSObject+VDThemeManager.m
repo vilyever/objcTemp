@@ -10,6 +10,7 @@
 
 #import <objc/runtime.h>
 #import "VDThemeManager.h"
+#import "NSObject+VDSelectorArgument.h"
 
 
 @implementation NSObject (VDThemeManager)
