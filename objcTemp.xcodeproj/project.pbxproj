@@ -13,6 +13,16 @@
 		FE416F8D1D2CFFA900518C78 /* VDSelectorArgument.m in Sources */ = {isa = PBXBuildFile; fileRef = FE416F8B1D2CFFA900518C78 /* VDSelectorArgument.m */; };
 		FE416F901D2D030600518C78 /* NSObject+VDSelectorArgument.h in Headers */ = {isa = PBXBuildFile; fileRef = FE416F8E1D2D030600518C78 /* NSObject+VDSelectorArgument.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FE416F911D2D030600518C78 /* NSObject+VDSelectorArgument.m in Sources */ = {isa = PBXBuildFile; fileRef = FE416F8F1D2D030600518C78 /* NSObject+VDSelectorArgument.m */; };
+		FE416FA71D2DE7E000518C78 /* VDThemeManager.h in Headers */ = {isa = PBXBuildFile; fileRef = FE416FA51D2DE7E000518C78 /* VDThemeManager.h */; };
+		FE416FA81D2DE7E000518C78 /* VDThemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FE416FA61D2DE7E000518C78 /* VDThemeManager.m */; };
+		FE416FAB1D2DED9400518C78 /* NSObject+VDThemeManager.h in Headers */ = {isa = PBXBuildFile; fileRef = FE416FA91D2DED9400518C78 /* NSObject+VDThemeManager.h */; };
+		FE416FAC1D2DED9400518C78 /* NSObject+VDThemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FE416FAA1D2DED9400518C78 /* NSObject+VDThemeManager.m */; };
+		FE416FB31D2DEDC800518C78 /* VDThemeElement.h in Headers */ = {isa = PBXBuildFile; fileRef = FE416FB11D2DEDC800518C78 /* VDThemeElement.h */; };
+		FE416FB41D2DEDC800518C78 /* VDThemeElement.m in Sources */ = {isa = PBXBuildFile; fileRef = FE416FB21D2DEDC800518C78 /* VDThemeElement.m */; };
+		FE416FB71D2DEE1700518C78 /* VDThemeSelectorArgument.h in Headers */ = {isa = PBXBuildFile; fileRef = FE416FB51D2DEE1700518C78 /* VDThemeSelectorArgument.h */; };
+		FE416FB81D2DEE1700518C78 /* VDThemeSelectorArgument.m in Sources */ = {isa = PBXBuildFile; fileRef = FE416FB61D2DEE1700518C78 /* VDThemeSelectorArgument.m */; };
+		FE416FBB1D2DF50300518C78 /* UIView+VDThemeManager.h in Headers */ = {isa = PBXBuildFile; fileRef = FE416FB91D2DF50300518C78 /* UIView+VDThemeManager.h */; };
+		FE416FBC1D2DF50300518C78 /* UIView+VDThemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FE416FBA1D2DF50300518C78 /* UIView+VDThemeManager.m */; };
 		FE615F3B1D23679B00AECD76 /* objcTemp.h in Headers */ = {isa = PBXBuildFile; fileRef = FE615F3A1D23679B00AECD76 /* objcTemp.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FE615F421D23679B00AECD76 /* objcTemp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE615F371D23679B00AECD76 /* objcTemp.framework */; };
 		FE615F471D23679B00AECD76 /* objcTempTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FE615F461D23679B00AECD76 /* objcTempTests.m */; };
@@ -104,6 +114,16 @@
 		FE416F8B1D2CFFA900518C78 /* VDSelectorArgument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDSelectorArgument.m; sourceTree = "<group>"; };
 		FE416F8E1D2D030600518C78 /* NSObject+VDSelectorArgument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+VDSelectorArgument.h"; sourceTree = "<group>"; };
 		FE416F8F1D2D030600518C78 /* NSObject+VDSelectorArgument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+VDSelectorArgument.m"; sourceTree = "<group>"; };
+		FE416FA51D2DE7E000518C78 /* VDThemeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDThemeManager.h; sourceTree = "<group>"; };
+		FE416FA61D2DE7E000518C78 /* VDThemeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDThemeManager.m; sourceTree = "<group>"; };
+		FE416FA91D2DED9400518C78 /* NSObject+VDThemeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+VDThemeManager.h"; sourceTree = "<group>"; };
+		FE416FAA1D2DED9400518C78 /* NSObject+VDThemeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+VDThemeManager.m"; sourceTree = "<group>"; };
+		FE416FB11D2DEDC800518C78 /* VDThemeElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDThemeElement.h; sourceTree = "<group>"; };
+		FE416FB21D2DEDC800518C78 /* VDThemeElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDThemeElement.m; sourceTree = "<group>"; };
+		FE416FB51D2DEE1700518C78 /* VDThemeSelectorArgument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDThemeSelectorArgument.h; sourceTree = "<group>"; };
+		FE416FB61D2DEE1700518C78 /* VDThemeSelectorArgument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDThemeSelectorArgument.m; sourceTree = "<group>"; };
+		FE416FB91D2DF50300518C78 /* UIView+VDThemeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+VDThemeManager.h"; sourceTree = "<group>"; };
+		FE416FBA1D2DF50300518C78 /* UIView+VDThemeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+VDThemeManager.m"; sourceTree = "<group>"; };
 		FE615F371D23679B00AECD76 /* objcTemp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = objcTemp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE615F3A1D23679B00AECD76 /* objcTemp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = objcTemp.h; sourceTree = "<group>"; };
 		FE615F3C1D23679B00AECD76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -220,6 +240,23 @@
 			path = SelectorArgument;
 			sourceTree = "<group>";
 		};
+		FE416FA41D2DE7CA00518C78 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				FE416FA51D2DE7E000518C78 /* VDThemeManager.h */,
+				FE416FA61D2DE7E000518C78 /* VDThemeManager.m */,
+				FE416FA91D2DED9400518C78 /* NSObject+VDThemeManager.h */,
+				FE416FAA1D2DED9400518C78 /* NSObject+VDThemeManager.m */,
+				FE416FB11D2DEDC800518C78 /* VDThemeElement.h */,
+				FE416FB21D2DEDC800518C78 /* VDThemeElement.m */,
+				FE416FB51D2DEE1700518C78 /* VDThemeSelectorArgument.h */,
+				FE416FB61D2DEE1700518C78 /* VDThemeSelectorArgument.m */,
+				FE416FB91D2DF50300518C78 /* UIView+VDThemeManager.h */,
+				FE416FBA1D2DF50300518C78 /* UIView+VDThemeManager.m */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
 		FE615F2D1D23679B00AECD76 = {
 			isa = PBXGroup;
 			children = (
@@ -243,6 +280,7 @@
 		FE615F391D23679B00AECD76 /* objcTemp */ = {
 			isa = PBXGroup;
 			children = (
+				FE416FA41D2DE7CA00518C78 /* Theme */,
 				FE416F891D2CFF9E00518C78 /* SelectorArgument */,
 				FE416F6C1D2CA69F00518C78 /* UITableView */,
 				FECA26AC1D2653D200ED8FDD /* Persistent */,
@@ -504,6 +542,7 @@
 			files = (
 				FE615F3B1D23679B00AECD76 /* objcTemp.h in Headers */,
 				FE615FA81D2367B500AECD76 /* VDHookInvocationInfo.h in Headers */,
+				FE416FAB1D2DED9400518C78 /* NSObject+VDThemeManager.h in Headers */,
 				FE615FBB1D2367B500AECD76 /* VDRouter.h in Headers */,
 				FE615FAC1D2367B500AECD76 /* VDMacros.h in Headers */,
 				FE615FC71D2367B500AECD76 /* UILabel+VDEnhance.h in Headers */,
@@ -514,12 +553,15 @@
 				FE615FBF1D2367B500AECD76 /* UIApplication+VDEnhance.h in Headers */,
 				FE615FC11D2367B500AECD76 /* UICollectionViewCell+VDEnhance.h in Headers */,
 				FE615FAF1D2367B500AECD76 /* NSObject+VDEnhance.h in Headers */,
+				FE416FBB1D2DF50300518C78 /* UIView+VDThemeManager.h in Headers */,
 				FE615FA01D2367B500AECD76 /* VDFingerPrintViewController.h in Headers */,
 				FE615FA41D2367B500AECD76 /* VDHook.h in Headers */,
 				FE615FA61D2367B500AECD76 /* VDHookElement.h in Headers */,
 				FE615FD11D2367B500AECD76 /* UIView+VDFrame.h in Headers */,
+				FE416FA71D2DE7E000518C78 /* VDThemeManager.h in Headers */,
 				FE615FB51D2367B500AECD76 /* NSString+VDJavaScript.h in Headers */,
 				FE615FCD1D2367B500AECD76 /* UIView+VDConstraint.h in Headers */,
+				FE416FB71D2DEE1700518C78 /* VDThemeSelectorArgument.h in Headers */,
 				FE615FD51D2367B500AECD76 /* UIViewController+VDEnhance.h in Headers */,
 				FE615FCF1D2367B500AECD76 /* UIView+VDEnhance.h in Headers */,
 				FE615FC91D2367B500AECD76 /* UILabel+VDVerticalAlignment.h in Headers */,
@@ -534,6 +576,7 @@
 				FE615FD71D2367B500AECD76 /* VDWeakRef.h in Headers */,
 				FE615F9E1D2367B500AECD76 /* CALayer+VDEnhance.h in Headers */,
 				FE416F8C1D2CFFA900518C78 /* VDSelectorArgument.h in Headers */,
+				FE416FB31D2DEDC800518C78 /* VDThemeElement.h in Headers */,
 				FE416F901D2D030600518C78 /* NSObject+VDSelectorArgument.h in Headers */,
 				FE416F6F1D2CA6CE00518C78 /* UITableViewCell+VDEnhance.h in Headers */,
 				FE615FB11D2367B500AECD76 /* VDDelayOperation.h in Headers */,
@@ -645,6 +688,7 @@
 				FE615FAB1D2367B500AECD76 /* VDHookRecorder.m in Sources */,
 				FE615FD41D2367B500AECD76 /* UIView+VDGesture.m in Sources */,
 				FECA26B01D26556800ED8FDD /* NSObject+VDPersistent.m in Sources */,
+				FE416FAC1D2DED9400518C78 /* NSObject+VDThemeManager.m in Sources */,
 				FE615FAE1D2367B500AECD76 /* NSDictionary+VDEnhance.m in Sources */,
 				FE615FD21D2367B500AECD76 /* UIView+VDFrame.m in Sources */,
 				FE615FCA1D2367B500AECD76 /* UILabel+VDVerticalAlignment.m in Sources */,
@@ -655,6 +699,7 @@
 				FE615FBE1D2367B500AECD76 /* VDRouterNavigationViewController.m in Sources */,
 				FE615FD01D2367B500AECD76 /* UIView+VDEnhance.m in Sources */,
 				FE615F9F1D2367B500AECD76 /* CALayer+VDEnhance.m in Sources */,
+				FE416FA81D2DE7E000518C78 /* VDThemeManager.m in Sources */,
 				FE615FB01D2367B500AECD76 /* NSObject+VDEnhance.m in Sources */,
 				FE416F701D2CA6CE00518C78 /* UITableViewCell+VDEnhance.m in Sources */,
 				FECA263E1D25030B00ED8FDD /* README.md in Sources */,
@@ -666,6 +711,7 @@
 				FECA268F1D2516FD00ED8FDD /* NSObject+VDProperty.m in Sources */,
 				FE615FA31D2367B500AECD76 /* NSObject+VDHook.m in Sources */,
 				FE615FC41D2367B500AECD76 /* UIColor+VDEnhance.m in Sources */,
+				FE416FB41D2DEDC800518C78 /* VDThemeElement.m in Sources */,
 				FECA26941D25215F00ED8FDD /* VDJsonObject.m in Sources */,
 				FE615FA91D2367B500AECD76 /* VDHookInvocationInfo.m in Sources */,
 				FE416F8D1D2CFFA900518C78 /* VDSelectorArgument.m in Sources */,
@@ -673,10 +719,12 @@
 				FE615FC01D2367B500AECD76 /* UIApplication+VDEnhance.m in Sources */,
 				FE615FA51D2367B500AECD76 /* VDHook.m in Sources */,
 				FE615FB21D2367B500AECD76 /* VDDelayOperation.m in Sources */,
+				FE416FBC1D2DF50300518C78 /* UIView+VDThemeManager.m in Sources */,
 				FE615FB81D2367B500AECD76 /* NSString+VDRegex.m in Sources */,
 				FE615FA71D2367B500AECD76 /* VDHookElement.m in Sources */,
 				FE615FB61D2367B500AECD76 /* NSString+VDJavaScript.m in Sources */,
 				FE615FC21D2367B500AECD76 /* UICollectionViewCell+VDEnhance.m in Sources */,
+				FE416FB81D2DEE1700518C78 /* VDThemeSelectorArgument.m in Sources */,
 				FE615FD81D2367B500AECD76 /* VDWeakRef.m in Sources */,
 				FE615FA11D2367B500AECD76 /* VDFingerPrintViewController.m in Sources */,
 			);
