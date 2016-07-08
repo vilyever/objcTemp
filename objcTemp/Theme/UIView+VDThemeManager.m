@@ -21,6 +21,11 @@
     [VDThemeManager setColorForTarget:self withSelector:@selector(setBackgroundColor:) withArguments:@[argument1]];
 }
 
+- (void)vd_setTintColorWithThemeKey:(NSString *)key {
+    VDThemeSelectorArgument *argument1 = [VDThemeSelectorArgument argumentWithThemeKey:key];
+    [VDThemeManager setColorForTarget:self withSelector:@selector(setTintColor:) withArguments:@[argument1]];
+}
+
 #pragma mark Private Method
 
 

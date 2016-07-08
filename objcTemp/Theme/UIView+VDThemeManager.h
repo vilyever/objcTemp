@@ -13,5 +13,5 @@
 
 #pragma mark Public Method
 - (void)vd_setBackgroundColorWithThemeKey:(NSString *)key;
-
+- (void)vd_setTintColorWithThemeKey:(NSString *)key;
 @end
