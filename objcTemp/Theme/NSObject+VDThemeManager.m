@@ -11,6 +11,7 @@
 #import <objc/runtime.h>
 #import "VDThemeManager.h"
 #import "NSObject+VDSelectorArgument.h"
+#import "NSObject+VDEnhance.h"
 
 
 @implementation NSObject (VDThemeManager)
@@ -33,31 +34,63 @@
 }
 
 - (void)vd_performElement:(VDThemeElement *)element {
-    switch (element.resourceType) {
-        case VDThemeElementResourceTypeColor: {
-            UIColor *color = [VDThemeManager colorForKey:element.themeSelectorArgument.themeKey];
-            element.themeSelectorArgument.strongObject = color;
-            [self vd_performSelector:element.selector withArguments:element.arguments];
-            break;
+    if ([VDThemeManager vd_sharedInstance].animationDuration <= 0) {
+        switch (element.resourceType) {
+            case VDThemeElementResourceTypeColor: {
+                UIColor *color = [VDThemeManager colorForKey:element.themeSelectorArgument.themeKey];
+                element.themeSelectorArgument.strongObject = color;
+                [self vd_performSelector:element.selector withArguments:element.arguments];
+                break;
+            }
+            case VDThemeElementResourceTypeImage: {
+                UIImage *image = [VDThemeManager imageForKey:element.themeSelectorArgument.themeKey];
+                element.themeSelectorArgument.strongObject = image;
+                [self vd_performSelector:element.selector withArguments:element.arguments];
+                break;
+            }
+            case VDThemeElementResourceTypeFont: {
+                UIFont *font = [VDThemeManager fontForKey:element.themeSelectorArgument.themeKey];
+                element.themeSelectorArgument.strongObject = font;
+                [self vd_performSelector:element.selector withArguments:element.arguments];
+                break;
+            }
+            case VDThemeElementResourceTypeAttribute: {
+                id attribute = [VDThemeManager attributeForKey:element.themeSelectorArgument.themeKey];
+                element.themeSelectorArgument.strongObject = attribute;
+                [self vd_performSelector:element.selector withArguments:element.arguments];
+                break;
+            }
         }
-        case VDThemeElementResourceTypeImage: {
-            UIImage *image = [VDThemeManager imageForKey:element.themeSelectorArgument.themeKey];
-            element.themeSelectorArgument.strongObject = image;
-            [self vd_performSelector:element.selector withArguments:element.arguments];
-            break;
-        }
-        case VDThemeElementResourceTypeFont: {
-            UIFont *font = [VDThemeManager fontForKey:element.themeSelectorArgument.themeKey];
-            element.themeSelectorArgument.strongObject = font;
-            [self vd_performSelector:element.selector withArguments:element.arguments];
-            break;
-        }
-        case VDThemeElementResourceTypeAttribute: {
-            id attribute = [VDThemeManager attributeForKey:element.themeSelectorArgument.themeKey];
-            element.themeSelectorArgument.strongObject = attribute;
-            [self vd_performSelector:element.selector withArguments:element.arguments];
-            break;
-        }
+    }
+    else {
+        [UIView animateWithDuration:[VDThemeManager vd_sharedInstance].animationDuration animations:^{
+            switch (element.resourceType) {
+                case VDThemeElementResourceTypeColor: {
+                    UIColor *color = [VDThemeManager colorForKey:element.themeSelectorArgument.themeKey];
+                    element.themeSelectorArgument.strongObject = color;
+                    [self vd_performSelector:element.selector withArguments:element.arguments];
+                    break;
+                }
+                case VDThemeElementResourceTypeImage: {
+                    UIImage *image = [VDThemeManager imageForKey:element.themeSelectorArgument.themeKey];
+                    element.themeSelectorArgument.strongObject = image;
+                    [self vd_performSelector:element.selector withArguments:element.arguments];
+                    break;
+                }
+                case VDThemeElementResourceTypeFont: {
+                    UIFont *font = [VDThemeManager fontForKey:element.themeSelectorArgument.themeKey];
+                    element.themeSelectorArgument.strongObject = font;
+                    [self vd_performSelector:element.selector withArguments:element.arguments];
+                    break;
+                }
+                case VDThemeElementResourceTypeAttribute: {
+                    id attribute = [VDThemeManager attributeForKey:element.themeSelectorArgument.themeKey];
+                    element.themeSelectorArgument.strongObject = attribute;
+                    [self vd_performSelector:element.selector withArguments:element.arguments];
+                    break;
+                }
+            }
+        }];
     }
 }
 

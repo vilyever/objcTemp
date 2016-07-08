@@ -36,6 +36,10 @@ NSString * const VDThemeManagerThemeTypeDidChangeNotificationUserInfoOldThemeTyp
     [VDThemeManager vd_sharedInstance].datasource = datasource;
 }
 
++ (void)setupThemeChangeAnimationDuration:(NSTimeInterval)duration {
+    [VDThemeManager vd_sharedInstance].animationDuration = duration;
+}
+
 + (void)changeThemeType:(NSInteger)themeType {
     [VDThemeManager vd_sharedInstance].themeType = themeType;
 }

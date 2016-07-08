@@ -16,6 +16,8 @@
 @property (nonatomic, assign) NSInteger __x;
 @property (nonatomic, strong) NSArray *_array;
 
+//@property (nonatomic, strong) VDAuto
+
 @end
 
 @implementation ViewController

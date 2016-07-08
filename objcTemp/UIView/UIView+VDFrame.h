@@ -12,11 +12,11 @@
 @interface UIView (VDFrame)
 
 #pragma mark Public Method
-@property (nonatomic, assign, readonly) CGPoint vd_frameOrigin;
-@property (nonatomic, assign, readonly) CGSize vd_frameSize;
-@property (nonatomic, assign, readonly) float vd_frameX;
-@property (nonatomic, assign, readonly) float vd_frameY;
-@property (nonatomic, assign, readonly) float vd_frameWidth;
-@property (nonatomic, assign, readonly) float vd_frameHeight;
+@property (nonatomic, assign) CGPoint vd_frameOrigin;
+@property (nonatomic, assign) CGSize vd_frameSize;
+@property (nonatomic, assign) float vd_frameX;
+@property (nonatomic, assign) float vd_frameY;
+@property (nonatomic, assign) float vd_frameWidth;
+@property (nonatomic, assign) float vd_frameHeight;
 
 @end

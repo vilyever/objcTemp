@@ -74,6 +74,7 @@ FOUNDATION_EXPORT const unsigned char objcTempVersionString[];
 
 #import <objcTemp/NSObject+VDPersistent.h>
 
+#import <objcTemp/UITableView+VDEnhance.h>
 #import <objcTemp/UITableViewCell+VDEnhance.h>
 
 #import <objcTemp/VDSelectorArgument.h>
@@ -84,3 +85,7 @@ FOUNDATION_EXPORT const unsigned char objcTempVersionString[];
 #import <objcTemp/VDThemeManager.h>
 #import <objcTemp/NSObject+VDThemeManager.h>
 #import <objcTemp/UIView+VDThemeManager.h>
+
+#import <objcTemp/VDAutoPanUpElement.h>
+#import <objcTemp/VDAutoPanUpManager.h>
+#import <objcTemp/UIView+VDAutoPanUp.h>

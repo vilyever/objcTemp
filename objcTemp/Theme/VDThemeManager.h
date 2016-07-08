@@ -29,6 +29,7 @@ extern NSString * const VDThemeManagerThemeTypeDidChangeNotificationUserInfoOldT
 
 #pragma mark Public Method
 + (void)bindDatasource:(id<VDThemeManagerDatasource>)datasource;
++ (void)setupThemeChangeAnimationDuration:(NSTimeInterval)duration;
 + (void)changeThemeType:(NSInteger)themeType;
 + (void)setDefaultThemeType:(NSInteger)defaultThemeType;
 
@@ -46,6 +47,7 @@ extern NSString * const VDThemeManagerThemeTypeDidChangeNotificationUserInfoOldT
 @property (nonatomic, weak) id<VDThemeManagerDatasource> datasource;
 
 @property (nonatomic, assign) NSInteger themeType;
+@property (nonatomic, assign) NSTimeInterval animationDuration;
 
 #pragma mark Private Method
 - (void)internalAddTarget:(id)target;

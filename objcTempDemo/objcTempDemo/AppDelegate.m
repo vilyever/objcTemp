@@ -7,6 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import "AppRouterHome.h"
+#import "HomeTableViewController.h"
+#import "AppRouterAutoPanUp.h"
+#import "AutoPanUpViewController.h"
 
 //#import <objcTemp.h>
 //#import <NSObject+VDHook.h>
@@ -24,28 +28,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-//    [self test];
-//    
-//    [self vd_hookSelector:@selector(test) afterBlock:^(VDHookInvocationInfo *info) {
-//        VDLog(@"hook affter ");
-//    }];
-//    
-//    [self vd_performSelector:@selector(test)];
-//    
-//    [self test];
+    [AppRouterHome bindViewController:[HomeTableViewController class]];
+    [AppRouterAutoPanUp bindViewController:[AutoPanUpViewController class]];
     
-//    VDSelectorArgument *argument;
-    [self vd_performSelector:@selector(test) withArguments:nil];
+    [AppRouterHome asRoot];
     
     return YES;
-}
-
-- (void)test {
-    NSLog(@"teat");
-}
-
-- (void)test123:(NSString *)string {
-    NSLog(@"ttt %@", string);
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

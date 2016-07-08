@@ -9,6 +9,17 @@
 /* Begin PBXBuildFile section */
 		FE416FA11D2D0C1300518C78 /* objcTemp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE416FA01D2D0C1300518C78 /* objcTemp.framework */; };
 		FE416FA21D2D0C1300518C78 /* objcTemp.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FE416FA01D2D0C1300518C78 /* objcTemp.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FE416FFD1D2F4B7E00518C78 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE416FFC1D2F4B7E00518C78 /* BaseViewController.m */; };
+		FE4170011D2F4BA700518C78 /* AutoPanUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE416FFF1D2F4BA700518C78 /* AutoPanUpViewController.m */; };
+		FE4170021D2F4BA700518C78 /* AutoPanUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE4170001D2F4BA700518C78 /* AutoPanUpViewController.xib */; };
+		FE41700E1D2F4D1900518C78 /* HomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE41700C1D2F4D1900518C78 /* HomeTableViewController.m */; };
+		FE41700F1D2F4D1900518C78 /* HomeTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE41700D1D2F4D1900518C78 /* HomeTableViewController.xib */; };
+		FE4170131D2F4D7000518C78 /* BusinessProcess.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4170121D2F4D7000518C78 /* BusinessProcess.m */; };
+		FE4170161D2F4DA400518C78 /* HomeBusinessProcess.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4170151D2F4DA400518C78 /* HomeBusinessProcess.m */; };
+		FE41701A1D2F4EA400518C78 /* HomeItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4170181D2F4EA400518C78 /* HomeItemTableViewCell.m */; };
+		FE41701B1D2F4EA400518C78 /* HomeItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE4170191D2F4EA400518C78 /* HomeItemTableViewCell.xib */; };
+		FE41701E1D2F517200518C78 /* AppRouterHome.m in Sources */ = {isa = PBXBuildFile; fileRef = FE41701D1D2F517200518C78 /* AppRouterHome.m */; };
+		FE4170211D2F519E00518C78 /* AppRouterAutoPanUp.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4170201D2F519E00518C78 /* AppRouterAutoPanUp.m */; };
 		FE615FE71D2367FF00AECD76 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FE615FE61D2367FF00AECD76 /* main.m */; };
 		FE615FEA1D2367FF00AECD76 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FE615FE91D2367FF00AECD76 /* AppDelegate.m */; };
 		FE615FED1D2367FF00AECD76 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE615FEC1D2367FF00AECD76 /* ViewController.m */; };
@@ -33,6 +44,25 @@
 
 /* Begin PBXFileReference section */
 		FE416FA01D2D0C1300518C78 /* objcTemp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = objcTemp.framework; path = "/Users/ftet/Library/Developer/Xcode/DerivedData/objcTemp-dsvrfefekloeavfmbfjuecgqqsko/Build/Products/Debug-iphoneos/objcTemp.framework"; sourceTree = "<absolute>"; };
+		FE416FFB1D2F4B7E00518C78 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		FE416FFC1D2F4B7E00518C78 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		FE416FFE1D2F4BA700518C78 /* AutoPanUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoPanUpViewController.h; sourceTree = "<group>"; };
+		FE416FFF1D2F4BA700518C78 /* AutoPanUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoPanUpViewController.m; sourceTree = "<group>"; };
+		FE4170001D2F4BA700518C78 /* AutoPanUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AutoPanUpViewController.xib; sourceTree = "<group>"; };
+		FE41700B1D2F4D1900518C78 /* HomeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTableViewController.h; sourceTree = "<group>"; };
+		FE41700C1D2F4D1900518C78 /* HomeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewController.m; sourceTree = "<group>"; };
+		FE41700D1D2F4D1900518C78 /* HomeTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeTableViewController.xib; sourceTree = "<group>"; };
+		FE4170111D2F4D7000518C78 /* BusinessProcess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessProcess.h; sourceTree = "<group>"; };
+		FE4170121D2F4D7000518C78 /* BusinessProcess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusinessProcess.m; sourceTree = "<group>"; };
+		FE4170141D2F4DA400518C78 /* HomeBusinessProcess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeBusinessProcess.h; sourceTree = "<group>"; };
+		FE4170151D2F4DA400518C78 /* HomeBusinessProcess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeBusinessProcess.m; sourceTree = "<group>"; };
+		FE4170171D2F4EA400518C78 /* HomeItemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeItemTableViewCell.h; sourceTree = "<group>"; };
+		FE4170181D2F4EA400518C78 /* HomeItemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeItemTableViewCell.m; sourceTree = "<group>"; };
+		FE4170191D2F4EA400518C78 /* HomeItemTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeItemTableViewCell.xib; sourceTree = "<group>"; };
+		FE41701C1D2F517200518C78 /* AppRouterHome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppRouterHome.h; sourceTree = "<group>"; };
+		FE41701D1D2F517200518C78 /* AppRouterHome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppRouterHome.m; sourceTree = "<group>"; };
+		FE41701F1D2F519E00518C78 /* AppRouterAutoPanUp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppRouterAutoPanUp.h; sourceTree = "<group>"; };
+		FE4170201D2F519E00518C78 /* AppRouterAutoPanUp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppRouterAutoPanUp.m; sourceTree = "<group>"; };
 		FE615FE21D2367FF00AECD76 /* objcTempDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = objcTempDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE615FE61D2367FF00AECD76 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FE615FE81D2367FF00AECD76 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -57,6 +87,60 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FE416FF91D2F4B4600518C78 /* AutoPanUp */ = {
+			isa = PBXGroup;
+			children = (
+				FE416FFE1D2F4BA700518C78 /* AutoPanUpViewController.h */,
+				FE416FFF1D2F4BA700518C78 /* AutoPanUpViewController.m */,
+				FE4170001D2F4BA700518C78 /* AutoPanUpViewController.xib */,
+			);
+			name = AutoPanUp;
+			sourceTree = "<group>";
+		};
+		FE416FFA1D2F4B5500518C78 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				FE416FFB1D2F4B7E00518C78 /* BaseViewController.h */,
+				FE416FFC1D2F4B7E00518C78 /* BaseViewController.m */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		FE4170031D2F4C0600518C78 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				FE41701C1D2F517200518C78 /* AppRouterHome.h */,
+				FE41701D1D2F517200518C78 /* AppRouterHome.m */,
+				FE41701F1D2F519E00518C78 /* AppRouterAutoPanUp.h */,
+				FE4170201D2F519E00518C78 /* AppRouterAutoPanUp.m */,
+			);
+			name = Router;
+			sourceTree = "<group>";
+		};
+		FE41700A1D2F4D0600518C78 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				FE41700B1D2F4D1900518C78 /* HomeTableViewController.h */,
+				FE41700C1D2F4D1900518C78 /* HomeTableViewController.m */,
+				FE41700D1D2F4D1900518C78 /* HomeTableViewController.xib */,
+				FE4170171D2F4EA400518C78 /* HomeItemTableViewCell.h */,
+				FE4170181D2F4EA400518C78 /* HomeItemTableViewCell.m */,
+				FE4170191D2F4EA400518C78 /* HomeItemTableViewCell.xib */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		FE4170101D2F4D5100518C78 /* BusinessProcess */ = {
+			isa = PBXGroup;
+			children = (
+				FE4170111D2F4D7000518C78 /* BusinessProcess.h */,
+				FE4170121D2F4D7000518C78 /* BusinessProcess.m */,
+				FE4170141D2F4DA400518C78 /* HomeBusinessProcess.h */,
+				FE4170151D2F4DA400518C78 /* HomeBusinessProcess.m */,
+			);
+			name = BusinessProcess;
+			sourceTree = "<group>";
+		};
 		FE615FD91D2367FF00AECD76 = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +161,11 @@
 		FE615FE41D2367FF00AECD76 /* objcTempDemo */ = {
 			isa = PBXGroup;
 			children = (
+				FE4170101D2F4D5100518C78 /* BusinessProcess */,
+				FE41700A1D2F4D0600518C78 /* Home */,
+				FE4170031D2F4C0600518C78 /* Router */,
+				FE416FFA1D2F4B5500518C78 /* Base */,
+				FE416FF91D2F4B4600518C78 /* AutoPanUp */,
 				FE615FE81D2367FF00AECD76 /* AppDelegate.h */,
 				FE615FE91D2367FF00AECD76 /* AppDelegate.m */,
 				FE615FEB1D2367FF00AECD76 /* ViewController.h */,
@@ -157,7 +246,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE41700F1D2F4D1900518C78 /* HomeTableViewController.xib in Resources */,
+				FE4170021D2F4BA700518C78 /* AutoPanUpViewController.xib in Resources */,
 				FE615FF51D2367FF00AECD76 /* LaunchScreen.storyboard in Resources */,
+				FE41701B1D2F4EA400518C78 /* HomeItemTableViewCell.xib in Resources */,
 				FE615FF21D2367FF00AECD76 /* Assets.xcassets in Resources */,
 				FE615FF01D2367FF00AECD76 /* Main.storyboard in Resources */,
 			);
@@ -171,6 +263,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE615FED1D2367FF00AECD76 /* ViewController.m in Sources */,
+				FE4170011D2F4BA700518C78 /* AutoPanUpViewController.m in Sources */,
+				FE4170211D2F519E00518C78 /* AppRouterAutoPanUp.m in Sources */,
+				FE416FFD1D2F4B7E00518C78 /* BaseViewController.m in Sources */,
+				FE41701A1D2F4EA400518C78 /* HomeItemTableViewCell.m in Sources */,
+				FE41701E1D2F517200518C78 /* AppRouterHome.m in Sources */,
+				FE41700E1D2F4D1900518C78 /* HomeTableViewController.m in Sources */,
+				FE4170131D2F4D7000518C78 /* BusinessProcess.m in Sources */,
+				FE4170161D2F4DA400518C78 /* HomeBusinessProcess.m in Sources */,
 				FE615FEA1D2367FF00AECD76 /* AppDelegate.m in Sources */,
 				FE615FE71D2367FF00AECD76 /* main.m in Sources */,
 			);
