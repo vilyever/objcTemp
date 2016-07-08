@@ -134,6 +134,11 @@ __strong __typeof(&*vd_weak_object)self = vd_weak_object
 [NSUserDefaults standardUserDefaults]
 #endif
 
+#if !VDUserDefaultKey
+#define VDUserDefaultKey(clazz, name) \
+[NSString stringWithFormat:@"%@_%@", NSStringFromClass(clazz), name]
+#endif
+
 #if !VDApplication
 #define VDApplication \
 [UIApplication sharedApplication]
