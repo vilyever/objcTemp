@@ -26,6 +26,14 @@
 }
 
 #pragma mark Private Method
+- (CGRect)vd_trackRectForBounds:(CGRect)bounds {
+    CGRect trackRect = [self vd_trackRectForBounds:bounds];
+    
+    if (self.vd_trackHeight > 0.0f) {
+        trackRect.size.height = self.vd_trackHeight;
+    }
+    return trackRect;
+}
 
 #pragma mark load
 + (void)load {

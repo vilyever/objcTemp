@@ -16,4 +16,7 @@
 #pragma mark Properties
 @property (nonatomic, assign) CGFloat vd_trackHeight;
 
+#pragma mark Private Method
+- (CGRect)vd_trackRectForBounds:(CGRect)bounds;
+
 @end
