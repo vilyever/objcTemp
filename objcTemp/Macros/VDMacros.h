@@ -40,6 +40,11 @@ __strong __typeof(&*vd_weak_object)self = vd_weak_object
 ([NSString stringWithFormat:frmt, ##__VA_ARGS__])
 #endif
 
+#if !VDStringWithInteger
+#define VDStringWithInteger(integer) \
+[NSString stringWithFormat:@"%@", @(integer)]
+#endif
+
 #if !VDIdentifier
 #define VDIdentifier \
 ([NSString stringWithFormat:@"%p_%s_%d", self, __FUNCTION__, __LINE__])
@@ -59,6 +64,11 @@ __strong __typeof(&*vd_weak_object)self = vd_weak_object
 
 #if !VDBOOLToString
 #define VDBOOLToString(bool) \
+((bool) ? VDStringYES : VDStringNO)
+#endif
+
+#if !VDStringWithBOOL
+#define VDStringWithBOOL(b) \
 ((bool) ? VDStringYES : VDStringNO)
 #endif
 
