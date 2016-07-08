@@ -31,6 +31,8 @@
 		FE416FF41D2F45A300518C78 /* VDAutoPanUpManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FE416FF21D2F45A300518C78 /* VDAutoPanUpManager.m */; };
 		FE416FF71D2F45D900518C78 /* VDAutoPanUpElement.h in Headers */ = {isa = PBXBuildFile; fileRef = FE416FF51D2F45D900518C78 /* VDAutoPanUpElement.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FE416FF81D2F45D900518C78 /* VDAutoPanUpElement.m in Sources */ = {isa = PBXBuildFile; fileRef = FE416FF61D2F45D900518C78 /* VDAutoPanUpElement.m */; };
+		FE41702A1D2F822500518C78 /* UIButton+VDThemeManager.h in Headers */ = {isa = PBXBuildFile; fileRef = FE4170281D2F822500518C78 /* UIButton+VDThemeManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE41702B1D2F822500518C78 /* UIButton+VDThemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4170291D2F822500518C78 /* UIButton+VDThemeManager.m */; };
 		FE615F3B1D23679B00AECD76 /* objcTemp.h in Headers */ = {isa = PBXBuildFile; fileRef = FE615F3A1D23679B00AECD76 /* objcTemp.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FE615F421D23679B00AECD76 /* objcTemp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE615F371D23679B00AECD76 /* objcTemp.framework */; };
 		FE615F471D23679B00AECD76 /* objcTempTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FE615F461D23679B00AECD76 /* objcTempTests.m */; };
@@ -140,6 +142,8 @@
 		FE416FF21D2F45A300518C78 /* VDAutoPanUpManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDAutoPanUpManager.m; sourceTree = "<group>"; };
 		FE416FF51D2F45D900518C78 /* VDAutoPanUpElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDAutoPanUpElement.h; sourceTree = "<group>"; };
 		FE416FF61D2F45D900518C78 /* VDAutoPanUpElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDAutoPanUpElement.m; sourceTree = "<group>"; };
+		FE4170281D2F822500518C78 /* UIButton+VDThemeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+VDThemeManager.h"; sourceTree = "<group>"; };
+		FE4170291D2F822500518C78 /* UIButton+VDThemeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+VDThemeManager.m"; sourceTree = "<group>"; };
 		FE615F371D23679B00AECD76 /* objcTemp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = objcTemp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE615F3A1D23679B00AECD76 /* objcTemp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = objcTemp.h; sourceTree = "<group>"; };
 		FE615F3C1D23679B00AECD76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -271,6 +275,8 @@
 				FE416FB61D2DEE1700518C78 /* VDThemeSelectorArgument.m */,
 				FE416FB91D2DF50300518C78 /* UIView+VDThemeManager.h */,
 				FE416FBA1D2DF50300518C78 /* UIView+VDThemeManager.m */,
+				FE4170281D2F822500518C78 /* UIButton+VDThemeManager.h */,
+				FE4170291D2F822500518C78 /* UIButton+VDThemeManager.m */,
 			);
 			path = Theme;
 			sourceTree = "<group>";
@@ -616,6 +622,7 @@
 				FE416F901D2D030600518C78 /* NSObject+VDSelectorArgument.h in Headers */,
 				FE416F6F1D2CA6CE00518C78 /* UITableViewCell+VDEnhance.h in Headers */,
 				FE615FB11D2367B500AECD76 /* VDDelayOperation.h in Headers */,
+				FE41702A1D2F822500518C78 /* UIButton+VDThemeManager.h in Headers */,
 				FE615FAA1D2367B500AECD76 /* VDHookRecorder.h in Headers */,
 				FECA26AF1D26556800ED8FDD /* NSObject+VDPersistent.h in Headers */,
 				FE615FC51D2367B500AECD76 /* UIImage+VDEnhance.h in Headers */,
@@ -763,6 +770,7 @@
 				FE615FA71D2367B500AECD76 /* VDHookElement.m in Sources */,
 				FE416FEB1D2E576A00518C78 /* UITableView+VDEnhance.m in Sources */,
 				FE615FB61D2367B500AECD76 /* NSString+VDJavaScript.m in Sources */,
+				FE41702B1D2F822500518C78 /* UIButton+VDThemeManager.m in Sources */,
 				FE615FC21D2367B500AECD76 /* UICollectionViewCell+VDEnhance.m in Sources */,
 				FE416FB81D2DEE1700518C78 /* VDThemeSelectorArgument.m in Sources */,
 				FE615FD81D2367B500AECD76 /* VDWeakRef.m in Sources */,

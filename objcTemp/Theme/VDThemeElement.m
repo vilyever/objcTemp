@@ -29,7 +29,8 @@
 #pragma mark Properties
 - (void)setArguments:(NSArray *)arguments {
     for (id argument in arguments) {
-        if ([argument isKindOfClass:[VDThemeSelectorArgument class]]) {
+        if ([argument isKindOfClass:[VDThemeSelectorArgument class]]
+            && [argument themeKey]) {
             self.themeSelectorArgument = argument;
             break;
         }

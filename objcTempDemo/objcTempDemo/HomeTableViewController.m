@@ -89,6 +89,8 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
     HomeItemType type = [[HomeBusinessProcess vd_sharedInstance].homeItemTypes[indexPath.item] integerValue];
     
     [[HomeBusinessProcess vd_sharedInstance] setSelectedItemType:type];
