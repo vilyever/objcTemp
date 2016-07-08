@@ -17,9 +17,6 @@
 #pragma mark Public Method
 + (instancetype)elementWithTargetView:(UIView *)targetView withPanUpView:(UIView *)panUpView withOffset:(CGFloat)panUpOffset;
 
-- (void)panUp;
-- (void)panBack;
-
 #pragma mark Properties
 @property (nonatomic, weak) UIView *targetView;
 @property (nonatomic, weak) UIView *panUpView;

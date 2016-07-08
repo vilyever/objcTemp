@@ -30,11 +30,6 @@
 }
 
 #pragma mark Properties
-- (void)setTargetView:(UIView *)targetView {
-    _targetView = targetView;
-    
-    
-}
 
 #pragma mark Overrides
 - (instancetype)init {
