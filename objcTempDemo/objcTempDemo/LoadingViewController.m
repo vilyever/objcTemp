@@ -34,6 +34,12 @@
     
     
     [self.loadingView startAnimation];
+    
+    VDWeakifySelf;
+    [self.view vd_performActionOnTap:^{
+        VDStrongifySelf;
+        [self.loadingView sizeToFit];
+    }];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -42,8 +48,6 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    
-    
     
 //    [self.navigationController setNavigationBarHidden:YES animated:YES];
 }

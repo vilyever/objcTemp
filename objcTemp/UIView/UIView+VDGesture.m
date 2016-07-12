@@ -52,12 +52,12 @@
 }
 
 - (void (^)(void))vd_tapBlock {
-    void (^tapBlock)(void) = objc_getAssociatedObject(self, @selector(vd_tapBlock));
+    id tapBlock = objc_getAssociatedObject(self, @selector(vd_tapBlock));
     return tapBlock;
 }
 
 - (void)setVd_tapBlock:(void (^)(void))tapBlock {
-    objc_setAssociatedObject(self, @selector(vd_tapBlock), tapBlock, OBJC_ASSOCIATION_ASSIGN);
+    objc_setAssociatedObject(self, @selector(vd_tapBlock), tapBlock, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (BOOL)vd_isOnTapActive {

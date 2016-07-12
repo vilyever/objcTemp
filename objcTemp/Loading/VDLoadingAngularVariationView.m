@@ -58,6 +58,13 @@
     _leapAngular = 360 * 2 + 120;
 }
 
+- (CGSize)sizeThatFits:(CGSize)size {
+    CGFloat widthHeight = (self.radius + self.torusWidth / 2.0f) * 2.0f;
+    size.width = MIN(widthHeight, size.width);
+    size.height = MIN(widthHeight, size.height);
+    return size;
+}
+
 
 #pragma mark IBActions
 
