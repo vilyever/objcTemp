@@ -20,6 +20,18 @@
 @implementation BusinessProcess
 
 #pragma mark Public Method
++ (void)registerDelegate:(id<BusinessProcessDelegate>)delegate {
+    [[self vd_sharedInstance] registerDelegate:delegate];
+}
+
++ (void)registerWeakDelegate:(id<BusinessProcessDelegate>)delegate {
+    [[self vd_sharedInstance] registerWeakDelegate:delegate];
+}
+
++ (void)removeDelegate:(id<BusinessProcessDelegate>)delegate {
+    [[self vd_sharedInstance] removeDelegate:delegate];
+}
+
 - (void)registerDelegate:(id<BusinessProcessDelegate>)delegate {
     if (![self.delegates containsObject:delegate]) {
         [self.delegates addObject:delegate];
@@ -34,6 +46,10 @@
 
 - (void)removeDelegate:(id<BusinessProcessDelegate>)delegate {
     [self.delegates removeObject:delegate];
+}
+
++ (void)triggerDelegate:(id)delegate {
+    
 }
 
 #pragma mark Properties

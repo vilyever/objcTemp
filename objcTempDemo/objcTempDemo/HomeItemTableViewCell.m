@@ -30,6 +30,14 @@
             self.titleLabel.text = @"AutoPanUp";
             break;
         }
+        case HomeItemTypeHud: {
+            self.titleLabel.text = @"Hud";
+            break;
+        }
+        case HomeItemTypeLoadingView: {
+            self.titleLabel.text = @"LoadingView";
+            break;
+        }
     }
 }
 

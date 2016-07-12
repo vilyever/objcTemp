@@ -11,7 +11,7 @@
 @import objcTemp;
 
 
-@interface HomeTableViewController ()
+@interface HomeTableViewController () <HomeBusinessProcessDelegate>
 
 @end
 
@@ -37,12 +37,14 @@
     
     [HomeItemTableViewCell vd_registerNibWithTableView:self.tableView];
     
+    [HomeBusinessProcess registerDelegate:self];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
 //    [self.navigationController setNavigationBarHidden:YES];
+    [HomeBusinessProcess modifySelectedItemType:HomeItemTypeAutoPanNone];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -89,11 +91,15 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+//    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     HomeItemType type = [[HomeBusinessProcess vd_sharedInstance].homeItemTypes[indexPath.item] integerValue];
     
     [[HomeBusinessProcess vd_sharedInstance] setSelectedItemType:type];
+}
+
+- (void)onSelectedHomeItemTypeChange:(HomeItemType)type {
+    [self.tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:type inSection:0] animated:YES scrollPosition:UITableViewScrollPositionNone];
 }
 
 /*

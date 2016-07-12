@@ -6,22 +6,18 @@
 //  Copyright © Deng. All rights reserved.
 //
 
-#import <objcTemp/objcTemp.h>
+#import "AppRouter.h"
 
 
 @class AppRouterHome;
 
 
-@interface AppRouterHome : VDRouter
+@interface AppRouterHome : AppRouter
 
 #pragma mark Public Method
-+ (void)bindViewController:(Class)clazz;
-+ (void)asRoot;
-+ (UIViewController *)open;
 
 #pragma mark Properties
 
 #pragma mark Private Method
-+ (UIViewController *)internalOpen;
 
 @end

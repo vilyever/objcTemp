@@ -94,3 +94,12 @@ FOUNDATION_EXPORT const unsigned char objcTempVersionString[];
 #import <objcTemp/UIView+VDAutoPanUp.h>
 
 #import <objcTemp/UISlider+VDEnhance.h>
+
+#import <objcTemp/VDHudMaskView.h>
+#import <objcTemp/UIView+VDHud.h>
+#import <objcTemp/UIViewController+VDHud.h>
+#import <objcTemp/VDHudViewController.h>
+
+#import <objcTemp/VDLoadingLayer.h>
+#import <objcTemp/VDLoadingView.h>
+#import <objcTemp/VDLoadingAngularVariationView.h>

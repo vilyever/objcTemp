@@ -19,13 +19,7 @@
 @implementation AppRouterAutoPanUp
 
 #pragma mark Public Method
-+ (void)bindViewController:(Class)clazz {
-    [VDRouter bindViewController:clazz identifier:[self vd_className]];
-}
 
-+ (UIViewController *)open {
-    return [VDRouter push:[self vd_className]];
-}
 
 #pragma mark Properties
 

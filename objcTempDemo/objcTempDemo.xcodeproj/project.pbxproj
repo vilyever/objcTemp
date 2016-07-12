@@ -20,6 +20,15 @@
 		FE41701B1D2F4EA400518C78 /* HomeItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE4170191D2F4EA400518C78 /* HomeItemTableViewCell.xib */; };
 		FE41701E1D2F517200518C78 /* AppRouterHome.m in Sources */ = {isa = PBXBuildFile; fileRef = FE41701D1D2F517200518C78 /* AppRouterHome.m */; };
 		FE4170211D2F519E00518C78 /* AppRouterAutoPanUp.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4170201D2F519E00518C78 /* AppRouterAutoPanUp.m */; };
+		FE41705D1D3364EE00518C78 /* AppRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = FE41705C1D3364EE00518C78 /* AppRouter.m */; };
+		FE4170601D3365A200518C78 /* AppRouterHud.m in Sources */ = {isa = PBXBuildFile; fileRef = FE41705F1D3365A200518C78 /* AppRouterHud.m */; };
+		FE4170641D33664D00518C78 /* HudViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4170621D33664D00518C78 /* HudViewController.m */; };
+		FE4170651D33664D00518C78 /* HudViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE4170631D33664D00518C78 /* HudViewController.xib */; };
+		FE41706D1D336BE500518C78 /* TextHudViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE41706B1D336BE500518C78 /* TextHudViewController.m */; };
+		FE41706E1D336BE500518C78 /* TextHudViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE41706C1D336BE500518C78 /* TextHudViewController.xib */; };
+		FE41707A1D33853400518C78 /* AppRouterLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4170791D33853400518C78 /* AppRouterLoadingView.m */; };
+		FE41707F1D33859C00518C78 /* LoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE41707D1D33859C00518C78 /* LoadingViewController.m */; };
+		FE4170801D33859C00518C78 /* LoadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE41707E1D33859C00518C78 /* LoadingViewController.xib */; };
 		FE615FE71D2367FF00AECD76 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FE615FE61D2367FF00AECD76 /* main.m */; };
 		FE615FEA1D2367FF00AECD76 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FE615FE91D2367FF00AECD76 /* AppDelegate.m */; };
 		FE615FED1D2367FF00AECD76 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE615FEC1D2367FF00AECD76 /* ViewController.m */; };
@@ -63,6 +72,21 @@
 		FE41701D1D2F517200518C78 /* AppRouterHome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppRouterHome.m; sourceTree = "<group>"; };
 		FE41701F1D2F519E00518C78 /* AppRouterAutoPanUp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppRouterAutoPanUp.h; sourceTree = "<group>"; };
 		FE4170201D2F519E00518C78 /* AppRouterAutoPanUp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppRouterAutoPanUp.m; sourceTree = "<group>"; };
+		FE41705B1D3364EE00518C78 /* AppRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppRouter.h; sourceTree = "<group>"; };
+		FE41705C1D3364EE00518C78 /* AppRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppRouter.m; sourceTree = "<group>"; };
+		FE41705E1D3365A200518C78 /* AppRouterHud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppRouterHud.h; sourceTree = "<group>"; };
+		FE41705F1D3365A200518C78 /* AppRouterHud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppRouterHud.m; sourceTree = "<group>"; };
+		FE4170611D33664D00518C78 /* HudViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HudViewController.h; sourceTree = "<group>"; };
+		FE4170621D33664D00518C78 /* HudViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HudViewController.m; sourceTree = "<group>"; };
+		FE4170631D33664D00518C78 /* HudViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HudViewController.xib; sourceTree = "<group>"; };
+		FE41706A1D336BE500518C78 /* TextHudViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextHudViewController.h; sourceTree = "<group>"; };
+		FE41706B1D336BE500518C78 /* TextHudViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextHudViewController.m; sourceTree = "<group>"; };
+		FE41706C1D336BE500518C78 /* TextHudViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextHudViewController.xib; sourceTree = "<group>"; };
+		FE4170781D33853400518C78 /* AppRouterLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppRouterLoadingView.h; sourceTree = "<group>"; };
+		FE4170791D33853400518C78 /* AppRouterLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppRouterLoadingView.m; sourceTree = "<group>"; };
+		FE41707C1D33859C00518C78 /* LoadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingViewController.h; sourceTree = "<group>"; };
+		FE41707D1D33859C00518C78 /* LoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingViewController.m; sourceTree = "<group>"; };
+		FE41707E1D33859C00518C78 /* LoadingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingViewController.xib; sourceTree = "<group>"; };
 		FE615FE21D2367FF00AECD76 /* objcTempDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = objcTempDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE615FE61D2367FF00AECD76 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FE615FE81D2367FF00AECD76 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -113,6 +137,12 @@
 				FE41701D1D2F517200518C78 /* AppRouterHome.m */,
 				FE41701F1D2F519E00518C78 /* AppRouterAutoPanUp.h */,
 				FE4170201D2F519E00518C78 /* AppRouterAutoPanUp.m */,
+				FE41705B1D3364EE00518C78 /* AppRouter.h */,
+				FE41705C1D3364EE00518C78 /* AppRouter.m */,
+				FE41705E1D3365A200518C78 /* AppRouterHud.h */,
+				FE41705F1D3365A200518C78 /* AppRouterHud.m */,
+				FE4170781D33853400518C78 /* AppRouterLoadingView.h */,
+				FE4170791D33853400518C78 /* AppRouterLoadingView.m */,
 			);
 			name = Router;
 			sourceTree = "<group>";
@@ -141,6 +171,29 @@
 			name = BusinessProcess;
 			sourceTree = "<group>";
 		};
+		FE4170571D3362F900518C78 /* Hud */ = {
+			isa = PBXGroup;
+			children = (
+				FE4170611D33664D00518C78 /* HudViewController.h */,
+				FE4170621D33664D00518C78 /* HudViewController.m */,
+				FE4170631D33664D00518C78 /* HudViewController.xib */,
+				FE41706A1D336BE500518C78 /* TextHudViewController.h */,
+				FE41706B1D336BE500518C78 /* TextHudViewController.m */,
+				FE41706C1D336BE500518C78 /* TextHudViewController.xib */,
+			);
+			name = Hud;
+			sourceTree = "<group>";
+		};
+		FE41707B1D33857C00518C78 /* LoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				FE41707C1D33859C00518C78 /* LoadingViewController.h */,
+				FE41707D1D33859C00518C78 /* LoadingViewController.m */,
+				FE41707E1D33859C00518C78 /* LoadingViewController.xib */,
+			);
+			name = LoadingView;
+			sourceTree = "<group>";
+		};
 		FE615FD91D2367FF00AECD76 = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +214,8 @@
 		FE615FE41D2367FF00AECD76 /* objcTempDemo */ = {
 			isa = PBXGroup;
 			children = (
+				FE41707B1D33857C00518C78 /* LoadingView */,
+				FE4170571D3362F900518C78 /* Hud */,
 				FE4170101D2F4D5100518C78 /* BusinessProcess */,
 				FE41700A1D2F4D0600518C78 /* Home */,
 				FE4170031D2F4C0600518C78 /* Router */,
@@ -246,12 +301,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE4170801D33859C00518C78 /* LoadingViewController.xib in Resources */,
 				FE41700F1D2F4D1900518C78 /* HomeTableViewController.xib in Resources */,
 				FE4170021D2F4BA700518C78 /* AutoPanUpViewController.xib in Resources */,
 				FE615FF51D2367FF00AECD76 /* LaunchScreen.storyboard in Resources */,
 				FE41701B1D2F4EA400518C78 /* HomeItemTableViewCell.xib in Resources */,
 				FE615FF21D2367FF00AECD76 /* Assets.xcassets in Resources */,
 				FE615FF01D2367FF00AECD76 /* Main.storyboard in Resources */,
+				FE4170651D33664D00518C78 /* HudViewController.xib in Resources */,
+				FE41706E1D336BE500518C78 /* TextHudViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,13 +321,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE615FED1D2367FF00AECD76 /* ViewController.m in Sources */,
+				FE41705D1D3364EE00518C78 /* AppRouter.m in Sources */,
 				FE4170011D2F4BA700518C78 /* AutoPanUpViewController.m in Sources */,
+				FE4170601D3365A200518C78 /* AppRouterHud.m in Sources */,
 				FE4170211D2F519E00518C78 /* AppRouterAutoPanUp.m in Sources */,
 				FE416FFD1D2F4B7E00518C78 /* BaseViewController.m in Sources */,
+				FE41707F1D33859C00518C78 /* LoadingViewController.m in Sources */,
+				FE4170641D33664D00518C78 /* HudViewController.m in Sources */,
 				FE41701A1D2F4EA400518C78 /* HomeItemTableViewCell.m in Sources */,
+				FE41706D1D336BE500518C78 /* TextHudViewController.m in Sources */,
 				FE41701E1D2F517200518C78 /* AppRouterHome.m in Sources */,
 				FE41700E1D2F4D1900518C78 /* HomeTableViewController.m in Sources */,
 				FE4170131D2F4D7000518C78 /* BusinessProcess.m in Sources */,
+				FE41707A1D33853400518C78 /* AppRouterLoadingView.m in Sources */,
 				FE4170161D2F4DA400518C78 /* HomeBusinessProcess.m in Sources */,
 				FE615FEA1D2367FF00AECD76 /* AppDelegate.m in Sources */,
 				FE615FE71D2367FF00AECD76 /* main.m in Sources */,

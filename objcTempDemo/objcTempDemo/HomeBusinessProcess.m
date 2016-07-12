@@ -8,6 +8,8 @@
 
 #import "HomeBusinessProcess.h"
 #import "AppRouterAutoPanUp.h"
+#import "AppRouterHud.h"
+#import "AppRouterLoadingView.h"
 //#import "objcTemp.h"
 
 
@@ -20,13 +22,25 @@
 @implementation HomeBusinessProcess
 
 #pragma mark Public Method
++ (NSMutableArray *)obtainHomeItemTypes {
+    return [HomeBusinessProcess vd_sharedInstance].homeItemTypes;
+}
 
++ (void)modifySelectedItemType:(HomeItemType)itemType {
+    [HomeBusinessProcess vd_sharedInstance].selectedItemType = itemType;
+}
+
++ (HomeItemType)obtainSelectedItemType {
+    return [HomeBusinessProcess vd_sharedInstance].selectedItemType;
+}
 
 #pragma mark Properties
 - (NSMutableArray *)homeItemTypes {
     if (!_homeItemTypes) {
         _homeItemTypes = [NSMutableArray arrayWithArray:@[
                                                           @(HomeItemTypeAutoPanUp),
+                                                          @(HomeItemTypeHud),
+                                                          @(HomeItemTypeLoadingView),
                                                           ]];
     }
     
@@ -43,15 +57,29 @@
                 [AppRouterAutoPanUp open];
                 break;
             }
+            case HomeItemTypeHud: {
+                [AppRouterHud open];
+                break;
+            }
+            case HomeItemTypeLoadingView: {
+                [AppRouterLoadingView open];
+                break;
+            }
             default:
                 break;
         }
         
         for (id delegate in self.delegates) {
-            if ([delegate respondsToSelector:@selector(onHomeItemTypeChange:)]) {
-                [delegate onHomeItemTypeChange:_selectedItemType];
+            if ([delegate respondsToSelector:@selector(onSelectedHomeItemTypeChange:)]) {
+                [delegate onSelectedHomeItemTypeChange:_selectedItemType];
             }
         }
+    }
+}
+
++ (void)triggerDelegate:(id)delegate {
+    if ([delegate respondsToSelector:@selector(onSelectedHomeItemTypeChange:)]) {
+        [delegate onSelectedHomeItemTypeChange:[self obtainSelectedItemType]];
     }
 }
 

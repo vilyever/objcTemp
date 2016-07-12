@@ -17,9 +17,15 @@
 @interface BusinessProcess : NSObject
 
 #pragma mark Public Method
++ (void)registerDelegate:(id<BusinessProcessDelegate>)delegate;
++ (void)registerWeakDelegate:(id<BusinessProcessDelegate>)delegate;
++ (void)removeDelegate:(id<BusinessProcessDelegate>)delegate;
+
 - (void)registerDelegate:(id<BusinessProcessDelegate>)delegate;
 - (void)registerWeakDelegate:(id<BusinessProcessDelegate>)delegate;
 - (void)removeDelegate:(id<BusinessProcessDelegate>)delegate;
+
++ (void)triggerDelegate:(id)delegate;
 
 #pragma mark Protected Method
 

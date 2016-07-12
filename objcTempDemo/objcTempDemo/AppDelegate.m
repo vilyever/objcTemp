@@ -11,6 +11,10 @@
 #import "HomeTableViewController.h"
 #import "AppRouterAutoPanUp.h"
 #import "AutoPanUpViewController.h"
+#import "AppRouterHud.h"
+#import "HudViewController.h"
+#import "AppRouterLoadingView.h"
+#import "LoadingViewController.h"
 
 //#import <objcTemp.h>
 //#import <NSObject+VDHook.h>
@@ -30,6 +34,8 @@
     // Override point for customization after application launch.
     [AppRouterHome bindViewController:[HomeTableViewController class]];
     [AppRouterAutoPanUp bindViewController:[AutoPanUpViewController class]];
+    [AppRouterHud bindViewController:[HudViewController class]];
+    [AppRouterLoadingView bindViewController:[LoadingViewController class]];
     
     [AppRouterHome asRoot];
     

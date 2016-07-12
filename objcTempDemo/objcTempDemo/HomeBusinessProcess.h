@@ -9,8 +9,10 @@
 #import "BusinessProcess.h"
 
 typedef NS_ENUM(NSInteger, HomeItemType) {
-    HomeItemTypeAutoPanNone,
+    HomeItemTypeAutoPanNone = -1,
     HomeItemTypeAutoPanUp,
+    HomeItemTypeHud,
+    HomeItemTypeLoadingView,
 };
 
 @class HomeBusinessProcess;
@@ -18,14 +20,16 @@ typedef NS_ENUM(NSInteger, HomeItemType) {
 @protocol HomeBusinessProcessDelegate <BusinessProcessDelegate>
 
 @optional
-- (void)onHomeItemTypeChange:(HomeItemType)type;
+- (void)onSelectedHomeItemTypeChange:(HomeItemType)type;
 
 @end
 
 @interface HomeBusinessProcess : BusinessProcess
 
 #pragma mark Public Method
-
++ (NSMutableArray *)obtainHomeItemTypes;
++ (void)modifySelectedItemType:(HomeItemType)itemType;
++ (HomeItemType)obtainSelectedItemType;
 
 #pragma mark Properties
 @property (nonatomic, strong) NSMutableArray *homeItemTypes;
