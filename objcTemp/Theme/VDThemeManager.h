@@ -33,6 +33,8 @@ extern NSString * const VDThemeManagerThemeTypeDidChangeNotificationUserInfoOldT
 + (void)changeThemeType:(NSInteger)themeType;
 + (void)setDefaultThemeType:(NSInteger)defaultThemeType;
 
++ (NSInteger)currentThemeType;
+
 + (UIColor *)colorForKey:(NSString *)key;
 + (UIImage *)imageForKey:(NSString *)key;
 + (UIFont *)fontForKey:(NSString *)key;

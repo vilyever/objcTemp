@@ -50,6 +50,10 @@ NSString * const VDThemeManagerThemeTypeDidChangeNotificationUserInfoOldThemeTyp
     }
 }
 
++ (NSInteger)currentThemeType {
+    return [VDThemeManager vd_sharedInstance].themeType;
+}
+
 + (UIColor *)colorForKey:(NSString *)key {
     if ([[VDThemeManager vd_sharedInstance].datasource respondsToSelector:@selector(colorForThemeType:withKey:)]) {
         return [[VDThemeManager vd_sharedInstance].datasource colorForThemeType:[VDThemeManager vd_sharedInstance].themeType withKey:key];
