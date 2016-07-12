@@ -20,33 +20,32 @@
 @implementation VDHudViewController
 
 #pragma mark Public Method
-- (UIColor *)hudBackgroundColor {
-    return VDRGBAColor(0.0f, 0.0f, 0.0f, 180.0f);
-}
-
-- (CGFloat)hudCornerRadius {
-    return 8.0f;
-}
-
-- (CGSize)hudSize {
-    return self.view.bounds.size;
-}
 
 #pragma mark Properties
+- (void)setHudBackgroundColor:(UIColor *)hudBackgroundColor {
+    _hudBackgroundColor = hudBackgroundColor;
+    self.view.backgroundColor = _hudBackgroundColor;
+}
 
+- (void)setHudCornerRadius:(CGFloat)hudCornerRadius {
+    _hudCornerRadius = hudCornerRadius;
+    self.view.layer.cornerRadius = _hudCornerRadius;
+}
 
 #pragma mark Overrides
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-
-    self.view.backgroundColor = [self hudBackgroundColor];
-    self.view.layer.cornerRadius = [self hudCornerRadius];
+    
+    _hudBackgroundColor = VDRGBAColor(0.0f, 0.0f, 0.0f, 180.0f);
+    _hudCornerRadius = 12.0f;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 
+    self.view.backgroundColor = self.hudBackgroundColor;
+    self.view.layer.cornerRadius = self.hudCornerRadius;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -79,7 +78,9 @@
 //}
 
 - (void)viewWillLayoutSubviews {
-    self.view.bounds = CGRectMake(0.0f, 0.0f, [self hudSize].width, [self hudSize].height);
+    [super viewWillLayoutSubviews];
+    
+    self.view.bounds = CGRectMake(0.0f, 0.0f, self.hudSize.width, self.hudSize.height);
 }
 
 #pragma mark IBActions

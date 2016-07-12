@@ -13,5 +13,7 @@
 
 #pragma mark Public Method
 - (void)vd_showAsHud;
+- (void)vd_hideHud;
+- (void)vd_hideHudDelay:(NSTimeInterval)delay;
 
 @end

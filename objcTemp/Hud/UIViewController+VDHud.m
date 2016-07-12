@@ -22,6 +22,14 @@
     [self.view vd_showAsHud];
 }
 
+- (void)vd_hideHud {
+    [self.view vd_hideHud];
+}
+
+- (void)vd_hideHudDelay:(NSTimeInterval)delay {
+    [self.view vd_hideHudDelay:delay];
+}
+
 #pragma mark Private Method
 
 

@@ -15,10 +15,10 @@
 @interface VDHudViewController : UIViewController
 
 #pragma mark Public Method
-- (UIColor *)hudBackgroundColor;
-- (CGFloat)hudCornerRadius;
-- (CGSize)hudSize;
 
 #pragma mark Properties
+@property (nonatomic, assign) CGSize hudSize;
+@property (nonatomic, strong) UIColor *hudBackgroundColor;
+@property (nonatomic, assign) CGFloat hudCornerRadius;
 
 @end

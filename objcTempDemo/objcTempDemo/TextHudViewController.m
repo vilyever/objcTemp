@@ -30,6 +30,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    self.hudSize = CGSizeMake(200.0f, 400.0f);
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -59,10 +61,6 @@
 
 - (void)dealloc {
     
-}
-
-- (CGSize)hudSize {
-    return CGSizeMake(200.0f, 400.0f);
 }
 
 //- (UIStatusBarStyle)preferredStatusBarStyle {
