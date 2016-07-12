@@ -53,6 +53,8 @@
 		FE4170841D338E1100518C78 /* VDLoadingLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4170821D338E1100518C78 /* VDLoadingLayer.m */; };
 		FE41708B1D34B81D00518C78 /* VDLoadingAngularVariationView.h in Headers */ = {isa = PBXBuildFile; fileRef = FE4170891D34B81D00518C78 /* VDLoadingAngularVariationView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FE41708C1D34B81D00518C78 /* VDLoadingAngularVariationView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE41708A1D34B81D00518C78 /* VDLoadingAngularVariationView.m */; };
+		FE4170941D34DD5600518C78 /* VDSimpleHudViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = FE4170921D34DD5600518C78 /* VDSimpleHudViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE4170951D34DD5600518C78 /* VDSimpleHudViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4170931D34DD5600518C78 /* VDSimpleHudViewController.m */; };
 		FE615F3B1D23679B00AECD76 /* objcTemp.h in Headers */ = {isa = PBXBuildFile; fileRef = FE615F3A1D23679B00AECD76 /* objcTemp.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FE615F421D23679B00AECD76 /* objcTemp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE615F371D23679B00AECD76 /* objcTemp.framework */; };
 		FE615F471D23679B00AECD76 /* objcTempTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FE615F461D23679B00AECD76 /* objcTempTests.m */; };
@@ -184,6 +186,8 @@
 		FE4170821D338E1100518C78 /* VDLoadingLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDLoadingLayer.m; sourceTree = "<group>"; };
 		FE4170891D34B81D00518C78 /* VDLoadingAngularVariationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDLoadingAngularVariationView.h; sourceTree = "<group>"; };
 		FE41708A1D34B81D00518C78 /* VDLoadingAngularVariationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDLoadingAngularVariationView.m; sourceTree = "<group>"; };
+		FE4170921D34DD5600518C78 /* VDSimpleHudViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDSimpleHudViewController.h; sourceTree = "<group>"; };
+		FE4170931D34DD5600518C78 /* VDSimpleHudViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDSimpleHudViewController.m; sourceTree = "<group>"; };
 		FE615F371D23679B00AECD76 /* objcTemp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = objcTemp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE615F3A1D23679B00AECD76 /* objcTemp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = objcTemp.h; sourceTree = "<group>"; };
 		FE615F3C1D23679B00AECD76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -358,6 +362,8 @@
 				FE4170541D33624800518C78 /* UIView+VDHud.m */,
 				FE4170661D3369E700518C78 /* VDHudViewController.h */,
 				FE4170671D3369E700518C78 /* VDHudViewController.m */,
+				FE4170921D34DD5600518C78 /* VDSimpleHudViewController.h */,
+				FE4170931D34DD5600518C78 /* VDSimpleHudViewController.m */,
 			);
 			path = Hud;
 			sourceTree = "<group>";
@@ -718,6 +724,7 @@
 				FE4170721D33788600518C78 /* VDLoadingView.h in Headers */,
 				FE4170681D3369E700518C78 /* VDHudViewController.h in Headers */,
 				FE41708B1D34B81D00518C78 /* VDLoadingAngularVariationView.h in Headers */,
+				FE4170941D34DD5600518C78 /* VDSimpleHudViewController.h in Headers */,
 				FECA26AF1D26556800ED8FDD /* NSObject+VDPersistent.h in Headers */,
 				FE615FC51D2367B500AECD76 /* UIImage+VDEnhance.h in Headers */,
 			);
@@ -876,6 +883,7 @@
 				FE615FC21D2367B500AECD76 /* UICollectionViewCell+VDEnhance.m in Sources */,
 				FE4170561D33624800518C78 /* UIView+VDHud.m in Sources */,
 				FE4170521D3346B500518C78 /* VDHudMaskView.m in Sources */,
+				FE4170951D34DD5600518C78 /* VDSimpleHudViewController.m in Sources */,
 				FE416FB81D2DEE1700518C78 /* VDThemeSelectorArgument.m in Sources */,
 				FE615FD81D2367B500AECD76 /* VDWeakRef.m in Sources */,
 				FE615FA11D2367B500AECD76 /* VDFingerPrintViewController.m in Sources */,

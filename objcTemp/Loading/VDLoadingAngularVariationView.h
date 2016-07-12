@@ -24,4 +24,7 @@
 @property (nonatomic, assign) CGFloat torusWidth;
 @property (nonatomic, strong) UIColor *angularColor;
 
+#pragma mark Private Method
+- (void)internalInitVDLoadingAngularVariationView;
+
 @end

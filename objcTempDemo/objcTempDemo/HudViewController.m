@@ -73,9 +73,27 @@
 //    view.backgroundColor = [UIColor redColor];
 //    [view vd_showAsHud];
 //    [view vd_hideHudDelay:3];
-    TextHudViewController *controller = [TextHudViewController vd_controllerFromNib];
-    [controller.view vd_showAsHud];
-    [controller.view vd_hideHudDelay:3];
+    
+    
+//    TextHudViewController *controller = [TextHudViewController vd_controllerFromNib];
+//    [controller.view vd_showAsHud];
+//    [controller.view vd_hideHudDelay:3];
+    
+    VDSimpleHudViewController *controller = [[VDSimpleHudViewController alloc] init];
+    controller.title = @"haha";
+    controller.leftButtonTitle = @"left";
+    controller.centerButtonTitle = @"center";
+    controller.rightButtonTitle = @"right";
+    
+    controller.shouldDisplayLeftButton = YES;
+    controller.shouldDisplayCenterButton = YES;
+    controller.shouldDisplayRightButton = YES;
+    
+    VDLoadingAngularVariationView *loadingView = [[VDLoadingAngularVariationView alloc] init];
+    controller.customView = loadingView;
+    
+    [controller vd_showAsHud];
+    [controller vd_hideHudDelay:3];
 }
 
 

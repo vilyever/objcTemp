@@ -28,17 +28,23 @@
 - (instancetype)init {
     self = [super init];
     
+    [self internalInitVDLoadingAngularVariationView];
+    
     return self;
 }
 
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     
+    [self internalInitVDLoadingAngularVariationView];
+    
     return self;
 }
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
+    
+    [self internalInitVDLoadingAngularVariationView];
     
     return self;
 }
@@ -49,13 +55,6 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    
-    _angularColor = [UIColor vd_colorWithHexValue:0x1E90FF];
-    _radius = 35.0f;
-    _torusWidth = 5.0f;
-    _minAngular = 10;
-    _maxAngular = 300;
-    _leapAngular = 360 * 2 + 120;
 }
 
 - (CGSize)sizeThatFits:(CGSize)size {
@@ -142,5 +141,14 @@
 
 
 #pragma mark Private Method
+- (void)internalInitVDLoadingAngularVariationView {
+    _angularColor = [UIColor vd_colorWithHexValue:0x1E90FF];
+    _radius = 35.0f;
+    _torusWidth = 5.0f;
+    _minAngular = 10;
+    _maxAngular = 300;
+    _leapAngular = 360 * 2 + 120;
+    [self startAnimation];
+}
 
 @end

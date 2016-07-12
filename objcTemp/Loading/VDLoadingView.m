@@ -67,11 +67,17 @@
 - (instancetype)init {
     self = [super init];
     
+    [self internalInitVDLoadingView];
+    self.backgroundColor = [UIColor clearColor];
+    
     return self;
 }
 
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
+    
+    [self internalInitVDLoadingView];
+    self.backgroundColor = [UIColor clearColor];
     
     return self;
 }
@@ -79,19 +85,14 @@
 - (instancetype)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     
+    [self internalInitVDLoadingView];
+    
     return self;
 }
 
 - (void)awakeFromNib {
     [super awakeFromNib];
     
-    _progressAnimationRepeatCount = HUGE_VALF;
-    _progressAnimationDuration = 1.5;
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(internalAppWillResignActive:) name:UIApplicationWillResignActiveNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(internalAppDidEnterBackground:) name:UIApplicationDidEnterBackgroundNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(internalAppWillEnterForeground:) name:UIApplicationWillEnterForegroundNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(internalAppDidBecomeActive:) name:UIApplicationDidBecomeActiveNotification object:nil];
 }
 
 - (void)setHidden:(BOOL)hidden {
@@ -130,6 +131,16 @@
 }
 
 #pragma mark Private Method
+- (void)internalInitVDLoadingView {
+    _progressAnimationRepeatCount = HUGE_VALF;
+    _progressAnimationDuration = 1.5;
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(internalAppWillResignActive:) name:UIApplicationWillResignActiveNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(internalAppDidEnterBackground:) name:UIApplicationDidEnterBackgroundNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(internalAppWillEnterForeground:) name:UIApplicationWillEnterForegroundNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(internalAppDidBecomeActive:) name:UIApplicationDidBecomeActiveNotification object:nil];
+}
+
 - (void)internalAppWillResignActive:(NSNotification *)notification {
 }
 
