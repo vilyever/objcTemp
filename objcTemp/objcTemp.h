@@ -92,6 +92,8 @@ FOUNDATION_EXPORT const unsigned char objcTempVersionString[];
 #import <objcTemp/VDAutoPanUpElement.h>
 #import <objcTemp/VDAutoPanUpManager.h>
 #import <objcTemp/UIView+VDAutoPanUp.h>
+#import <objcTemp/VDInputManager.h>
+#import <objcTemp/UIView+VDInputManager.h>
 
 #import <objcTemp/UISlider+VDEnhance.h>
 
