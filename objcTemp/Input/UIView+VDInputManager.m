@@ -15,6 +15,8 @@
 
 @implementation UIView (VDInputManager)
 
+@dynamic vd_inputManager;
+
 #pragma mark Public Method
 - (void)vd_addInputView:(id)inputView {
     [self.vd_inputManager addInputView:inputView];
