@@ -12,6 +12,9 @@
 @interface NSMutableArray (VDEnhance)
 
 #pragma mark Public Method
-
+- (void)vd_queuePush:(id)obj;
+- (id)vd_queuePop;
+- (void)vd_stackPush:(id)obj;
+- (id)vd_stackPop;
 
 @end

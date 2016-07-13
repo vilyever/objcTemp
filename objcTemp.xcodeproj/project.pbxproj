@@ -55,6 +55,10 @@
 		FE41708C1D34B81D00518C78 /* VDLoadingAngularVariationView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE41708A1D34B81D00518C78 /* VDLoadingAngularVariationView.m */; };
 		FE4170941D34DD5600518C78 /* VDSimpleHudViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = FE4170921D34DD5600518C78 /* VDSimpleHudViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FE4170951D34DD5600518C78 /* VDSimpleHudViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4170931D34DD5600518C78 /* VDSimpleHudViewController.m */; };
+		FE4170A11D35E34000518C78 /* VDToastView.h in Headers */ = {isa = PBXBuildFile; fileRef = FE41709F1D35E34000518C78 /* VDToastView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE4170A21D35E34000518C78 /* VDToastView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4170A01D35E34000518C78 /* VDToastView.m */; };
+		FE4170AA1D35E93A00518C78 /* NSMutableArray+VDEnhance.h in Headers */ = {isa = PBXBuildFile; fileRef = FE4170A81D35E93A00518C78 /* NSMutableArray+VDEnhance.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE4170AB1D35E93A00518C78 /* NSMutableArray+VDEnhance.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4170A91D35E93A00518C78 /* NSMutableArray+VDEnhance.m */; };
 		FE615F3B1D23679B00AECD76 /* objcTemp.h in Headers */ = {isa = PBXBuildFile; fileRef = FE615F3A1D23679B00AECD76 /* objcTemp.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FE615F421D23679B00AECD76 /* objcTemp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE615F371D23679B00AECD76 /* objcTemp.framework */; };
 		FE615F471D23679B00AECD76 /* objcTempTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FE615F461D23679B00AECD76 /* objcTempTests.m */; };
@@ -188,6 +192,10 @@
 		FE41708A1D34B81D00518C78 /* VDLoadingAngularVariationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDLoadingAngularVariationView.m; sourceTree = "<group>"; };
 		FE4170921D34DD5600518C78 /* VDSimpleHudViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDSimpleHudViewController.h; sourceTree = "<group>"; };
 		FE4170931D34DD5600518C78 /* VDSimpleHudViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDSimpleHudViewController.m; sourceTree = "<group>"; };
+		FE41709F1D35E34000518C78 /* VDToastView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDToastView.h; sourceTree = "<group>"; };
+		FE4170A01D35E34000518C78 /* VDToastView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDToastView.m; sourceTree = "<group>"; };
+		FE4170A81D35E93A00518C78 /* NSMutableArray+VDEnhance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+VDEnhance.h"; sourceTree = "<group>"; };
+		FE4170A91D35E93A00518C78 /* NSMutableArray+VDEnhance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+VDEnhance.m"; sourceTree = "<group>"; };
 		FE615F371D23679B00AECD76 /* objcTemp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = objcTemp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE615F3A1D23679B00AECD76 /* objcTemp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = objcTemp.h; sourceTree = "<group>"; };
 		FE615F3C1D23679B00AECD76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -364,6 +372,8 @@
 				FE4170671D3369E700518C78 /* VDHudViewController.m */,
 				FE4170921D34DD5600518C78 /* VDSimpleHudViewController.h */,
 				FE4170931D34DD5600518C78 /* VDSimpleHudViewController.m */,
+				FE41709F1D35E34000518C78 /* VDToastView.h */,
+				FE4170A01D35E34000518C78 /* VDToastView.m */,
 			);
 			path = Hud;
 			sourceTree = "<group>";
@@ -379,6 +389,15 @@
 				FE41708A1D34B81D00518C78 /* VDLoadingAngularVariationView.m */,
 			);
 			path = Loading;
+			sourceTree = "<group>";
+		};
+		FE4170A31D35E8C900518C78 /* NSArray */ = {
+			isa = PBXGroup;
+			children = (
+				FE4170A81D35E93A00518C78 /* NSMutableArray+VDEnhance.h */,
+				FE4170A91D35E93A00518C78 /* NSMutableArray+VDEnhance.m */,
+			);
+			path = NSArray;
 			sourceTree = "<group>";
 		};
 		FE615F2D1D23679B00AECD76 = {
@@ -404,6 +423,7 @@
 		FE615F391D23679B00AECD76 /* objcTemp */ = {
 			isa = PBXGroup;
 			children = (
+				FE4170A31D35E8C900518C78 /* NSArray */,
 				FE41706F1D33778000518C78 /* Loading */,
 				FE41704A1D33431F00518C78 /* Hud */,
 				FE41703D1D2FAB7A00518C78 /* UISlider */,
@@ -725,6 +745,8 @@
 				FE4170681D3369E700518C78 /* VDHudViewController.h in Headers */,
 				FE41708B1D34B81D00518C78 /* VDLoadingAngularVariationView.h in Headers */,
 				FE4170941D34DD5600518C78 /* VDSimpleHudViewController.h in Headers */,
+				FE4170A11D35E34000518C78 /* VDToastView.h in Headers */,
+				FE4170AA1D35E93A00518C78 /* NSMutableArray+VDEnhance.h in Headers */,
 				FECA26AF1D26556800ED8FDD /* NSObject+VDPersistent.h in Headers */,
 				FE615FC51D2367B500AECD76 /* UIImage+VDEnhance.h in Headers */,
 			);
@@ -843,6 +865,7 @@
 				FE4170411D2FAB8E00518C78 /* UISlider+VDEnhance.m in Sources */,
 				FE615FBE1D2367B500AECD76 /* VDRouterNavigationViewController.m in Sources */,
 				FE615FD01D2367B500AECD76 /* UIView+VDEnhance.m in Sources */,
+				FE4170A21D35E34000518C78 /* VDToastView.m in Sources */,
 				FE4170691D3369E700518C78 /* VDHudViewController.m in Sources */,
 				FE615F9F1D2367B500AECD76 /* CALayer+VDEnhance.m in Sources */,
 				FE416FA81D2DE7E000518C78 /* VDThemeManager.m in Sources */,
@@ -866,6 +889,7 @@
 				FE41708C1D34B81D00518C78 /* VDLoadingAngularVariationView.m in Sources */,
 				FE416F8D1D2CFFA900518C78 /* VDSelectorArgument.m in Sources */,
 				FE4170731D33788600518C78 /* VDLoadingView.m in Sources */,
+				FE4170AB1D35E93A00518C78 /* NSMutableArray+VDEnhance.m in Sources */,
 				FE416FF01D2F44FC00518C78 /* UIView+VDAutoPanUp.m in Sources */,
 				FE615FBC1D2367B500AECD76 /* VDRouter.m in Sources */,
 				FE615FC01D2367B500AECD76 /* UIApplication+VDEnhance.m in Sources */,

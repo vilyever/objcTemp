@@ -15,6 +15,7 @@
 @interface HudViewController ()
 
 @property (weak, nonatomic) IBOutlet UIButton *showButton;
+@property (nonatomic, assign) NSInteger x;
 
 @end
 
@@ -79,21 +80,24 @@
 //    [controller.view vd_showAsHud];
 //    [controller.view vd_hideHudDelay:3];
     
-    VDSimpleHudViewController *controller = [[VDSimpleHudViewController alloc] init];
-    controller.title = @"haha";
-    controller.leftButtonTitle = @"left";
-    controller.centerButtonTitle = @"center";
-    controller.rightButtonTitle = @"right";
+//    VDSimpleHudViewController *controller = [[VDSimpleHudViewController alloc] init];
+//    controller.title = @"haha";
+//    controller.leftButtonTitle = @"left";
+//    controller.centerButtonTitle = @"center";
+//    controller.rightButtonTitle = @"right";
+//    
+//    controller.shouldDisplayLeftButton = YES;
+//    controller.shouldDisplayCenterButton = YES;
+//    controller.shouldDisplayRightButton = YES;
+//    
+//    VDLoadingAngularVariationView *loadingView = [[VDLoadingAngularVariationView alloc] init];
+//    controller.customView = loadingView;
+//    
+//    [controller vd_showAsHud];
+//    [controller vd_hideHudDelay:3];
     
-    controller.shouldDisplayLeftButton = YES;
-    controller.shouldDisplayCenterButton = YES;
-    controller.shouldDisplayRightButton = YES;
     
-    VDLoadingAngularVariationView *loadingView = [[VDLoadingAngularVariationView alloc] init];
-    controller.customView = loadingView;
-    
-    [controller vd_showAsHud];
-    [controller vd_hideHudDelay:3];
+    [VDToastView showToast:[NSString stringWithFormat:@"info %@", @(self.x++)]];
 }
 
 

@@ -14,10 +14,15 @@
 @interface VDToastView : UIView
 
 #pragma mark Public Method
++ (void)showToast:(NSString *)info;
++ (void)showToast:(NSString *)info withShowTime:(NSTimeInterval)showTime;
+- (void)pushInfo:(NSString *)info;
 
 
 #pragma mark Properties
-
+@property (nonatomic, strong, readonly) UILabel *infoLabel;
+@property (nonatomic, strong) NSMutableArray *infoArray;
+@property (nonatomic, assign) NSTimeInterval defaultShowTime;
 
 #pragma mark Private Method
 - (void)internalInitVDToastView;
