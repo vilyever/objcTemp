@@ -22,20 +22,21 @@
 
 #pragma mark Public Method
 - (void)addInputView:(id)inputView {
-    [self addInputView:inputView atIndex:-1];
+    if ([inputView respondsToSelector:@selector(setInputAccessoryView:)]) {
+        [inputView setInputAccessoryView:self.inputAccessoryToolBar];
+    }
+    
+    [self.inputViews addObject:[VDWeakRef refWithObject:inputView]];
+    
+    [self internalFindPrevNextInputView];
 }
 
 - (void)addInputView:(id)inputView atIndex:(NSUInteger)index {
     if ([inputView respondsToSelector:@selector(setInputAccessoryView:)]) {
         [inputView setInputAccessoryView:self.inputAccessoryToolBar];
     }
-    
-    if (index < 0) {
-        [self.inputViews addObject:[VDWeakRef refWithObject:inputView]];
-    }
-    else {
-        [self.inputViews insertObject:[VDWeakRef refWithObject:inputView] atIndex:index];
-    }
+
+    [self.inputViews insertObject:[VDWeakRef refWithObject:inputView] atIndex:index];
     
     [self internalFindPrevNextInputView];
 }
