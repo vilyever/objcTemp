@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "objcTemp"
-  s.version          = "0.0.039"
+  s.version          = "0.0.040"
   s.summary          = "sth useful."
   s.description      = <<-DESC
                        wait for next time.

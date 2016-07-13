@@ -159,6 +159,10 @@
     [self.buttonsLayoutView addSubview:self.rightButtonSplitLineView];
     [self.buttonsLayoutView addSubview:self.rightButton];
     
+    [self.leftButton addTarget:self action:@selector(internalOnLeftButtonClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.centerButton addTarget:self action:@selector(internalOnCenterButtonClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.rightButton addTarget:self action:@selector(internalOnRightButtonClick) forControlEvents:UIControlEventTouchUpInside];
+    
     _shouldDisplayLeftButton = NO;
     _shouldDisplayCenterButton = NO;
     _shouldDisplayRightButton = NO;
@@ -316,6 +320,24 @@
     button.titleLabel.font = [UIFont systemFontOfSize:18.0f];
     
     return button;
+}
+
+- (void)internalOnLeftButtonClick {
+    if ([self.delegate respondsToSelector:@selector(onSimpleHudViewControllerLeftButtonClick:)]) {
+        [self.delegate onSimpleHudViewControllerLeftButtonClick:self];
+    }
+}
+
+- (void)internalOnCenterButtonClick {
+    if ([self.delegate respondsToSelector:@selector(onSimpleHudViewControllerCenterButtonClick:)]) {
+        [self.delegate onSimpleHudViewControllerCenterButtonClick:self];
+    }
+}
+
+- (void)internalOnRightButtonClick {
+    if ([self.delegate respondsToSelector:@selector(onSimpleHudViewControllerRightButtonClick:)]) {
+        [self.delegate onSimpleHudViewControllerRightButtonClick:self];
+    }
 }
 
 @end

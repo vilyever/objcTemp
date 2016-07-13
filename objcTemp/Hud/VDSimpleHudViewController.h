@@ -11,12 +11,23 @@
 
 @class VDSimpleHudViewController;
 
+@protocol VDSimpleHudViewControllerDelegate <NSObject>
+
+@optional
+- (void)onSimpleHudViewControllerLeftButtonClick:(VDSimpleHudViewController *)controller;
+- (void)onSimpleHudViewControllerCenterButtonClick:(VDSimpleHudViewController *)controller;
+- (void)onSimpleHudViewControllerRightButtonClick:(VDSimpleHudViewController *)controller;
+
+@end
+
 @interface VDSimpleHudViewController : VDHudViewController
 
 #pragma mark Public Method
 
 
 #pragma mark Properties
+@property (nonatomic, weak) id<VDSimpleHudViewControllerDelegate> delegate;
+
 @property (nonatomic, copy) NSString *hudTitle;
 @property (nonatomic, copy) NSString *leftButtonTitle;
 @property (nonatomic, copy) NSString *centerButtonTitle;
@@ -35,5 +46,10 @@
 @property (nonatomic, strong, readonly) UIButton *centerButton;
 @property (nonatomic, strong, readonly) UIView *rightButtonSplitLineView;
 @property (nonatomic, strong, readonly) UIButton *rightButton;
+
+#pragma mark Private Method
+- (void)internalOnLeftButtonClick;
+- (void)internalOnCenterButtonClick;
+- (void)internalOnRightButtonClick;
 
 @end
