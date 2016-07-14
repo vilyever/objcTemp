@@ -27,6 +27,10 @@
 
 + (instancetype)modelWithJsonString:(NSString *)jsonString usingEncoding:(NSStringEncoding)encoding
 {
+    if (jsonString.length == 0) {
+        return nil;
+    }
+    
     NSError *error;
     NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:[jsonString dataUsingEncoding:encoding]
                                                                options:kNilOptions
@@ -40,6 +44,10 @@
 
 + (instancetype)modelWithDictionary:(NSDictionary *)dictionary
 {
+    if (!dictionary) {
+        return nil;
+    }
+    
     id model = [[self alloc] init];
     
     NSDictionary *jsonKeyDictionary = [self jsonKeyDictionary];
@@ -67,6 +75,10 @@
 
 + (NSArray *)arrayWithJsonString:(NSString *)jsonString usingEncoding:(NSStringEncoding)encoding
 {
+    if (jsonString.length == 0) {
+        return nil;
+    }
+    
     NSError *error;
     NSArray *dictionaries = [NSJSONSerialization JSONObjectWithData:[jsonString dataUsingEncoding:encoding]
                                                             options:kNilOptions
@@ -80,6 +92,10 @@
 
 + (NSArray *)arrayWithDictionaries:(NSArray *)dictionaries
 {
+    if (!dictionaries) {
+        return nil;
+    }
+    
     NSMutableArray *array = [NSMutableArray new];
     
     for (NSDictionary *dic in dictionaries)
