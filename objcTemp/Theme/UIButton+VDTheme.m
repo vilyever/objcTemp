@@ -1,21 +1,20 @@
 //
-//  UIButton+VDThemeManager.m
+//  UIButton+VDTheme.m
 //  objcTemp
 //
-//  Created by Deng on 16/7/8.
+//  Created by Deng on 16/7/14.
 //  Copyright © Deng. All rights reserved.
 //
 
-#import "UIButton+VDThemeManager.h"
+#import "UIButton+VDTheme.h"
+#import "VDThemeManager.h"
 
 //#import <objc/runtime.h>
 //#import "objcTemp.h"
 //@import objcTemp;
 
-#import "VDThemeManager.h"
 
-
-@implementation UIButton (VDThemeManager)
+@implementation UIButton (VDTheme)
 
 #pragma mark Public Method
 - (void)vd_setTitleColorWithThemeKey:(NSString *)key forState:(UIControlState)state {

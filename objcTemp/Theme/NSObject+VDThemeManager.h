@@ -7,8 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "VDThemeElement.h"
-
+#import "VDThemeManager.h"
 
 @interface NSObject (VDThemeManager)
 

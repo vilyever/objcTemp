@@ -84,12 +84,12 @@ FOUNDATION_EXPORT const unsigned char objcTempVersionString[];
 #import <objcTemp/VDThemeElement.h>
 #import <objcTemp/VDThemeManager.h>
 #import <objcTemp/NSObject+VDThemeManager.h>
-#import <objcTemp/UIView+VDThemeManager.h>
-#import <objcTemp/UIButton+VDThemeManager.h>
-#import <objcTemp/UINavigationBar+VDThemeManager.h>
-#import <objcTemp/UISlider+VDThemeManager.h>
-#import <objcTemp/UILabel+VDThemeManager.h>
-#import <objcTemp/UIImageView+VDThemeManager.h>
+#import <objcTemp/UIView+VDTheme.h>
+#import <objcTemp/UIButton+VDTheme.h>
+#import <objcTemp/UINavigationBar+VDTheme.h>
+#import <objcTemp/UISlider+VDTheme.h>
+#import <objcTemp/UILabel+VDTheme.h>
+#import <objcTemp/UIImageView+VDTheme.h>
 
 #import <objcTemp/VDAutoPanUpElement.h>
 #import <objcTemp/VDAutoPanUpManager.h>

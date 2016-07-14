@@ -1,12 +1,12 @@
 //
-//  UISlider+VDThemeManager.m
+//  UISlider+VDTheme.m
 //  objcTemp
 //
-//  Created by Deng on 16/7/8.
+//  Created by Deng on 16/7/14.
 //  Copyright © Deng. All rights reserved.
 //
 
-#import "UISlider+VDThemeManager.h"
+#import "UISlider+VDTheme.h"
 #import "VDThemeManager.h"
 
 //#import <objc/runtime.h>
@@ -14,7 +14,7 @@
 //@import objcTemp;
 
 
-@implementation UISlider (VDThemeManager)
+@implementation UISlider (VDTheme)
 
 #pragma mark Public Method
 - (void)vd_setThumbTintColorWithThemeKey:(NSString *)key {

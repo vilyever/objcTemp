@@ -1,12 +1,12 @@
 //
-//  UINavigationBar+VDThemeManager.m
+//  UINavigationBar+VDTheme.m
 //  objcTemp
 //
-//  Created by Deng on 16/7/8.
+//  Created by Deng on 16/7/14.
 //  Copyright © Deng. All rights reserved.
 //
 
-#import "UINavigationBar+VDThemeManager.h"
+#import "UINavigationBar+VDTheme.h"
 #import "VDThemeManager.h"
 
 //#import <objc/runtime.h>
@@ -14,7 +14,7 @@
 //@import objcTemp;
 
 
-@implementation UINavigationBar (VDThemeManager)
+@implementation UINavigationBar (VDTheme)
 
 #pragma mark Public Method
 - (void)vd_setBarTintColorWithThemeKey:(NSString *)key {
@@ -85,7 +85,6 @@
         [VDThemeManager removeTarget:self withSelector:@selector(setShadowImage:) withArguments:@[argument1]];
     }
 }
-
 
 #pragma mark Private Method
 

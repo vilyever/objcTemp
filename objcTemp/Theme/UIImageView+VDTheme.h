@@ -1,5 +1,5 @@
 //
-//  UIImageView+VDThemeManager.h
+//  UIImageView+VDTheme.h
 //  objcTemp
 //
 //  Created by Deng on 16/7/14.
@@ -9,11 +9,10 @@
 #import <UIKit/UIKit.h>
 
 
-@interface UIImageView (VDThemeManager)
+@interface UIImageView (VDTheme)
 
 #pragma mark Public Method
 - (void)vd_setImageWithThemeKey:(NSString *)key;
 - (void)vd_setHighlightedImageImageWithThemeKey:(NSString *)key;
-
 
 @end

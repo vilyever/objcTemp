@@ -1,18 +1,20 @@
 //
-//  UIView+VDThemeManager.m
+//  UIView+VDTheme.m
 //  objcTemp
 //
-//  Created by Deng on 16/7/7.
+//  Created by Deng on 16/7/14.
 //  Copyright © Deng. All rights reserved.
 //
 
-#import "UIView+VDThemeManager.h"
+#import "UIView+VDTheme.h"
 #import "VDThemeManager.h"
 
 //#import <objc/runtime.h>
+//#import "objcTemp.h"
+//@import objcTemp;
 
 
-@implementation UIView (VDThemeManager)
+@implementation UIView (VDTheme)
 
 #pragma mark Public Method
 - (void)vd_setBackgroundColorWithThemeKey:(NSString *)key {

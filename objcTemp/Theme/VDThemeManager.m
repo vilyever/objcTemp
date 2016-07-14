@@ -9,6 +9,7 @@
 #import "VDThemeManager.h"
 #import "NSObject+VDEnhance.h"
 #import "VDWeakRef.h"
+#import "NSObject+VDThemeManager.h"
 
 #if !VDThemeManagerThemeTypeKey
 #define VDThemeManagerThemeTypeKey \

@@ -1,19 +1,20 @@
 //
-//  UIImageView+VDThemeManager.m
+//  UIImageView+VDTheme.m
 //  objcTemp
 //
 //  Created by Deng on 16/7/14.
 //  Copyright © Deng. All rights reserved.
 //
 
-#import "UIImageView+VDThemeManager.h"
+#import "UIImageView+VDTheme.h"
 #import "VDThemeManager.h"
+
 //#import <objc/runtime.h>
 //#import "objcTemp.h"
 //@import objcTemp;
 
 
-@implementation UIImageView (VDThemeManager)
+@implementation UIImageView (VDTheme)
 
 #pragma mark Public Method
 - (void)vd_setImageWithThemeKey:(NSString *)key {

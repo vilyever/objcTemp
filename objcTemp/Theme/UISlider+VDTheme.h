@@ -1,15 +1,15 @@
 //
-//  UISlider+VDThemeManager.h
+//  UISlider+VDTheme.h
 //  objcTemp
 //
-//  Created by Deng on 16/7/8.
+//  Created by Deng on 16/7/14.
 //  Copyright © Deng. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
 
-@interface UISlider (VDThemeManager)
+@interface UISlider (VDTheme)
 
 #pragma mark Public Method
 - (void)vd_setThumbTintColorWithThemeKey:(NSString *)key;

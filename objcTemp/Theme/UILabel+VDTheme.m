@@ -1,12 +1,12 @@
 //
-//  UILabel+VDThemeManager.m
+//  UILabel+VDTheme.m
 //  objcTemp
 //
 //  Created by Deng on 16/7/14.
 //  Copyright © Deng. All rights reserved.
 //
 
-#import "UILabel+VDThemeManager.h"
+#import "UILabel+VDTheme.h"
 #import "VDThemeManager.h"
 
 //#import <objc/runtime.h>
@@ -14,7 +14,7 @@
 //@import objcTemp;
 
 
-@implementation UILabel (VDThemeManager)
+@implementation UILabel (VDTheme)
 
 #pragma mark Public Method
 - (void)vd_setTextColorWithThemeKey:(NSString *)key {

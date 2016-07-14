@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "NSObject+VDThemeManager.h"
+#import "VDThemeElement.h"
 #import "VDThemeSelectorArgument.h"
 
 extern NSString * const VDThemeManagerThemeTypeDidChangeNotification;

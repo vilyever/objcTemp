@@ -1,5 +1,5 @@
 //
-//  UILabel+VDThemeManager.h
+//  UILabel+VDTheme.h
 //  objcTemp
 //
 //  Created by Deng on 16/7/14.
@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 
-@interface UILabel (VDThemeManager)
+@interface UILabel (VDTheme)
 
 #pragma mark Public Method
 - (void)vd_setTextColorWithThemeKey:(NSString *)key;

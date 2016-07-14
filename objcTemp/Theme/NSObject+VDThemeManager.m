@@ -9,7 +9,6 @@
 #import "NSObject+VDThemeManager.h"
 
 #import <objc/runtime.h>
-#import "VDThemeManager.h"
 #import "NSObject+VDSelectorArgument.h"
 #import "NSObject+VDEnhance.h"
 
