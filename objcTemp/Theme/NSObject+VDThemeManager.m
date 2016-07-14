@@ -37,6 +37,8 @@
 - (void)vd_performElement:(VDThemeElement *)element {
     if ([VDThemeManager vd_sharedInstance].animationDuration <= 0) {
         switch (element.resourceType) {
+            case VDThemeElementResourceTypeRemove:
+                break;
             case VDThemeElementResourceTypeColor: {
                 UIColor *color = [VDThemeManager colorForKey:element.themeSelectorArgument.themeKey];
                 element.themeSelectorArgument.strongObject = color;
@@ -66,6 +68,8 @@
     else {
         [UIView animateWithDuration:[VDThemeManager vd_sharedInstance].animationDuration animations:^{
             switch (element.resourceType) {
+                case VDThemeElementResourceTypeRemove:
+                    break;
                 case VDThemeElementResourceTypeColor: {
                     UIColor *color = [VDThemeManager colorForKey:element.themeSelectorArgument.themeKey];
                     element.themeSelectorArgument.strongObject = color;

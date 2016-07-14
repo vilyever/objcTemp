@@ -10,7 +10,7 @@
 #import "VDThemeSelectorArgument.h"
 
 typedef NS_ENUM(NSInteger, VDThemeElementResourceType) {
-    VDThemeElementResourceTypeRemove,
+    VDThemeElementResourceTypeRemove, // mark for removing element, just for equal judgment
     VDThemeElementResourceTypeColor,
     VDThemeElementResourceTypeImage,
     VDThemeElementResourceTypeFont,
