@@ -162,6 +162,72 @@
     
 }
 
+- (BOOL)isEqual:(id)object {
+    if ([object isKindOfClass:[VDSelectorArgument class]]) {
+        VDSelectorArgument *argument = object;
+        
+        BOOL equal = YES;
+        
+        equal = self.type == argument.type;
+        
+        if (equal) {
+            switch (self.type) {
+                case VDSelectorArgumentTypeCopiedObject: {
+                    equal = [self.copiedObject isEqual:argument.copiedObject];
+                    break;
+                }
+                case VDSelectorArgumentTypeWeakObject: {
+                    equal = [self.weakObject isEqual:argument.weakObject];
+                    break;
+                }
+                case VDSelectorArgumentTypeStrongObject: {
+                    equal = [self.strongObject isEqual:argument.strongObject];
+                    break;
+                }
+                case VDSelectorArgumentTypeAssignObject: {
+                    equal = [self.assignObject isEqual:argument.assignObject];
+                    break;
+                }
+                case VDSelectorArgumentTypeInt: {
+                    equal = self.intArgument == argument.intArgument;
+                    break;
+                }
+                case VDSelectorArgumentTypeLong: {
+                    equal = self.longArgument == argument.longArgument;
+                    break;
+                }
+                case VDSelectorArgumentTypeChar: {
+                    equal = self.charArgument == argument.charArgument;
+                    break;
+                }
+                case VDSelectorArgumentTypeBool: {
+                    equal = self.boolArgument == argument.boolArgument;
+                    break;
+                }
+                case VDSelectorArgumentTypeFloat: {
+                    equal = self.floatArgument == argument.floatArgument;
+                    break;
+                }
+                case VDSelectorArgumentTypeDouble: {
+                    equal = self.doubleArgument == argument.doubleArgument;
+                    break;
+                }
+                case VDSelectorArgumentTypeNSInteger: {
+                    equal = self.integerArgument == argument.integerArgument;
+                    break;
+                }
+                case VDSelectorArgumentTypeNSUInteger: {
+                    equal = self.uintegerArgument == argument.uintegerArgument;
+                    break;
+                }
+            }
+        }
+        
+        return equal;
+    }
+    
+    return [super isEqual:object];
+}
 
 #pragma mark Delegates
 

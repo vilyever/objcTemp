@@ -25,6 +25,14 @@
     [self setNeedsDisplay];
 }
 
+- (void)vd_setValueWithValueChangedAction:(float)value {
+    [self vd_setValueWithValueChangedAction:value animated:NO];
+}
+- (void)vd_setValueWithValueChangedAction:(float)value animated:(BOOL)animated {
+    [self setValue:value animated:animated];
+    [self sendActionsForControlEvents:UIControlEventValueChanged];
+}
+
 #pragma mark Private Method
 - (CGRect)vd_trackRectForBounds:(CGRect)bounds {
     CGRect trackRect = [self vd_trackRectForBounds:bounds];

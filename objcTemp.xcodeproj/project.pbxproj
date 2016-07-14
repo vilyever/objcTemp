@@ -63,6 +63,10 @@
 		FE4170CF1D3635B400518C78 /* VDInputManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4170CD1D3635B400518C78 /* VDInputManager.m */; };
 		FE4170D61D363DC800518C78 /* UIView+VDInputManager.h in Headers */ = {isa = PBXBuildFile; fileRef = FE4170D41D363DC800518C78 /* UIView+VDInputManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FE4170D71D363DC800518C78 /* UIView+VDInputManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4170D51D363DC800518C78 /* UIView+VDInputManager.m */; };
+		FE4171071D3735EC00518C78 /* UILabel+VDThemeManager.h in Headers */ = {isa = PBXBuildFile; fileRef = FE4171051D3735EC00518C78 /* UILabel+VDThemeManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE4171081D3735EC00518C78 /* UILabel+VDThemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4171061D3735EC00518C78 /* UILabel+VDThemeManager.m */; };
+		FE41710B1D3740C000518C78 /* UIImageView+VDThemeManager.h in Headers */ = {isa = PBXBuildFile; fileRef = FE4171091D3740BF00518C78 /* UIImageView+VDThemeManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE41710C1D3740C000518C78 /* UIImageView+VDThemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FE41710A1D3740C000518C78 /* UIImageView+VDThemeManager.m */; };
 		FE615F3B1D23679B00AECD76 /* objcTemp.h in Headers */ = {isa = PBXBuildFile; fileRef = FE615F3A1D23679B00AECD76 /* objcTemp.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FE615F421D23679B00AECD76 /* objcTemp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE615F371D23679B00AECD76 /* objcTemp.framework */; };
 		FE615F471D23679B00AECD76 /* objcTempTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FE615F461D23679B00AECD76 /* objcTempTests.m */; };
@@ -204,6 +208,10 @@
 		FE4170CD1D3635B400518C78 /* VDInputManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDInputManager.m; sourceTree = "<group>"; };
 		FE4170D41D363DC800518C78 /* UIView+VDInputManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+VDInputManager.h"; sourceTree = "<group>"; };
 		FE4170D51D363DC800518C78 /* UIView+VDInputManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+VDInputManager.m"; sourceTree = "<group>"; };
+		FE4171051D3735EC00518C78 /* UILabel+VDThemeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+VDThemeManager.h"; sourceTree = "<group>"; };
+		FE4171061D3735EC00518C78 /* UILabel+VDThemeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+VDThemeManager.m"; sourceTree = "<group>"; };
+		FE4171091D3740BF00518C78 /* UIImageView+VDThemeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+VDThemeManager.h"; sourceTree = "<group>"; };
+		FE41710A1D3740C000518C78 /* UIImageView+VDThemeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+VDThemeManager.m"; sourceTree = "<group>"; };
 		FE615F371D23679B00AECD76 /* objcTemp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = objcTemp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE615F3A1D23679B00AECD76 /* objcTemp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = objcTemp.h; sourceTree = "<group>"; };
 		FE615F3C1D23679B00AECD76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -341,6 +349,10 @@
 				FE4170301D2F8F5000518C78 /* UINavigationBar+VDThemeManager.m */,
 				FE4170391D2FA97C00518C78 /* UISlider+VDThemeManager.h */,
 				FE41703A1D2FA97C00518C78 /* UISlider+VDThemeManager.m */,
+				FE4171051D3735EC00518C78 /* UILabel+VDThemeManager.h */,
+				FE4171061D3735EC00518C78 /* UILabel+VDThemeManager.m */,
+				FE4171091D3740BF00518C78 /* UIImageView+VDThemeManager.h */,
+				FE41710A1D3740C000518C78 /* UIImageView+VDThemeManager.m */,
 			);
 			path = Theme;
 			sourceTree = "<group>";
@@ -759,6 +771,8 @@
 				FE4170941D34DD5600518C78 /* VDSimpleHudViewController.h in Headers */,
 				FE4170A11D35E34000518C78 /* VDToastView.h in Headers */,
 				FE4170CE1D3635B400518C78 /* VDInputManager.h in Headers */,
+				FE4171071D3735EC00518C78 /* UILabel+VDThemeManager.h in Headers */,
+				FE41710B1D3740C000518C78 /* UIImageView+VDThemeManager.h in Headers */,
 				FE4170D61D363DC800518C78 /* UIView+VDInputManager.h in Headers */,
 				FE4170AA1D35E93A00518C78 /* NSMutableArray+VDEnhance.h in Headers */,
 				FECA26AF1D26556800ED8FDD /* NSObject+VDPersistent.h in Headers */,
@@ -871,6 +885,7 @@
 				FE416FAC1D2DED9400518C78 /* NSObject+VDThemeManager.m in Sources */,
 				FE615FAE1D2367B500AECD76 /* NSDictionary+VDEnhance.m in Sources */,
 				FE615FD21D2367B500AECD76 /* UIView+VDFrame.m in Sources */,
+				FE41710C1D3740C000518C78 /* UIImageView+VDThemeManager.m in Sources */,
 				FE615FCA1D2367B500AECD76 /* UILabel+VDVerticalAlignment.m in Sources */,
 				FE615FC61D2367B500AECD76 /* UIImage+VDEnhance.m in Sources */,
 				FE615FB41D2367B500AECD76 /* NSString+VDEnhance.m in Sources */,
@@ -916,6 +931,7 @@
 				FE41704E1D3344EA00518C78 /* UIViewController+VDHud.m in Sources */,
 				FE416FBC1D2DF50300518C78 /* UIView+VDThemeManager.m in Sources */,
 				FE615FB81D2367B500AECD76 /* NSString+VDRegex.m in Sources */,
+				FE4171081D3735EC00518C78 /* UILabel+VDThemeManager.m in Sources */,
 				FE615FA71D2367B500AECD76 /* VDHookElement.m in Sources */,
 				FE416FEB1D2E576A00518C78 /* UITableView+VDEnhance.m in Sources */,
 				FE615FB61D2367B500AECD76 /* NSString+VDJavaScript.m in Sources */,

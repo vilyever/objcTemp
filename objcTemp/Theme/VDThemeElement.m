@@ -52,6 +52,40 @@
     
 }
 
+- (BOOL)isEqual:(id)object {
+    if ([object isKindOfClass:[VDThemeElement class]]) {
+        VDThemeElement *element = object;
+        
+        BOOL equal = YES;
+        
+        if (self.resourceType == VDThemeElementResourceTypeRemove
+            || element.resourceType == VDThemeElementResourceTypeRemove) {
+            equal = YES;
+        }
+        else {
+            equal = self.resourceType == element.resourceType; // comment for easy remove, that the remove element can not set resourceType
+        }
+        
+        if (equal) {
+            equal = [NSStringFromSelector(self.selector) isEqualToString:NSStringFromSelector(element.selector)];
+        }
+        
+        if (equal) {
+            for (NSInteger i = 0; i < self.arguments.count; i++) {
+                equal = [self.arguments[i] isEqual:element.arguments[i]];
+                if (!equal) {
+                    break;
+                }
+            }
+        }
+        
+        
+        return equal;
+    }
+    
+    return [super isEqual:object];
+}
+
 
 #pragma mark Delegates
 

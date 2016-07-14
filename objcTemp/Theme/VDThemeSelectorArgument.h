@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "VDSelectorArgument.h"
 
+extern NSString * const VDThemeSelectorArgumentRemoveThemeKey;
 
 @class VDThemeSelectorArgument;
 

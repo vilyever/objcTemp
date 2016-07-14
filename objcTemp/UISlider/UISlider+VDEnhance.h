@@ -18,5 +18,7 @@
 
 #pragma mark Private Method
 - (CGRect)vd_trackRectForBounds:(CGRect)bounds;
+- (void)vd_setValueWithValueChangedAction:(float)value;
+- (void)vd_setValueWithValueChangedAction:(float)value animated:(BOOL)animated;
 
 @end

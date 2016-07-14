@@ -10,6 +10,7 @@
 #import "VDThemeSelectorArgument.h"
 
 typedef NS_ENUM(NSInteger, VDThemeElementResourceType) {
+    VDThemeElementResourceTypeRemove,
     VDThemeElementResourceTypeColor,
     VDThemeElementResourceTypeImage,
     VDThemeElementResourceTypeFont,

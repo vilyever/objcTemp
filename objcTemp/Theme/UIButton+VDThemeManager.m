@@ -13,7 +13,6 @@
 //@import objcTemp;
 
 #import "VDThemeManager.h"
-#import "VDThemeSelectorArgument.h"
 
 
 @implementation UIButton (VDThemeManager)
@@ -22,26 +21,50 @@
 - (void)vd_setTitleColorWithThemeKey:(NSString *)key forState:(UIControlState)state {
     VDThemeSelectorArgument *argument1 = [VDThemeSelectorArgument argumentWithThemeKey:key];
     VDThemeSelectorArgument *argument2 = [VDThemeSelectorArgument argumentWithIntegerArgument:state];
-    [VDThemeManager setColorForTarget:self withSelector:@selector(setTitleColor:forState:) withArguments:@[argument1, argument2]];
+    
+    if (key) {
+        [VDThemeManager setColorForTarget:self withSelector:@selector(setTitleColor:forState:) withArguments:@[argument1, argument2]];
+    }
+    else {
+        [VDThemeManager removeTarget:self withSelector:@selector(setTitleColor:forState:) withArguments:@[argument1, argument2]];
+    }
 }
 
 - (void)vd_setTitleShadowColorWithThemeKey:(NSString *)key forState:(UIControlState)state {
     VDThemeSelectorArgument *argument1 = [VDThemeSelectorArgument argumentWithThemeKey:key];
     VDThemeSelectorArgument *argument2 = [VDThemeSelectorArgument argumentWithIntegerArgument:state];
-    [VDThemeManager setColorForTarget:self withSelector:@selector(setTitleShadowColor:forState:) withArguments:@[argument1, argument2]];
+    
+    if (key) {
+        [VDThemeManager setColorForTarget:self withSelector:@selector(setTitleShadowColor:forState:) withArguments:@[argument1, argument2]];
+    }
+    else {
+        [VDThemeManager removeTarget:self withSelector:@selector(setTitleShadowColor:forState:) withArguments:@[argument1, argument2]];
+    }
     
 }
 
 - (void)vd_setImageWithThemeKey:(NSString *)key forState:(UIControlState)state {
     VDThemeSelectorArgument *argument1 = [VDThemeSelectorArgument argumentWithThemeKey:key];
     VDThemeSelectorArgument *argument2 = [VDThemeSelectorArgument argumentWithIntegerArgument:state];
-    [VDThemeManager setImageForTarget:self withSelector:@selector(setImage:forState:) withArguments:@[argument1, argument2]];
+    
+    if (key) {
+        [VDThemeManager setImageForTarget:self withSelector:@selector(setImage:forState:) withArguments:@[argument1, argument2]];
+    }
+    else {
+        [VDThemeManager removeTarget:self withSelector:@selector(setImage:forState:) withArguments:@[argument1, argument2]];
+    }
 }
 
 - (void)vd_setBackgroundImageWithThemeKey:(NSString *)key forState:(UIControlState)state {
     VDThemeSelectorArgument *argument1 = [VDThemeSelectorArgument argumentWithThemeKey:key];
     VDThemeSelectorArgument *argument2 = [VDThemeSelectorArgument argumentWithIntegerArgument:state];
-    [VDThemeManager setImageForTarget:self withSelector:@selector(setBackgroundImage:forState:) withArguments:@[argument1, argument2]];
+    
+    if (key) {
+        [VDThemeManager setImageForTarget:self withSelector:@selector(setBackgroundImage:forState:) withArguments:@[argument1, argument2]];
+    }
+    else {
+        [VDThemeManager removeTarget:self withSelector:@selector(setBackgroundImage:forState:) withArguments:@[argument1, argument2]];
+    }
 }
 
 #pragma mark Private Method

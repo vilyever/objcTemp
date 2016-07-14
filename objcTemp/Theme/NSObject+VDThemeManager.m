@@ -19,10 +19,11 @@
 
 #pragma mark Public Method
 - (void)vd_addThemeElement:(VDThemeElement *)element {
-    if (![[self vd_themeElements] containsObject:element]) {
+    [self vd_removeThemeElement:element];
+//    if (![[self vd_themeElements] containsObject:element]) {
         [[self vd_themeElements] addObject:element];
         [self vd_performElement:element];
-    }
+//    }
 }
 
 - (void)vd_removeThemeElement:(VDThemeElement *)element {

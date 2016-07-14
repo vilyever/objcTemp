@@ -8,7 +8,6 @@
 
 #import "VDThemeManager.h"
 #import "NSObject+VDEnhance.h"
-#import "NSObject+VDThemeManager.h"
 #import "VDWeakRef.h"
 
 #if !VDThemeManagerThemeTypeKey
@@ -103,6 +102,14 @@ NSString * const VDThemeManagerThemeTypeDidChangeNotificationUserInfoOldThemeTyp
 + (void)setAttributeForTarget:(id)target withSelector:(SEL)selector withArguments:(NSArray *)arguments {
     [target vd_addThemeElement:[VDThemeElement elementWithResourceType:VDThemeElementResourceTypeAttribute withSelector:selector withArguments:arguments]];
     [[VDThemeManager vd_sharedInstance] internalAddTarget:target];
+}
+
++ (void)removeTarget:(id)target {
+    [target vd_clearThemeElements];
+}
+
++ (void)removeTarget:(id)target withSelector:(SEL)selector withArguments:(NSArray *)arguments {
+    [target vd_removeThemeElement:[VDThemeElement elementWithResourceType:VDThemeElementResourceTypeRemove withSelector:selector withArguments:arguments]];
 }
 
 #pragma mark Properties

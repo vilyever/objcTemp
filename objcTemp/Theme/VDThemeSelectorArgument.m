@@ -9,6 +9,8 @@
 #import "VDThemeSelectorArgument.h"
 
 
+NSString * const VDThemeSelectorArgumentRemoveThemeKey = @"VDThemeSelectorArgumentRemoveThemeKey";
+
 @interface VDThemeSelectorArgument ()
 
 
@@ -38,6 +40,28 @@
     
 }
 
+- (BOOL)isEqual:(id)object {
+    if ([object isKindOfClass:[VDThemeSelectorArgument class]]) {
+        VDThemeSelectorArgument *argument = object;
+        
+        BOOL equal = [super isEqual:argument];
+        
+//        if (equal) {
+//            if ([self.themeKey isEqualToString:VDThemeSelectorArgumentRemoveThemeKey]
+//                || [argument.themeKey isEqualToString:VDThemeSelectorArgumentRemoveThemeKey]) {
+//                equal = YES;
+//            }
+//            else {
+//    //          if set diferent themeKey for the same selector, we must remove pre one to make sure only one element for on selector with same arguments.
+//                equal = [self.themeKey isEqualToString:argument.themeKey];
+//            }
+//        }
+        
+        return equal;
+    }
+    
+    return [super isEqual:object];
+}
 
 #pragma mark Delegates
 

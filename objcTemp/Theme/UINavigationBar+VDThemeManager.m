@@ -8,7 +8,6 @@
 
 #import "UINavigationBar+VDThemeManager.h"
 #import "VDThemeManager.h"
-#import "VDThemeSelectorArgument.h"
 
 //#import <objc/runtime.h>
 //#import "objcTemp.h"
@@ -20,35 +19,71 @@
 #pragma mark Public Method
 - (void)vd_setBarTintColorWithThemeKey:(NSString *)key {
     VDThemeSelectorArgument *argument1 = [VDThemeSelectorArgument argumentWithThemeKey:key];
-    [VDThemeManager setColorForTarget:self withSelector:@selector(setBarTintColor:) withArguments:@[argument1]];
+    
+    if (key) {
+        [VDThemeManager setColorForTarget:self withSelector:@selector(setBarTintColor:) withArguments:@[argument1]];
+    }
+    else {
+        [VDThemeManager removeTarget:self withSelector:@selector(setBarTintColor:) withArguments:@[argument1]];
+    }
 }
 
 - (void)vd_setBackgroundImageWithThemeKey:(NSString *)key forBarMetrics:(UIBarMetrics)barMetrics {
     VDThemeSelectorArgument *argument1 = [VDThemeSelectorArgument argumentWithThemeKey:key];
     VDThemeSelectorArgument *argument2 = [VDThemeSelectorArgument argumentWithIntegerArgument:barMetrics];
-    [VDThemeManager setImageForTarget:self withSelector:@selector(setBackgroundImage:forBarMetrics:) withArguments:@[argument1, argument2]];
+    
+    if (key) {
+        [VDThemeManager setImageForTarget:self withSelector:@selector(setBackgroundImage:forBarMetrics:) withArguments:@[argument1, argument2]];
+    }
+    else {
+        [VDThemeManager removeTarget:self withSelector:@selector(setBackgroundImage:forBarMetrics:) withArguments:@[argument1, argument2]];
+    }
 }
 
 - (void)vd_setBackgroundImageWithThemeKey:(NSString *)key forBarPosition:(UIBarPosition)barPosition barMetrics:(UIBarMetrics)barMetrics {
     VDThemeSelectorArgument *argument1 = [VDThemeSelectorArgument argumentWithThemeKey:key];
     VDThemeSelectorArgument *argument2 = [VDThemeSelectorArgument argumentWithIntegerArgument:barPosition];
     VDThemeSelectorArgument *argument3 = [VDThemeSelectorArgument argumentWithIntegerArgument:barMetrics];
-    [VDThemeManager setImageForTarget:self withSelector:@selector(setBackgroundImage:forBarPosition:barMetrics:) withArguments:@[argument1, argument2, argument3]];
+    
+    if (key) {
+        [VDThemeManager setImageForTarget:self withSelector:@selector(setBackgroundImage:forBarPosition:barMetrics:) withArguments:@[argument1, argument2, argument3]];
+    }
+    else {
+        [VDThemeManager removeTarget:self withSelector:@selector(setBackgroundImage:forBarPosition:barMetrics:) withArguments:@[argument1, argument2, argument3]];
+    }
 }
 
 - (void)vd_setBackIndicatorImageWithThemeKey:(NSString *)key {
     VDThemeSelectorArgument *argument1 = [VDThemeSelectorArgument argumentWithThemeKey:key];
-    [VDThemeManager setImageForTarget:self withSelector:@selector(setBackIndicatorImage:) withArguments:@[argument1]];
+    
+    if (key) {
+        [VDThemeManager setImageForTarget:self withSelector:@selector(setBackIndicatorImage:) withArguments:@[argument1]];
+    }
+    else {
+        [VDThemeManager removeTarget:self withSelector:@selector(setBackIndicatorImage:) withArguments:@[argument1]];
+    }
 }
 
 - (void)vd_setBackIndicatorTransitionMaskImageWithThemeKey:(NSString *)key {
     VDThemeSelectorArgument *argument1 = [VDThemeSelectorArgument argumentWithThemeKey:key];
-    [VDThemeManager setImageForTarget:self withSelector:@selector(setBackIndicatorTransitionMaskImage:) withArguments:@[argument1]];
+    
+    if (key) {
+        [VDThemeManager setImageForTarget:self withSelector:@selector(setBackIndicatorTransitionMaskImage:) withArguments:@[argument1]];
+    }
+    else {
+        [VDThemeManager removeTarget:self withSelector:@selector(setBackIndicatorTransitionMaskImage:) withArguments:@[argument1]];
+    }
 }
 
 - (void)vd_setShadowImageWithThemeKey:(NSString *)key {
     VDThemeSelectorArgument *argument1 = [VDThemeSelectorArgument argumentWithThemeKey:key];
-    [VDThemeManager setImageForTarget:self withSelector:@selector(setShadowImage:) withArguments:@[argument1]];
+    
+    if (key) {
+        [VDThemeManager setImageForTarget:self withSelector:@selector(setShadowImage:) withArguments:@[argument1]];
+    }
+    else {
+        [VDThemeManager removeTarget:self withSelector:@selector(setShadowImage:) withArguments:@[argument1]];
+    }
 }
 
 
