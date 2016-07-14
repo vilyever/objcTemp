@@ -19,6 +19,8 @@
 @property (nonatomic, strong, readwrite) UILabel *infoLabel;
 @property (nonatomic, assign) BOOL isShowing;
 
+@property (nonatomic, assign) CGFloat keyboardHeight;
+
 @end
 
 
@@ -61,6 +63,13 @@
     return _infoArray;
 }
 
+- (void)setKeyboardHeight:(CGFloat)keyboardHeight {
+    if (_keyboardHeight != keyboardHeight) {
+        _keyboardHeight = keyboardHeight;
+        [self setNeedsLayout];
+    }
+}
+
 
 #pragma mark Overrides
 - (instancetype)init {
@@ -92,7 +101,7 @@
 }
 
 - (void)dealloc {
-    
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)layoutSubviews {
@@ -113,7 +122,7 @@
     CGFloat toastHeight = infoLabelSize.height + infoLabelTopBottom * 2.0f;
     
     self.bounds = CGRectMake(0.0f, 0.0f, toastWidth, toastHeight);
-    self.center = CGPointMake(VDWindow.bounds.size.width / 2.0f, (VDWindow.bounds.size.height - toastHeight - 60.0f) + toastHeight / 2.0f);
+    self.center = CGPointMake(VDWindow.bounds.size.width / 2.0f, (VDWindow.bounds.size.height - self.keyboardHeight - toastHeight - 60.0f) + toastHeight / 2.0f);
     
     [super layoutSubviews];
 }
@@ -135,6 +144,8 @@
     [self addSubview:self.infoLabel];
     
     self.userInteractionEnabled = NO;
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(internalOnKeyboardWillChangeFrame:) name:UIKeyboardWillChangeFrameNotification object:nil];
 }
 
 - (void)internalShowNextInfo {
@@ -175,6 +186,11 @@
         self.isShowing = NO;
         [self internalShowNextInfo];
     }];
+}
+
+- (void)internalOnKeyboardWillChangeFrame:(NSNotification *)notification {
+    CGRect endFrame = [[[notification userInfo] objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    self.keyboardHeight = endFrame.size.height;
 }
 
 @end
