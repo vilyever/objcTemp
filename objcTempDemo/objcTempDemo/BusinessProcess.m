@@ -40,7 +40,7 @@
 
 - (void)registerWeakDelegate:(id<BusinessProcessDelegate>)delegate {
     if (![self.delegates containsObject:delegate]) {
-        [self.delegates addObject:[VDWeakRef refWithObject:delegate]];
+        [self.delegates addObject:[delegate vd_weakRef]];
     }
 }
 

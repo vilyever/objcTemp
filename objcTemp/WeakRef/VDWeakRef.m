@@ -7,11 +7,12 @@
 //
 
 #import "VDWeakRef.h"
+#import <objc/runtime.h>
 
 
 @interface VDWeakRef ()
 
-@property (nonatomic, weak, readwrite) id object;
+@property (nonatomic, weak, readwrite) id weakObject;
 
 @end
 
@@ -21,7 +22,7 @@
 #pragma mark Public Method
 + (instancetype)refWithObject:(id)object {
     VDWeakRef *ref = [self alloc];
-    ref.object = object;
+    ref.weakObject = object;
     return ref;
 }
 
@@ -30,46 +31,24 @@
 
 #pragma mark Overrides
 - (void)forwardInvocation:(NSInvocation *)invocation {
-    if (self.object) {
-        invocation.target = self.object;
-        [invocation invoke];
-    }
+    invocation.target = self.weakObject;
+    [invocation invoke];
 }
 
 - (NSMethodSignature *)methodSignatureForSelector:(SEL)sel {
-    if (self.object) {
-        return [self.object methodSignatureForSelector:sel];
-    }
-    else {
-        return [NSObject methodSignatureForSelector:sel];;
-    }
+    return [self.weakObject methodSignatureForSelector:sel];
 }
 
 - (NSString *)description {
-    if (self.object) {
-        return [self.object description];
-    }
-    else {
-        return [super description];
-    }
+    return [self.weakObject description];
 }
 
 - (BOOL)respondsToSelector:(SEL)aSelector {
-    if (self.object) {
-        return [self.object respondsToSelector:aSelector];
-    }
-    else {
-        return NO;
-    }
+    return [self.weakObject respondsToSelector:aSelector];
 }
 
 - (BOOL)isEqual:(id)object {
-    if (self.object) {
-        return [object isEqual:self.object];
-    }
-    else {
-        return NO;
-    }
+    return [self.weakObject isEqual:object];
 }
 
 
@@ -77,5 +56,26 @@
 
 
 #pragma mark Private Method
+
+@end
+
+
+@implementation NSObject (VDWeakRef)
+
+- (VDWeakRef *)vd_weakRef {
+    return [VDWeakRef refWithObject:self];
+}
+
+- (BOOL)vd_isEqual:(id)object {
+    id realSelf = [self class]  == [VDWeakRef class] ? ((VDWeakRef *)self).weakObject : self;
+    id realObject =  [object class]  == [VDWeakRef class] ? ((VDWeakRef *)object).weakObject : object;
+    
+    BOOL result = [realSelf vd_isEqual:realObject];
+    return result;
+}
+
++ (void)load {
+    method_exchangeImplementations(class_getInstanceMethod(self, @selector(isEqual:) ), class_getInstanceMethod(self, @selector(vd_isEqual:) ) );
+}
 
 @end

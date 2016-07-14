@@ -155,7 +155,7 @@ NSString * const VDThemeManagerThemeTypeDidChangeNotificationUserInfoOldThemeTyp
 #pragma mark Private Method      
 - (void)internalAddTarget:(id)target {
     if (![self.themeTargets containsObject:target]) {
-        [self.themeTargets addObject:[VDWeakRef refWithObject:target]];
+        [self.themeTargets addObject:[target vd_weakRef]];
     }
 }
 

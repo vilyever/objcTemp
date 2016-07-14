@@ -18,6 +18,12 @@
 + (instancetype)refWithObject:(id)object;
 
 #pragma mark Properties
-@property (nonatomic, weak, readonly) id object;
+@property (nonatomic, weak, readonly) id weakObject;
+
+@end
+
+@interface NSObject (VDWeakRef)
+
+- (VDWeakRef *)vd_weakRef;
 
 @end

@@ -31,12 +31,12 @@
 #pragma mark Properties
 - (id)vd_tapTarget {
     VDWeakRef *ref = objc_getAssociatedObject(self, @selector(vd_tapTarget));
-    id tapTarget = ref.object;
+    id tapTarget = ref.weakObject;
     return tapTarget;
 }
 
 - (void)setVd_tapTarget:(id)tapTarget {
-    VDWeakRef *ref = [VDWeakRef refWithObject:tapTarget];
+    VDWeakRef *ref = [tapTarget vd_weakRef];
     objc_setAssociatedObject(self, @selector(vd_tapTarget), ref, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 

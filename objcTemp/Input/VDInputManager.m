@@ -26,7 +26,7 @@
         [inputView setInputAccessoryView:self.inputAccessoryToolBar];
     }
     
-    [self.inputViews addObject:[VDWeakRef refWithObject:inputView]];
+    [self.inputViews addObject:[inputView vd_weakRef]];
     
     [self internalFindPrevNextInputView];
 }
@@ -36,7 +36,7 @@
         [inputView setInputAccessoryView:self.inputAccessoryToolBar];
     }
 
-    [self.inputViews insertObject:[VDWeakRef refWithObject:inputView] atIndex:index];
+    [self.inputViews insertObject:[inputView vd_weakRef] atIndex:index];
     
     [self internalFindPrevNextInputView];
 }
