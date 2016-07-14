@@ -20,13 +20,11 @@
 @implementation VDJsonObject
 
 #pragma mark Public Method
-+ (instancetype)modelWithJsonString:(NSString *)jsonString
-{
++ (instancetype)modelWithJsonString:(NSString *)jsonString {
     return [self modelWithJsonString:jsonString usingEncoding:NSUTF8StringEncoding];
 }
 
-+ (instancetype)modelWithJsonString:(NSString *)jsonString usingEncoding:(NSStringEncoding)encoding
-{
++ (instancetype)modelWithJsonString:(NSString *)jsonString usingEncoding:(NSStringEncoding)encoding {
     if (jsonString.length == 0) {
         return nil;
     }
@@ -42,8 +40,7 @@
     return [self modelWithDictionary:dictionary];
 }
 
-+ (instancetype)modelWithDictionary:(NSDictionary *)dictionary
-{
++ (instancetype)modelWithDictionary:(NSDictionary *)dictionary {
     if (!dictionary) {
         return nil;
     }
@@ -60,7 +57,8 @@
     for (VDProperty *property in properties) {
         if ([jsonKeyDictionary objectForKey:property.name]) {
             [self internalInsertJsonValue:dictionary jsonKey:[jsonKeyDictionary objectForKey:property.name] model:model property:property];
-        } else {
+        }
+        else {
             [self internalInsertJsonValue:dictionary jsonKey:property.name model:model property:property];
         }
     }
@@ -68,13 +66,11 @@
     return model;
 }
 
-+ (NSArray *)arrayWithJsonString:(NSString *)jsonString
-{
++ (NSArray *)arrayWithJsonString:(NSString *)jsonString {
     return [self arrayWithJsonString:jsonString usingEncoding:NSUTF8StringEncoding];
 }
 
-+ (NSArray *)arrayWithJsonString:(NSString *)jsonString usingEncoding:(NSStringEncoding)encoding
-{
++ (NSArray *)arrayWithJsonString:(NSString *)jsonString usingEncoding:(NSStringEncoding)encoding {
     if (jsonString.length == 0) {
         return nil;
     }
@@ -90,24 +86,21 @@
     return [self arrayWithDictionaries:dictionaries];
 }
 
-+ (NSArray *)arrayWithDictionaries:(NSArray *)dictionaries
-{
++ (NSArray *)arrayWithDictionaries:(NSArray *)dictionaries {
     if (!dictionaries) {
         return nil;
     }
     
     NSMutableArray *array = [NSMutableArray new];
     
-    for (NSDictionary *dic in dictionaries)
-    {
+    for (NSDictionary *dic in dictionaries) {
         [array addObject:[self modelWithDictionary:dic]];
     }
     
     return [NSArray arrayWithArray:array];
 }
 
-+ (NSDictionary *)jsonKeyDictionary
-{
++ (NSDictionary *)jsonKeyDictionary {
     return [NSDictionary new];
 }
 
@@ -125,54 +118,48 @@
     
     NSDictionary *jsonKeyDictionary = [[self class] jsonKeyDictionary];
     
-    for (VDProperty *property in properties)
-    {
-        if (![property.protocols containsObject:@protocol(VDJsonIgnore)])
-        {
-            for (NSString *propertyName in jsonKeyDictionary.allKeys)
-            {
-                if ([propertyName isEqualToString:property.name])
-                {
-                    id value;
-                    if ([property.type isSubclassOfClass:[VDJsonObject class]])
-                    {
-                        value = [[self valueForKey:property.name] toJsonDictionary];
+    for (VDProperty *property in properties) {
+        if (![property.protocols containsObject:@protocol(VDJsonIgnore)]) {
+            NSString *jsonKey = property.name;
+            if ([jsonKeyDictionary.allKeys containsObject:property.name]) {
+                jsonKey = [jsonKeyDictionary objectForKey:property.name];
+            }
+
+            id value;
+            if ([property.type isSubclassOfClass:[VDJsonObject class]]) {
+                value = [[self valueForKey:property.name] toJsonDictionary];
+            }
+            else if (property.type == [NSArray class]
+                     || property.type == [NSMutableArray class]) {
+                BOOL isJsonObjectArray = NO;
+                for (NSString *protocolName in property.protocols) {
+                    Class protocolClass = NSClassFromString(protocolName);
+                    if ([protocolClass isSubclassOfClass:[VDJsonObject class]]) {
+                        isJsonObjectArray = YES;
+                        break;
                     }
-                    else if (property.type == [NSArray class]
-                             || property.type == [NSMutableArray class])
-                    {
-                        BOOL isJsonObjectArray = NO;
-                        for (NSString *protocolName in property.protocols) {
-                            Class protocolClass = NSClassFromString(protocolName);
-                            if ([protocolClass isSubclassOfClass:[VDJsonObject class]]) {
-                                isJsonObjectArray = YES;
-                                break;
-                            }
-                        }
-                        
-                        if (isJsonObjectArray) {
-                            NSMutableArray *values = [NSMutableArray new];
-                            NSArray *models = [self valueForKey:property.name];
-                            for (id model in models) {
-                                [values addObject:[model toJsonDictionary]];
-                            }
-                            value = values;
-                        } else {
-                            value = [[self class] internalGetValueFromModel:self property:property];
-                        }
+                }
+                
+                if (isJsonObjectArray) {
+                    NSMutableArray *values = [NSMutableArray new];
+                    NSArray *models = [self valueForKey:property.name];
+                    for (id model in models) {
+                        [values addObject:[model toJsonDictionary]];
                     }
-                    else
-                    {
-                        value = [[self class] internalGetValueFromModel:self property:property];
-                    }
-                    
-                    if (!value) {
-                        value = @"";
-                    }
-                    [jsonDictionary setObject:value forKey:[jsonKeyDictionary objectForKey:propertyName]];
-                    break;
+                    value = values;
+                }
+                else {
+                    value = [[self class] internalGetValueFromModel:self property:property];
                 }
             }
+            else {
+                value = [[self class] internalGetValueFromModel:self property:property];
+            }
+            
+            if (!value) {
+                value = @"";
+            }
+            [jsonDictionary setObject:value forKey:jsonKey];
         }
     }
     
