@@ -76,6 +76,7 @@
 - (UIBarButtonItem *)prevBarButtonItem {
     if (!_prevBarButtonItem) {
         _prevBarButtonItem = [ [UIBarButtonItem alloc] initWithTitle:@"Prev" style:UIBarButtonItemStylePlain target:self action:@selector(internalOnPrevButtonClick:) ];
+        _prevBarButtonItem.enabled = NO;
     }
     
     return _prevBarButtonItem;
@@ -84,6 +85,7 @@
 - (UIBarButtonItem *)nextBarButtonItem {
     if (!_nextBarButtonItem) {
         _nextBarButtonItem = [ [UIBarButtonItem alloc] initWithTitle:@"Next" style:UIBarButtonItemStylePlain target:self action:@selector(internalOnNextButtonClick:) ];
+        _nextBarButtonItem.enabled = NO;
     }
     
     return _nextBarButtonItem;
