@@ -11,6 +11,7 @@
 //@import objcTemp;
 #import "VDMacros.h"
 #import "VDWeakRef.h"
+#import "UIView+VDInputManager.h"
 
 @interface VDInputManager ()
 
@@ -118,21 +119,46 @@
 - (void)setCurrentInputView:(id)currentInputView {
     _currentInputView = currentInputView;
     
+    self.disablePrev = [_currentInputView vd_inputManagerDisableJumpToPrev];
+    self.disableNext = [_currentInputView vd_inputManagerDisableJumpToNext];
+    self.disableClear = [_currentInputView vd_inputManagerDisableClear];
+    self.disableDone = [_currentInputView vd_inputManagerDisableDone];
+    
     [self internalFindPrevNextInputView];
 }
 
 - (void)setPrevInputView:(id)prevInputView {
     if (_prevInputView != prevInputView) {
         _prevInputView = prevInputView;
-        self.prevBarButtonItem.enabled = _prevInputView != nil;
+        self.prevBarButtonItem.enabled = !self.disablePrev && _prevInputView != nil;
     }
 }
 
 - (void)setNextInputView:(id)nextInputView {
     if (_nextInputView != nextInputView) {
         _nextInputView = nextInputView;
-        self.nextBarButtonItem.enabled = _nextInputView != nil;
+        self.nextBarButtonItem.enabled = !self.disableNext && _nextInputView != nil;
     }
+}
+
+- (void)setDisablePrev:(BOOL)disablePrev {
+    _disablePrev = disablePrev;
+    self.prevBarButtonItem.enabled = !_disablePrev;
+}
+
+- (void)setDisableNext:(BOOL)disableNext {
+    _disableNext = disableNext;
+    self.nextBarButtonItem.enabled = !_disableNext;
+}
+
+- (void)setDisableClear:(BOOL)disableClear {
+    _disableClear = disableClear;
+    self.clearBarButtonItem.enabled = !_disableClear;
+}
+
+- (void)setDisableDone:(BOOL)disableDone {
+    _disableDone = disableDone;
+    self.doneBarButtonItem.enabled = !_disableDone;
 }
 
 

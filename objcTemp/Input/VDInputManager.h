@@ -37,6 +37,11 @@
 @property (nonatomic, weak) id prevInputView;
 @property (nonatomic, weak) id nextInputView;
 
+@property (nonatomic, assign) BOOL disablePrev;
+@property (nonatomic, assign) BOOL disableNext;
+@property (nonatomic, assign) BOOL disableClear;
+@property (nonatomic, assign) BOOL disableDone;
+
 #pragma mark Private Method
 - (void)internalInitVDInputManager;
 

@@ -24,5 +24,9 @@
 #pragma mark Properties
 @property (nonatomic, strong) VDInputManager *vd_inputManager;
 
+@property (nonatomic, assign) BOOL vd_inputManagerDisableJumpToPrev;
+@property (nonatomic, assign) BOOL vd_inputManagerDisableJumpToNext;
+@property (nonatomic, assign) BOOL vd_inputManagerDisableClear;
+@property (nonatomic, assign) BOOL vd_inputManagerDisableDone;
 
 @end
