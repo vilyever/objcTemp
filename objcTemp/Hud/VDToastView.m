@@ -19,7 +19,7 @@
 @property (nonatomic, strong, readwrite) UILabel *infoLabel;
 @property (nonatomic, assign) BOOL isShowing;
 
-@property (nonatomic, assign) CGFloat keyboardY;
+@property (nonatomic, assign) CGFloat keyboardHeight;
 
 @end
 
@@ -63,9 +63,9 @@
     return _infoArray;
 }
 
-- (void)setKeyboardY:(CGFloat)keyboardY {
-    if (_keyboardY != keyboardY) {
-        _keyboardY = keyboardY;
+- (void)setKeyboardHeight:(CGFloat)keyboardHeight {
+    if (_keyboardHeight != keyboardHeight) {
+        _keyboardHeight = keyboardHeight;
         [self setNeedsLayout];
     }
 }
@@ -122,7 +122,7 @@
     CGFloat toastHeight = infoLabelSize.height + infoLabelTopBottom * 2.0f;
     
     self.bounds = CGRectMake(0.0f, 0.0f, toastWidth, toastHeight);
-    self.center = CGPointMake(VDWindow.bounds.size.width / 2.0f, (VDWindow.bounds.size.height - (VDWindow.bounds.size.height - self.keyboardY) - toastHeight - 60.0f) + toastHeight / 2.0f);
+    self.center = CGPointMake(VDWindow.bounds.size.width / 2.0f, (VDWindow.bounds.size.height - self.keyboardHeight - toastHeight - 60.0f) + toastHeight / 2.0f);
     
     [super layoutSubviews];
 }
@@ -190,7 +190,12 @@
 
 - (void)internalOnKeyboardWillChangeFrame:(NSNotification *)notification {
     CGRect endFrame = [[[notification userInfo] objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
-    self.keyboardY = endFrame.origin.y;
+    if (endFrame.origin.y >= VDWindow.bounds.size.height) {
+        self.keyboardHeight = 0.0f;
+    }
+    else {
+        self.keyboardHeight = endFrame.size.height;
+    }
 }
 
 @end
