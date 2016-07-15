@@ -130,25 +130,25 @@
 - (void)setPrevInputView:(id)prevInputView {
     if (_prevInputView != prevInputView) {
         _prevInputView = prevInputView;
-        self.prevBarButtonItem.enabled = !self.disablePrev && _prevInputView != nil;
+        self.prevBarButtonItem.enabled = !self.disablePrev && _prevInputView;
     }
 }
 
 - (void)setNextInputView:(id)nextInputView {
     if (_nextInputView != nextInputView) {
         _nextInputView = nextInputView;
-        self.nextBarButtonItem.enabled = !self.disableNext && _nextInputView != nil;
+        self.nextBarButtonItem.enabled = !self.disableNext && _nextInputView;
     }
 }
 
 - (void)setDisablePrev:(BOOL)disablePrev {
     _disablePrev = disablePrev;
-    self.prevBarButtonItem.enabled = !_disablePrev;
+    self.prevBarButtonItem.enabled = !_disablePrev && self.prevInputView;
 }
 
 - (void)setDisableNext:(BOOL)disableNext {
     _disableNext = disableNext;
-    self.nextBarButtonItem.enabled = !_disableNext;
+    self.nextBarButtonItem.enabled = !_disableNext && self.nextInputView;
 }
 
 - (void)setDisableClear:(BOOL)disableClear {
