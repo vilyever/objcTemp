@@ -144,7 +144,7 @@ static void VDHookedForwardInvocationMethod(__unsafe_unretained NSObject *target
         
         NSCAssert(![hookClazz instancesRespondToSelector:swizzleSelector], @"Alias method name %@ to hook selctor %@ on %@ is being possessed", NSStringFromSelector(swizzleSelector),  NSStringFromSelector(selector), hookClazz);
         
-        // 原先考虑到Aspectes冲突，现发现Category中替换方法后不能使用下述算法。若selector的实现imp为_objc_msgForward,将导致此hook失效，考虑其它解决方案
+        // 原先考虑到Aspects冲突，现发现Category中替换方法后不能使用下述算法。若selector的实现imp为_objc_msgForward,将导致此hook失效，考虑其它解决方案
 //        BOOL isHookedByOther = ![self internalCheckIsImp:targetMethodIMP fitSelector:selector];        
 //        // 是否selector的实现imp被替换，若是，查找所有方法的实现imp尝试找出selector的原imp
 //        if (isHookedByOther) {
@@ -260,7 +260,8 @@ static char VDHookMarkDicAssociatedObjectKey;
         hookDic = [[NSMutableDictionary alloc] init];
         objc_setAssociatedObject(target, &VDHookMarkDicAssociatedObjectKey, hookDic, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
-    BOOL isHooked = [[hookDic objectForKey:NSStringFromSelector(selector)] boolValue];
+    NSString *key = [NSString stringWithFormat:@"InstanceHook__%@__%@", NSStringFromClass([target class]), NSStringFromSelector(selector)];
+    BOOL isHooked = [[hookDic objectForKey:key] boolValue];
     return isHooked;
 }
 
@@ -270,7 +271,8 @@ static char VDHookMarkDicAssociatedObjectKey;
         hookDic = [[NSMutableDictionary alloc] init];
         objc_setAssociatedObject(target, &VDHookMarkDicAssociatedObjectKey, hookDic, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
-    [hookDic setObject:@(YES) forKey:NSStringFromSelector(selector)];
+    NSString *key = [NSString stringWithFormat:@"InstanceHook__%@__%@", NSStringFromClass([target class]), NSStringFromSelector(selector)];
+    [hookDic setObject:@(YES) forKey:key];
 }
 
 + (BOOL)internalCheckIsImp:(IMP)imp fitSelector:(SEL)selector {
