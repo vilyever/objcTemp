@@ -11,7 +11,7 @@
 
 @class VDJsonObject;
 
-@protocol VDJsonIgnore <NSObject>
+@protocol VDJsonNameAsKey <NSObject>
 @end
 
 

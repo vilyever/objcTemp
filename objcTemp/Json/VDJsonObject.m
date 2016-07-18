@@ -119,7 +119,8 @@
     NSDictionary *jsonKeyDictionary = [[self class] jsonKeyDictionary];
     
     for (VDProperty *property in properties) {
-        if (![property.protocols containsObject:@protocol(VDJsonIgnore)]) {
+        if ([property.protocols containsObject:@protocol(VDJsonNameAsKey)]
+            || [jsonKeyDictionary.allKeys containsObject:property.name]) {
             NSString *jsonKey = property.name;
             if ([jsonKeyDictionary.allKeys containsObject:property.name]) {
                 jsonKey = [jsonKeyDictionary objectForKey:property.name];
@@ -203,20 +204,17 @@
     
     NSDictionary *jsonKeyDictionary = [[self class] jsonKeyDictionary];
     
-    for (VDProperty *property in properties)
-    {
-        if (![property.protocols containsObject:@protocol(VDJsonIgnore)])
-        {
+    for (VDProperty *property in properties) {
+        if ([property.protocols containsObject:@protocol(VDJsonNameAsKey)]
+            || [jsonKeyDictionary.allKeys containsObject:property.name]) {
             id value = [self.class internalGetValueFromModel:self property:property];
             if (!value) {
                 continue;
             }
             
             NSString *appendString = @"";
-            for (NSString *propertyName in jsonKeyDictionary.allKeys)
-            {
-                if ([propertyName isEqualToString:property.name])
-                {
+            for (NSString *propertyName in jsonKeyDictionary.allKeys) {
+                if ([propertyName isEqualToString:property.name]) {
                     appendString = VDStringFormat(@" (%@) ", [jsonKeyDictionary objectForKey:propertyName]);
                     break;
                 }
