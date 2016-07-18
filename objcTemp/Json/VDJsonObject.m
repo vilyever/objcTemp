@@ -119,7 +119,7 @@
     NSDictionary *jsonKeyDictionary = [[self class] jsonKeyDictionary];
     
     for (VDProperty *property in properties) {
-        if ([property.protocols containsObject:@protocol(VDJsonNameAsKey)]
+        if ([property.protocols containsObject:NSStringFromProtocol(@protocol(VDJsonNameAsKey))]
             || [jsonKeyDictionary.allKeys containsObject:property.name]) {
             NSString *jsonKey = property.name;
             if ([jsonKeyDictionary.allKeys containsObject:property.name]) {
@@ -205,7 +205,7 @@
     NSDictionary *jsonKeyDictionary = [[self class] jsonKeyDictionary];
     
     for (VDProperty *property in properties) {
-        if ([property.protocols containsObject:@protocol(VDJsonNameAsKey)]
+        if ([property.protocols containsObject:NSStringFromProtocol(@protocol(VDJsonNameAsKey))]
             || [jsonKeyDictionary.allKeys containsObject:property.name]) {
             id value = [self.class internalGetValueFromModel:self property:property];
             if (!value) {
