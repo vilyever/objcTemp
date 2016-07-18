@@ -125,7 +125,7 @@ static char VDHookRecordersAssociatedObjectKey;
 - (void)internalRemoveDisposedElements:(NSMutableArray *)elements {
     NSMutableArray *willRemovedElements = [NSMutableArray new];
     for (VDHookElement *element in elements) {
-        if (element.autoRemove || element.isDisposed) {
+        if (element.isDisposed) {
             [willRemovedElements addObject:element];
         }
     }

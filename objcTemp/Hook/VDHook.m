@@ -11,6 +11,7 @@
 #import <objc/runtime.h>
 #import <objc/message.h>
 #include <dlfcn.h>
+#import "NSObject+VDEnhance.h"
 
 
 #if !VDHookInstanceSubclassSuffix
@@ -255,7 +256,7 @@ static void VDHookedForwardInvocationMethod(__unsafe_unretained NSObject *target
 
 static char VDHookMarkDicAssociatedObjectKey;
 + (BOOL)internalCheckIsHookedTarget:(id)target selector:(SEL)selector {
-    NSMutableDictionary *hookDic = objc_getAssociatedObject(target, &VDHookMarkDicAssociatedObjectKey);
+    NSMutableDictionary *hookDic = objc_getAssociatedObject([VDHook vd_sharedInstance], &VDHookMarkDicAssociatedObjectKey);
     if (!hookDic) {
         hookDic = [[NSMutableDictionary alloc] init];
         objc_setAssociatedObject(target, &VDHookMarkDicAssociatedObjectKey, hookDic, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
@@ -266,7 +267,7 @@ static char VDHookMarkDicAssociatedObjectKey;
 }
 
 + (void)internalMarkHookedTarget:(id)target selector:(SEL)selector {
-    NSMutableDictionary *hookDic = objc_getAssociatedObject(target, &VDHookMarkDicAssociatedObjectKey);
+    NSMutableDictionary *hookDic = objc_getAssociatedObject([VDHook vd_sharedInstance], &VDHookMarkDicAssociatedObjectKey);
     if (!hookDic) {
         hookDic = [[NSMutableDictionary alloc] init];
         objc_setAssociatedObject(target, &VDHookMarkDicAssociatedObjectKey, hookDic, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
