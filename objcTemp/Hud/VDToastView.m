@@ -27,13 +27,17 @@
 @implementation VDToastView
 
 #pragma mark Public Method
++ (VDToastView *)sharedToastView {
+    return [self vd_sharedInstance];
+}
+
 + (void)showToast:(NSString *)info {
-    VDToastView *toastView = [self vd_sharedInstance];
+    VDToastView *toastView = [self sharedToastView];
     [toastView pushInfo:info];
 }
 
 + (void)showToast:(NSString *)info withShowTime:(NSTimeInterval)showTime {
-    VDToastView *toastView = [self vd_sharedInstance];
+    VDToastView *toastView = [self sharedToastView];
     [toastView pushInfo:info];
 }
 

@@ -21,18 +21,22 @@
 @implementation VDHudMaskView
 
 #pragma mark Public Method
++ (VDHudMaskView *)sharedMaskView {
+    return [self vd_sharedInstance];
+}
+
 + (void)show {
-    [VDWindow vd_addSubview:[self vd_sharedInstance] scaleToFill:YES];
+    [VDWindow vd_addSubview:[self sharedMaskView] scaleToFill:YES];
 }
 
 + (void)showWithHudView:(UIView *)hudView {
-    [[self vd_sharedInstance] addSubview:hudView];
+    [[self sharedMaskView] addSubview:hudView];
     [self show];
 }
 
 + (void)hide {
-    [[self vd_sharedInstance] vd_removeAllSubviews];
-    [[self vd_sharedInstance] removeFromSuperview];
+    [[self sharedMaskView] vd_removeAllSubviews];
+    [[self sharedMaskView] removeFromSuperview];
 }
 
 + (void)hideDelay:(NSTimeInterval)delay {
@@ -41,7 +45,7 @@
 
 + (void)hideWithHudView:(UIView *)hudView {
     [hudView removeFromSuperview];
-    if ([[self vd_sharedInstance] subviews].count == 0) {
+    if ([[self sharedMaskView] subviews].count == 0) {
         [self hide];
     }
 }

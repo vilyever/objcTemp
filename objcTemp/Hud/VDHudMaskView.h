@@ -14,6 +14,7 @@
 @interface VDHudMaskView : UIView
 
 #pragma mark Public Method
++ (VDHudMaskView *)sharedMaskView;
 + (void)show;
 + (void)showWithHudView:(UIView *)hudView;
 + (void)hide;

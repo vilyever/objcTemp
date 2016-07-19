@@ -256,10 +256,10 @@ static void VDHookedForwardInvocationMethod(__unsafe_unretained NSObject *target
 
 static char VDHookMarkDicAssociatedObjectKey;
 + (BOOL)internalCheckIsHookedTarget:(id)target selector:(SEL)selector {
-    NSMutableDictionary *hookDic = objc_getAssociatedObject([VDHook vd_sharedInstance], &VDHookMarkDicAssociatedObjectKey);
+    NSMutableDictionary *hookDic = objc_getAssociatedObject([VDHook sharedInstance], &VDHookMarkDicAssociatedObjectKey);
     if (!hookDic) {
         hookDic = [[NSMutableDictionary alloc] init];
-        objc_setAssociatedObject([VDHook vd_sharedInstance], &VDHookMarkDicAssociatedObjectKey, hookDic, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+        objc_setAssociatedObject([VDHook sharedInstance], &VDHookMarkDicAssociatedObjectKey, hookDic, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
     NSString *key = [NSString stringWithFormat:@"InstanceHook__%@__%@", NSStringFromClass([target class]), NSStringFromSelector(selector)];
     BOOL isHooked = [[hookDic objectForKey:key] boolValue];
@@ -267,10 +267,10 @@ static char VDHookMarkDicAssociatedObjectKey;
 }
 
 + (void)internalMarkHookedTarget:(id)target selector:(SEL)selector {
-    NSMutableDictionary *hookDic = objc_getAssociatedObject([VDHook vd_sharedInstance], &VDHookMarkDicAssociatedObjectKey);
+    NSMutableDictionary *hookDic = objc_getAssociatedObject([VDHook sharedInstance], &VDHookMarkDicAssociatedObjectKey);
     if (!hookDic) {
         hookDic = [[NSMutableDictionary alloc] init];
-        objc_setAssociatedObject([VDHook vd_sharedInstance], &VDHookMarkDicAssociatedObjectKey, hookDic, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+        objc_setAssociatedObject([VDHook sharedInstance], &VDHookMarkDicAssociatedObjectKey, hookDic, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
     NSString *key = [NSString stringWithFormat:@"InstanceHook__%@__%@", NSStringFromClass([target class]), NSStringFromSelector(selector)];
     [hookDic setObject:@(YES) forKey:key];

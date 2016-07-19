@@ -34,7 +34,7 @@
 }
 
 - (void)vd_performElement:(VDThemeElement *)element {
-    if ([VDThemeManager vd_sharedInstance].animationDuration <= 0) {
+    if ([VDThemeManager sharedManager].animationDuration <= 0) {
         switch (element.resourceType) {
             case VDThemeElementResourceTypeRemove:
                 break;
@@ -65,7 +65,7 @@
         }
     }
     else {
-        [UIView animateWithDuration:[VDThemeManager vd_sharedInstance].animationDuration animations:^{
+        [UIView animateWithDuration:[VDThemeManager sharedManager].animationDuration animations:^{
             switch (element.resourceType) {
                 case VDThemeElementResourceTypeRemove:
                     break;

@@ -32,54 +32,58 @@ NSString * const VDThemeManagerThemeTypeDidChangeNotificationUserInfoOldThemeTyp
 @implementation VDThemeManager
 
 #pragma mark Public Method
++ (VDThemeManager *)sharedManager {
+    return [self vd_sharedInstance];
+}
+
 + (void)bindDatasource:(id<VDThemeManagerDatasource>)datasource {
-    [VDThemeManager vd_sharedInstance].datasource = datasource;
+    [[VDThemeManager sharedManager] setDatasource:datasource];
 }
 
 + (void)setupThemeChangeAnimationDuration:(NSTimeInterval)duration {
-    [VDThemeManager vd_sharedInstance].animationDuration = duration;
+    [[VDThemeManager sharedManager] setAnimationDuration:duration];
 }
 
 + (void)changeThemeType:(NSInteger)themeType {
-    [VDThemeManager vd_sharedInstance].themeType = themeType;
+    [[VDThemeManager sharedManager] setThemeType:themeType];
 }
 
 + (void)setDefaultThemeType:(NSInteger)defaultThemeType {
-    if (![VDThemeManager vd_sharedInstance].isThemeChangedBefore) {
+    if (![VDThemeManager sharedManager].isThemeChangedBefore) {
         [self changeThemeType:defaultThemeType];
     }
 }
 
 + (NSInteger)currentThemeType {
-    return [VDThemeManager vd_sharedInstance].themeType;
+    return [VDThemeManager sharedManager].themeType;
 }
 
 + (UIColor *)colorForKey:(NSString *)key {
-    if ([[VDThemeManager vd_sharedInstance].datasource respondsToSelector:@selector(colorForThemeType:withKey:)]) {
-        return [[VDThemeManager vd_sharedInstance].datasource colorForThemeType:[VDThemeManager vd_sharedInstance].themeType withKey:key];
+    if ([[VDThemeManager sharedManager].datasource respondsToSelector:@selector(colorForThemeType:withKey:)]) {
+        return [[VDThemeManager sharedManager].datasource colorForThemeType:[VDThemeManager sharedManager].themeType withKey:key];
     }
     
     return nil;
 }
 + (UIImage *)imageForKey:(NSString *)key {
-    if ([[VDThemeManager vd_sharedInstance].datasource respondsToSelector:@selector(imageForThemeType:withKey:)]) {
-        return [[VDThemeManager vd_sharedInstance].datasource imageForThemeType:[VDThemeManager vd_sharedInstance].themeType withKey:key];
+    if ([[VDThemeManager sharedManager].datasource respondsToSelector:@selector(imageForThemeType:withKey:)]) {
+        return [[VDThemeManager sharedManager].datasource imageForThemeType:[VDThemeManager sharedManager].themeType withKey:key];
     }
     
     return nil;
 }
 
 + (UIFont *)fontForKey:(NSString *)key {
-    if ([[VDThemeManager vd_sharedInstance].datasource respondsToSelector:@selector(fontForThemeType:withKey:)]) {
-        return [[VDThemeManager vd_sharedInstance].datasource fontForThemeType:[VDThemeManager vd_sharedInstance].themeType withKey:key];
+    if ([[VDThemeManager sharedManager].datasource respondsToSelector:@selector(fontForThemeType:withKey:)]) {
+        return [[VDThemeManager sharedManager].datasource fontForThemeType:[VDThemeManager sharedManager].themeType withKey:key];
     }
     
     return nil;
 }
 
 + (id)attributeForKey:(NSString *)key {
-    if ([[VDThemeManager vd_sharedInstance].datasource respondsToSelector:@selector(attributeForThemeType:withKey:)]) {
-        return [[VDThemeManager vd_sharedInstance].datasource attributeForThemeType:[VDThemeManager vd_sharedInstance].themeType withKey:key];
+    if ([[VDThemeManager sharedManager].datasource respondsToSelector:@selector(attributeForThemeType:withKey:)]) {
+        return [[VDThemeManager sharedManager].datasource attributeForThemeType:[VDThemeManager sharedManager].themeType withKey:key];
     }
     
     return nil;
@@ -87,22 +91,22 @@ NSString * const VDThemeManagerThemeTypeDidChangeNotificationUserInfoOldThemeTyp
 
 + (void)setColorForTarget:(id)target withSelector:(SEL)selector withArguments:(NSArray *)arguments {
     [target vd_addThemeElement:[VDThemeElement elementWithResourceType:VDThemeElementResourceTypeColor withSelector:selector withArguments:arguments]];
-    [[VDThemeManager vd_sharedInstance] internalAddTarget:target];
+    [[VDThemeManager sharedManager] internalAddTarget:target];
 }
 
 + (void)setImageForTarget:(id)target withSelector:(SEL)selector withArguments:(NSArray *)arguments {
     [target vd_addThemeElement:[VDThemeElement elementWithResourceType:VDThemeElementResourceTypeImage withSelector:selector withArguments:arguments]];
-    [[VDThemeManager vd_sharedInstance] internalAddTarget:target];
+    [[VDThemeManager sharedManager] internalAddTarget:target];
 }
 
 + (void)setFontForTarget:(id)target withSelector:(SEL)selector withArguments:(NSArray *)arguments {
     [target vd_addThemeElement:[VDThemeElement elementWithResourceType:VDThemeElementResourceTypeFont withSelector:selector withArguments:arguments]];
-    [[VDThemeManager vd_sharedInstance] internalAddTarget:target];
+    [[VDThemeManager sharedManager] internalAddTarget:target];
 }
 
 + (void)setAttributeForTarget:(id)target withSelector:(SEL)selector withArguments:(NSArray *)arguments {
     [target vd_addThemeElement:[VDThemeElement elementWithResourceType:VDThemeElementResourceTypeAttribute withSelector:selector withArguments:arguments]];
-    [[VDThemeManager vd_sharedInstance] internalAddTarget:target];
+    [[VDThemeManager sharedManager] internalAddTarget:target];
 }
 
 + (void)removeTarget:(id)target {

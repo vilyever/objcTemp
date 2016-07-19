@@ -24,6 +24,7 @@ typedef NS_ENUM(NSInteger, VDAutoPanUpState) {
 @interface VDAutoPanUpManager : NSObject
 
 #pragma mark Public Method
++ (VDAutoPanUpManager *)sharedManager;
 + (void)triggerOn;
 + (void)triggerOnWithDefaultOffset:(CGFloat)offset;
 

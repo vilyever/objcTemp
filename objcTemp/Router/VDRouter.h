@@ -22,6 +22,8 @@
 @interface VDRouter : NSObject
 
 #pragma mark Public Method
++ (VDRouter *)sharedRouter;
+
 + (void)setRootViewControllerIdentifier:(NSString *)rootViewControllerIdentifier;
 
 + (void)bindViewController:(Class)vcClass identifier:(NSString *)identifier;

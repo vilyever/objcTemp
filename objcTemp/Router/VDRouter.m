@@ -22,22 +22,26 @@
 @implementation VDRouter
 
 #pragma mark Public Method
++ (VDRouter *)sharedRouter {
+    return [self vd_sharedInstance];
+}
+
 + (void)setRootViewControllerIdentifier:(NSString *)rootViewControllerIdentifier {
-    VDWindow.rootViewController = [[self vd_sharedInstance] rootNavigationController];
+    VDWindow.rootViewController = [[self sharedRouter] rootNavigationController];
     
-    Class viewControllerClass = [[[self vd_sharedInstance] registeredViewControllers] objectForKey:rootViewControllerIdentifier];
+    Class viewControllerClass = [[[self sharedRouter] registeredViewControllers] objectForKey:rootViewControllerIdentifier];
     NSAssert(viewControllerClass, @"rootViewControllerIdentifier must be binded with a ViewController's class");
     
     UIViewController *rootViewController = [[viewControllerClass alloc] init];
-    [[[self vd_sharedInstance] rootNavigationController] changeRootViewController:rootViewController];
+    [[[self sharedRouter] rootNavigationController] changeRootViewController:rootViewController];
 }
 
 + (void)bindViewController:(Class)vcClass identifier:(NSString *)identifier {
-    [[[self vd_sharedInstance] registeredViewControllers] setObject:vcClass forKey:identifier];
+    [[[self sharedRouter] registeredViewControllers] setObject:vcClass forKey:identifier];
 }
 
 + (Class)findBindedViewControllerClass:(NSString *)identifier {
-    return [[[self vd_sharedInstance] registeredViewControllers] objectForKey:identifier];
+    return [[[self sharedRouter] registeredViewControllers] objectForKey:identifier];
 }
 
 + (UIViewController *)push:(NSString *)identifier {
@@ -45,13 +49,13 @@
 }
 
 + (UIViewController *)push:(NSString *)identifier withPrepareBlock:(void (^)(UIViewController *controller))block {
-    Class viewControllerClass = [[[self vd_sharedInstance] registeredViewControllers] objectForKey:identifier];
+    Class viewControllerClass = [[[self sharedRouter] registeredViewControllers] objectForKey:identifier];
     if (viewControllerClass) {
         UIViewController *targetViewController = [[viewControllerClass alloc] init];
         if (block) {
             block(targetViewController);
         }
-        [[[self vd_sharedInstance] rootNavigationController] pushViewController:targetViewController animated:YES];
+        [[[self sharedRouter] rootNavigationController] pushViewController:targetViewController animated:YES];
         
         return targetViewController;
     }
@@ -64,7 +68,7 @@
 }
 
 + (UIViewController *)present:(NSString *)identifier withPrepareBlock:(void (^)(UIViewController *controller))block {
-    Class viewControllerClass = [[[self vd_sharedInstance] registeredViewControllers] objectForKey:identifier];
+    Class viewControllerClass = [[[self sharedRouter] registeredViewControllers] objectForKey:identifier];
     if (viewControllerClass) {
         UIViewController *targetViewController = [[viewControllerClass alloc] init];
         if (block) {

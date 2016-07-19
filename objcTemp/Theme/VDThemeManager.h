@@ -30,6 +30,7 @@ extern NSString * const VDThemeManagerThemeTypeDidChangeNotificationUserInfoOldT
 @interface VDThemeManager : NSObject
 
 #pragma mark Public Method
++ (VDThemeManager *)sharedManager;
 + (void)bindDatasource:(id<VDThemeManagerDatasource>)datasource;
 + (void)setupThemeChangeAnimationDuration:(NSTimeInterval)duration;
 + (void)changeThemeType:(NSInteger)themeType;

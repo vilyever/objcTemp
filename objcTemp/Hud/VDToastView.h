@@ -14,6 +14,7 @@
 @interface VDToastView : UIView
 
 #pragma mark Public Method
++ (VDToastView *)sharedToastView;
 + (void)showToast:(NSString *)info;
 + (void)showToast:(NSString *)info withShowTime:(NSTimeInterval)showTime;
 - (void)pushInfo:(NSString *)info;

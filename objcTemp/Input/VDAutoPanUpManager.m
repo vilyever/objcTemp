@@ -23,12 +23,16 @@
 @implementation VDAutoPanUpManager
 
 #pragma mark Public Method
++ (VDAutoPanUpManager *)sharedManager {
+    return [self vd_sharedInstance];
+}
+
 + (void)triggerOn {
     [self triggerOnWithDefaultOffset:0.0f];
 }
 
 + (void)triggerOnWithDefaultOffset:(CGFloat)offset {
-    [VDAutoPanUpManager vd_sharedInstance].defalutPanUpOffset = offset;
+    [VDAutoPanUpManager sharedManager].defalutPanUpOffset = offset;
 }
 
 #pragma mark Properties
