@@ -45,7 +45,7 @@
     [self sharedManager].defaultPullingTrailerViewBuilderBlock = defaultPullingTrailerViewBuilderBlock;
 }
 
-+ (UIView *)newDefaultHeaderPullingView {
++ (UIView<VDPullRefreshPullingHeaderView> *)newDefaultHeaderPullingView {
     if ([self sharedManager].defaultPullingHeaderViewBuilderBlock) {
         return [self sharedManager].defaultPullingHeaderViewBuilderBlock();
     }
@@ -53,7 +53,7 @@
     return [VDDefaultPullingView pullingHeaderView];
 }
 
-+ (UIView *)newDefaultTrailerPullingView {
++ (UIView<VDPullRefreshPullingTrailerView> *)newDefaultTrailerPullingView {
     if ([self sharedManager].defaultPullingTrailerViewBuilderBlock) {
         return [self sharedManager].defaultPullingTrailerViewBuilderBlock();
     }

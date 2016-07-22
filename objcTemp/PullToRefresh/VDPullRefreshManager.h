@@ -24,8 +24,8 @@
 + (void)setupDefaultPullingHeaderViewBuilderBlock:(UIView<VDPullRefreshPullingHeaderView> *(^)(void))defaultPullingHeaderViewBuilderBlock;
 + (void)setupDefaultPullingTrailerViewBuilderBlock:(UIView<VDPullRefreshPullingTrailerView> *(^)(void))defaultPullingTrailerViewBuilderBlock;
 
-+ (UIView *)newDefaultHeaderPullingView;
-+ (UIView *)newDefaultTrailerPullingView;
++ (UIView<VDPullRefreshPullingHeaderView> *)newDefaultHeaderPullingView;
++ (UIView<VDPullRefreshPullingTrailerView> *)newDefaultTrailerPullingView;
 
 #pragma mark Properties
 @property (nonatomic, assign) VDPullRefreshOrientation defaultPullOrientation; // default is vertical
