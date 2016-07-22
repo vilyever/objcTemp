@@ -22,11 +22,11 @@
 @implementation VDDefaultPullingView
 
 #pragma mark Public Method
-+ (UIView *)pullingHeaderView {
++ (VDDefaultPullingView *)pullingHeaderView {
     return [[self alloc] initWithTrailer:NO];
 }
 
-+ (UIView *)pullingTrailerView {
++ (VDDefaultPullingView *)pullingTrailerView {
     return [[self alloc] initWithTrailer:YES];
 }
 

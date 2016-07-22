@@ -15,8 +15,8 @@
 @interface VDDefaultPullingView : UIView<VDPullRefreshPullingHeaderView, VDPullRefreshPullingTrailerView>
 
 #pragma mark Public Method
-+ (UIView *)pullingHeaderView;
-+ (UIView *)pullingTrailerView;
++ (VDDefaultPullingView *)pullingHeaderView;
++ (VDDefaultPullingView *)pullingTrailerView;
 - (instancetype)initWithTrailer:(BOOL)isTrailer;
 
 #pragma mark Properties
