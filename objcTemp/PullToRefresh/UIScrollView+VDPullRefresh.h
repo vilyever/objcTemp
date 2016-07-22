@@ -24,8 +24,8 @@
 - (void)vd_startPullRefreshTrailerRefreshing;
 - (void)vd_stopPullRefreshTrailerRefreshing;
 
-- (void)vd_setPullRefreshHeaderView:(UIView *)view;
-- (void)vd_setPullRefreshTrailerView:(UIView *)view;
+- (void)vd_setPullRefreshHeaderView:(UIView<VDPullRefreshPullingHeaderView> *)view;
+- (void)vd_setPullRefreshTrailerView:(UIView<VDPullRefreshPullingTrailerView> *)view;
 
 #pragma mark Properties
 @property (nonatomic, strong) VDPullRefreshElement *vd_pullRefreshElement;

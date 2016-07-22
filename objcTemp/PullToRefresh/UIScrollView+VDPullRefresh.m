@@ -58,11 +58,11 @@
     self.vd_isPullRefreshTrailerRefreshing = NO;
 }
 
-- (void)vd_setPullRefreshHeaderView:(UIView *)view {
+- (void)vd_setPullRefreshHeaderView:(UIView<VDPullRefreshPullingHeaderView> *)view {
     self.vd_pullRefreshElement.headerPullingView = view;
 }
 
-- (void)vd_setPullRefreshTrailerView:(UIView *)view {
+- (void)vd_setPullRefreshTrailerView:(UIView<VDPullRefreshPullingTrailerView> *)view {
     self.vd_pullRefreshElement.trailerPullingView = view;
 }
 
