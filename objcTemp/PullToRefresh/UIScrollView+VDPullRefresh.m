@@ -75,9 +75,7 @@
         element.pullOrientation = [VDPullRefreshManager sharedManager].defaultPullOrientation;
         element.defaultHeaderPullingViewHeight = [VDPullRefreshManager sharedManager].defaultHeaderPullingViewHeight;
         element.defaultTrailerPullingViewHeight = [VDPullRefreshManager sharedManager].defaultTrailerPullingViewHeight;
-        element.headerPullingView = [VDPullRefreshManager newDefaultHeaderPullingView];
-        element.trailerPullingView = [VDPullRefreshManager newDefaultTrailerPullingView];
-        
+                
         objc_setAssociatedObject(self, @selector(vd_pullRefreshElement), element, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
     
@@ -101,6 +99,9 @@
 }
 
 - (void)setVd_isPullRefreshHeaderEnable:(BOOL)vd_isPullRefreshHeaderEnable {
+    if (vd_isPullRefreshHeaderEnable && !self.vd_pullRefreshElement.headerPullingView) {
+        self.vd_pullRefreshElement.headerPullingView = [VDPullRefreshManager newDefaultHeaderPullingView];
+    }
     self.vd_pullRefreshElement.isHeaderPullingEnabled = vd_isPullRefreshHeaderEnable;
 }
 
@@ -109,6 +110,9 @@
 }
 
 - (void)setVd_isPullRefreshTrailerEnable:(BOOL)vd_isPullRefreshTrailerEnable {
+    if (vd_isPullRefreshTrailerEnable && !self.vd_pullRefreshElement.trailerPullingView) {
+        self.vd_pullRefreshElement.trailerPullingView = [VDPullRefreshManager newDefaultTrailerPullingView];
+    }
     self.vd_pullRefreshElement.isTrailerPullingEnabled = vd_isPullRefreshTrailerEnable;
 }
 
