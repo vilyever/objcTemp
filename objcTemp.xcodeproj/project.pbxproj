@@ -129,6 +129,14 @@
 		FE615FD61D2367B500AECD76 /* UIViewController+VDEnhance.m in Sources */ = {isa = PBXBuildFile; fileRef = FE615F9A1D2367B500AECD76 /* UIViewController+VDEnhance.m */; };
 		FE615FD71D2367B500AECD76 /* VDWeakRef.h in Headers */ = {isa = PBXBuildFile; fileRef = FE615F9C1D2367B500AECD76 /* VDWeakRef.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FE615FD81D2367B500AECD76 /* VDWeakRef.m in Sources */ = {isa = PBXBuildFile; fileRef = FE615F9D1D2367B500AECD76 /* VDWeakRef.m */; };
+		FE6400191D3F49F000652BAC /* UIScrollView+VDPullRefresh.h in Headers */ = {isa = PBXBuildFile; fileRef = FE6400171D3F49EF00652BAC /* UIScrollView+VDPullRefresh.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE64001A1D3F49F000652BAC /* UIScrollView+VDPullRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6400181D3F49EF00652BAC /* UIScrollView+VDPullRefresh.m */; };
+		FE64001D1D3F4E8E00652BAC /* VDPullRefreshManager.h in Headers */ = {isa = PBXBuildFile; fileRef = FE64001B1D3F4E8E00652BAC /* VDPullRefreshManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE64001E1D3F4E8E00652BAC /* VDPullRefreshManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FE64001C1D3F4E8E00652BAC /* VDPullRefreshManager.m */; };
+		FE6400211D3F4E9C00652BAC /* VDPullRefreshElement.h in Headers */ = {isa = PBXBuildFile; fileRef = FE64001F1D3F4E9C00652BAC /* VDPullRefreshElement.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE6400221D3F4E9C00652BAC /* VDPullRefreshElement.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6400201D3F4E9C00652BAC /* VDPullRefreshElement.m */; };
+		FE64002C1D40AC3C00652BAC /* VDDefaultPullingView.h in Headers */ = {isa = PBXBuildFile; fileRef = FE64002A1D40AC3C00652BAC /* VDDefaultPullingView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE64002D1D40AC3C00652BAC /* VDDefaultPullingView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE64002B1D40AC3C00652BAC /* VDDefaultPullingView.m */; };
 		FECA263D1D25030B00ED8FDD /* objcTemp.podspec in Resources */ = {isa = PBXBuildFile; fileRef = FECA263B1D25030B00ED8FDD /* objcTemp.podspec */; };
 		FECA263E1D25030B00ED8FDD /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = FECA263C1D25030B00ED8FDD /* README.md */; };
 		FECA268A1D25147000ED8FDD /* VDProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = FECA26881D25147000ED8FDD /* VDProperty.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -277,6 +285,14 @@
 		FE615F9A1D2367B500AECD76 /* UIViewController+VDEnhance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+VDEnhance.m"; sourceTree = "<group>"; };
 		FE615F9C1D2367B500AECD76 /* VDWeakRef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDWeakRef.h; sourceTree = "<group>"; };
 		FE615F9D1D2367B500AECD76 /* VDWeakRef.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDWeakRef.m; sourceTree = "<group>"; };
+		FE6400171D3F49EF00652BAC /* UIScrollView+VDPullRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+VDPullRefresh.h"; sourceTree = "<group>"; };
+		FE6400181D3F49EF00652BAC /* UIScrollView+VDPullRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+VDPullRefresh.m"; sourceTree = "<group>"; };
+		FE64001B1D3F4E8E00652BAC /* VDPullRefreshManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDPullRefreshManager.h; sourceTree = "<group>"; };
+		FE64001C1D3F4E8E00652BAC /* VDPullRefreshManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDPullRefreshManager.m; sourceTree = "<group>"; };
+		FE64001F1D3F4E9C00652BAC /* VDPullRefreshElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDPullRefreshElement.h; sourceTree = "<group>"; };
+		FE6400201D3F4E9C00652BAC /* VDPullRefreshElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDPullRefreshElement.m; sourceTree = "<group>"; };
+		FE64002A1D40AC3C00652BAC /* VDDefaultPullingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDDefaultPullingView.h; sourceTree = "<group>"; };
+		FE64002B1D40AC3C00652BAC /* VDDefaultPullingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDDefaultPullingView.m; sourceTree = "<group>"; };
 		FECA263B1D25030B00ED8FDD /* objcTemp.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = objcTemp.podspec; sourceTree = "<group>"; };
 		FECA263C1D25030B00ED8FDD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		FECA26881D25147000ED8FDD /* VDProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDProperty.h; sourceTree = "<group>"; };
@@ -447,6 +463,7 @@
 		FE615F391D23679B00AECD76 /* objcTemp */ = {
 			isa = PBXGroup;
 			children = (
+				FE6400161D3F49BD00652BAC /* PullToRefresh */,
 				FE4170A31D35E8C900518C78 /* NSArray */,
 				FE41706F1D33778000518C78 /* Loading */,
 				FE41704A1D33431F00518C78 /* Hud */,
@@ -676,6 +693,21 @@
 			path = WeakRef;
 			sourceTree = "<group>";
 		};
+		FE6400161D3F49BD00652BAC /* PullToRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				FE6400171D3F49EF00652BAC /* UIScrollView+VDPullRefresh.h */,
+				FE6400181D3F49EF00652BAC /* UIScrollView+VDPullRefresh.m */,
+				FE64001B1D3F4E8E00652BAC /* VDPullRefreshManager.h */,
+				FE64001C1D3F4E8E00652BAC /* VDPullRefreshManager.m */,
+				FE64001F1D3F4E9C00652BAC /* VDPullRefreshElement.h */,
+				FE6400201D3F4E9C00652BAC /* VDPullRefreshElement.m */,
+				FE64002A1D40AC3C00652BAC /* VDDefaultPullingView.h */,
+				FE64002B1D40AC3C00652BAC /* VDDefaultPullingView.m */,
+			);
+			path = PullToRefresh;
+			sourceTree = "<group>";
+		};
 		FECA26871D25146300ED8FDD /* Property */ = {
 			isa = PBXGroup;
 			children = (
@@ -773,8 +805,12 @@
 				FE4170941D34DD5600518C78 /* VDSimpleHudViewController.h in Headers */,
 				FE4170A11D35E34000518C78 /* VDToastView.h in Headers */,
 				FE4170CE1D3635B400518C78 /* VDInputManager.h in Headers */,
+				FE6400211D3F4E9C00652BAC /* VDPullRefreshElement.h in Headers */,
+				FE6400191D3F49F000652BAC /* UIScrollView+VDPullRefresh.h in Headers */,
+				FE64001D1D3F4E8E00652BAC /* VDPullRefreshManager.h in Headers */,
 				FE4170D61D363DC800518C78 /* UIView+VDInputManager.h in Headers */,
 				FE4170AA1D35E93A00518C78 /* NSMutableArray+VDEnhance.h in Headers */,
+				FE64002C1D40AC3C00652BAC /* VDDefaultPullingView.h in Headers */,
 				FECA26AF1D26556800ED8FDD /* NSObject+VDPersistent.h in Headers */,
 				FE615FC51D2367B500AECD76 /* UIImage+VDEnhance.h in Headers */,
 			);
@@ -899,6 +935,7 @@
 				FE4170691D3369E700518C78 /* VDHudViewController.m in Sources */,
 				FE615F9F1D2367B500AECD76 /* CALayer+VDEnhance.m in Sources */,
 				FE416FA81D2DE7E000518C78 /* VDThemeManager.m in Sources */,
+				FE64002D1D40AC3C00652BAC /* VDDefaultPullingView.m in Sources */,
 				FE615FB01D2367B500AECD76 /* NSObject+VDEnhance.m in Sources */,
 				FE416F701D2CA6CE00518C78 /* UITableViewCell+VDEnhance.m in Sources */,
 				FECA263E1D25030B00ED8FDD /* README.md in Sources */,
@@ -909,6 +946,7 @@
 				FE615FBA1D2367B500AECD76 /* UIViewController+VDRouter.m in Sources */,
 				FE41711B1D375F1C00518C78 /* UINavigationBar+VDTheme.m in Sources */,
 				FE4170CF1D3635B400518C78 /* VDInputManager.m in Sources */,
+				FE6400221D3F4E9C00652BAC /* VDPullRefreshElement.m in Sources */,
 				FE615FCE1D2367B500AECD76 /* UIView+VDConstraint.m in Sources */,
 				FECA268F1D2516FD00ED8FDD /* NSObject+VDProperty.m in Sources */,
 				FE4170841D338E1100518C78 /* VDLoadingLayer.m in Sources */,
@@ -919,6 +957,7 @@
 				FECA26941D25215F00ED8FDD /* VDJsonObject.m in Sources */,
 				FE615FA91D2367B500AECD76 /* VDHookInvocationInfo.m in Sources */,
 				FE41708C1D34B81D00518C78 /* VDLoadingAngularVariationView.m in Sources */,
+				FE64001A1D3F49F000652BAC /* UIScrollView+VDPullRefresh.m in Sources */,
 				FE416F8D1D2CFFA900518C78 /* VDSelectorArgument.m in Sources */,
 				FE4170731D33788600518C78 /* VDLoadingView.m in Sources */,
 				FE4170AB1D35E93A00518C78 /* NSMutableArray+VDEnhance.m in Sources */,
@@ -937,6 +976,7 @@
 				FE416FEB1D2E576A00518C78 /* UITableView+VDEnhance.m in Sources */,
 				FE615FB61D2367B500AECD76 /* NSString+VDJavaScript.m in Sources */,
 				FE615FC21D2367B500AECD76 /* UICollectionViewCell+VDEnhance.m in Sources */,
+				FE64001E1D3F4E8E00652BAC /* VDPullRefreshManager.m in Sources */,
 				FE4170561D33624800518C78 /* UIView+VDHud.m in Sources */,
 				FE4170521D3346B500518C78 /* VDHudMaskView.m in Sources */,
 				FE4170951D34DD5600518C78 /* VDSimpleHudViewController.m in Sources */,

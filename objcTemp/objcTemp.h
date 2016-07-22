@@ -111,3 +111,8 @@ FOUNDATION_EXPORT const unsigned char objcTempVersionString[];
 #import <objcTemp/VDLoadingAngularVariationView.h>
 
 #import <objcTemp/NSMutableArray+VDEnhance.h>
+
+#import <objcTemp/VDPullRefreshElement.h>
+#import <objcTemp/VDDefaultPullingView.h>
+#import <objcTemp/VDPullRefreshManager.h>
+#import <objcTemp/UIScrollView+VDPullRefresh.h>

@@ -20,11 +20,10 @@
 
 #pragma mark Properties
 //@property (nonatomic, strong) VDLoadingLayer *loadingLayer;
-@property (nonatomic, assign, readonly) BOOL animated;
+@property (nonatomic, assign) BOOL animated;
 @property (nonatomic, strong) CABasicAnimation *progressAnimation;
 
 @property (nonatomic, assign) NSTimeInterval progressAnimationDuration;
-@property (nonatomic, assign) float progressAnimationRepeatCount;
 
 @property (nonatomic, assign) NSInteger progressAnimationRepeatedTimes;
 

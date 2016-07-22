@@ -14,10 +14,9 @@
 
 @interface VDLoadingView ()
 
-@property (nonatomic, assign, readwrite) BOOL animated;
-@property (nonatomic, assign) BOOL needReanimate;
-
 @property (nonatomic, assign) CGFloat lastProgress;
+@property (nonatomic, assign) CFTimeInterval lastAnimationBeginTime;
+@property (nonatomic, assign) CFTimeInterval lastAnimationAnimatingTime;
 
 @end
 
@@ -26,17 +25,11 @@
 
 #pragma mark Public Method
 - (void)startAnimation {
-    if ([self.layer animationForKey:VDKeyPath(self, progressAnimation)]) {
-        return;
-    }
     self.animated = YES;
-    self.progressAnimationRepeatedTimes = -1;
-    [self.layer addAnimation:self.progressAnimation forKey:VDKeyPath(self, progressAnimation)];
 }
 
 - (void)stopAnimation {
     self.animated = NO;
-    [self.layer removeAnimationForKey:VDKeyPath(self, progressAnimation)];
 }
 
 #pragma mark Properties
@@ -46,21 +39,29 @@
         _progressAnimation.delegate = self;
         _progressAnimation.fromValue = @0.0;
         _progressAnimation.toValue = @1.0;
-        _progressAnimation.repeatCount = self.progressAnimationRepeatCount;
+        _progressAnimation.repeatCount = 1;
         _progressAnimation.duration = self.progressAnimationDuration;
     }
     
     return _progressAnimation;
 }
 
+- (void)setAnimated:(BOOL)animated {
+    if (_animated != animated) {
+        _animated = animated;
+        if (_animated) {
+            self.progressAnimationRepeatedTimes = -1;
+            [self internalStartAnimation:NO];
+        }
+        else {
+            [self internalStopAnimation:NO];
+        }
+    }
+}
+
 - (void)setProgressAnimationDuration:(NSTimeInterval)progressAnimationDuration {
     _progressAnimationDuration = progressAnimationDuration;
     self.progressAnimation.duration = _progressAnimationDuration;
-}
-
-- (void)setProgressAnimationRepeatCount:(float)progressAnimationRepeatCount {
-    _progressAnimationRepeatCount = progressAnimationRepeatCount;
-    self.progressAnimation.repeatCount = _progressAnimationRepeatCount;
 }
 
 #pragma mark Overrides
@@ -98,6 +99,23 @@
 - (void)setHidden:(BOOL)hidden {
     [super setHidden:hidden];
     
+    if (hidden) {
+        [self internalStopAnimationWhenBackground];
+    }
+    else {
+        [self internalTryStartAnimationWhenForeground];
+    }
+}
+
+- (void)didMoveToWindow {
+    [super didMoveToWindow];
+    
+    if (!self.window) {
+        [self internalStopAnimationWhenBackground];
+    }
+    else {
+        [self internalTryStartAnimationWhenForeground];
+    }
 }
 
 - (void)dealloc {
@@ -111,11 +129,7 @@
 - (void)drawLayer:(VDLoadingLayer *)layer inContext:(CGContextRef)ctx {
     [super drawLayer:layer inContext:ctx];
     
-    if (self.lastProgress > layer.animatingProgress) {
-        self.progressAnimationRepeatedTimes++;
-    }
-    
-    self.lastProgress = layer.animatingProgress;
+    [((VDLoadingLayer *)self.layer) setAnimatingProgress:layer.animatingProgress];
 }
 
 
@@ -124,16 +138,19 @@
 
 #pragma mark Delegates
 - (void)animationDidStart:(CAAnimation *)anim {
-    
+    self.progressAnimationRepeatedTimes++;
 }
 
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
+    
+    if (self.animated && flag) {
+        [self internalStartAnimation:NO];
+    }
 }
 
 #pragma mark Private Method
 - (void)internalInitVDLoadingView {
-    _progressAnimationRepeatCount = HUGE_VALF;
-    _progressAnimationDuration = 1.5;
+    _progressAnimationDuration = 2;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(internalAppWillResignActive:) name:UIApplicationWillResignActiveNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(internalAppDidEnterBackground:) name:UIApplicationDidEnterBackgroundNotification object:nil];
@@ -141,25 +158,70 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(internalAppDidBecomeActive:) name:UIApplicationDidBecomeActiveNotification object:nil];
 }
 
+- (void)internalStartAnimation:(BOOL)isResume {
+    if (self.isHidden
+        || !self.window
+        || [UIApplication sharedApplication].applicationState != UIApplicationStateActive) {
+        return;
+    }
+    
+    if (!self.animated) {
+        return;
+    }
+    
+    if ([self.layer animationForKey:VDKeyPath(self, progressAnimation)]) {
+        return;
+    }
+    
+    if (isResume) {
+        self.progressAnimation.beginTime = CACurrentMediaTime() - self.lastAnimationAnimatingTime;
+    }
+    else {
+        self.progressAnimation.beginTime = CACurrentMediaTime();
+        
+        self.lastAnimationAnimatingTime = 0;
+    }
+
+    self.lastAnimationBeginTime = CACurrentMediaTime();
+    
+    [self.layer addAnimation:self.progressAnimation forKey:VDKeyPath(self, progressAnimation)];
+}
+
+- (void)internalStopAnimation:(BOOL)isPause {
+    if (![self.layer animationForKey:VDKeyPath(self, progressAnimation)]) {
+        return;
+    }
+    
+    if (isPause) {
+        self.lastAnimationAnimatingTime += CACurrentMediaTime() - self.lastAnimationBeginTime;
+    }
+    [self.layer removeAnimationForKey:VDKeyPath(self, progressAnimation)];
+}
+
 - (void)internalAppWillResignActive:(NSNotification *)notification {
 }
 
 - (void)internalAppDidEnterBackground:(NSNotification *)notification {
-    if (self.animated) {
-        self.needReanimate = YES;
-        [self stopAnimation];
-    }
+    [self internalStopAnimationWhenBackground];
 }
 
 - (void)internalAppWillEnterForeground:(NSNotification *)notification {
-    if (self.needReanimate) {
-        self.needReanimate = NO;
-        [self startAnimation];
-    }
 }
 
 - (void)internalAppDidBecomeActive:(NSNotification *)notification {
+    [self internalTryStartAnimationWhenForeground];
+}
 
+- (void)internalStopAnimationWhenBackground {
+    if (self.animated) {
+        [self internalStopAnimation:YES];
+    }
+}
+
+- (void)internalTryStartAnimationWhenForeground {
+    if (self.animated) {
+        [self internalStartAnimation:YES];
+    }
 }
 
 @end

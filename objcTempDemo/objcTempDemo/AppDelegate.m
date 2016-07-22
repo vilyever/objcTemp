@@ -15,6 +15,8 @@
 #import "HudViewController.h"
 #import "AppRouterLoadingView.h"
 #import "LoadingViewController.h"
+#import "AppRouterPullToRefresh.h"
+#import "PullToRefreshViewController.h"
 
 //#import <objcTemp.h>
 //#import <NSObject+VDHook.h>
@@ -36,6 +38,7 @@
     [AppRouterAutoPanUp bindViewController:[AutoPanUpViewController class]];
     [AppRouterHud bindViewController:[HudViewController class]];
     [AppRouterLoadingView bindViewController:[LoadingViewController class]];
+    [AppRouterPullToRefresh bindViewController:[PullToRefreshViewController class]];
     
     [AppRouterHome asRoot];
     

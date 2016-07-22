@@ -40,6 +40,8 @@
 - (instancetype)initWithLayer:(id)layer {
     self = [super initWithLayer:layer];
     
+//    self.animatingProgress = [layer animatingProgress];
+    
     return self;
 }
 

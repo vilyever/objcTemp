@@ -16,7 +16,7 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TF3-49-PJZ" customClass="VDLoadingAngularVariationView">
+                <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TF3-49-PJZ" customClass="VDLoadingAngularVariationView">
                     <rect key="frame" x="8" y="8" width="240" height="128"/>
                     <color key="backgroundColor" red="1" green="0.90217387979999997" blue="0.14636512679999999" alpha="1" colorSpace="calibratedRGB"/>
                 </view>

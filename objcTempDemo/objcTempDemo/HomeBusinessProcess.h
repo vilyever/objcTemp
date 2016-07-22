@@ -13,6 +13,7 @@ typedef NS_ENUM(NSInteger, HomeItemType) {
     HomeItemTypeAutoPanUp,
     HomeItemTypeHud,
     HomeItemTypeLoadingView,
+    HomeItemTypePullToRefresh,
 };
 
 @class HomeBusinessProcess;

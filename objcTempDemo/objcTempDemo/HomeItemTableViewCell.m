@@ -26,6 +26,10 @@
 
 - (void)setType:(HomeItemType)type {
     switch (type) {
+        case HomeItemTypeAutoPanNone: {
+            self.titleLabel.text = @"";
+            break;
+        }
         case HomeItemTypeAutoPanUp: {
             self.titleLabel.text = @"AutoPanUp";
             break;
@@ -36,6 +40,10 @@
         }
         case HomeItemTypeLoadingView: {
             self.titleLabel.text = @"LoadingView";
+            break;
+        }
+        case HomeItemTypePullToRefresh: {
+            self.titleLabel.text = @"PullToRefresh";
             break;
         }
     }

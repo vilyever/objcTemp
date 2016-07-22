@@ -10,6 +10,7 @@
 #import "AppRouterAutoPanUp.h"
 #import "AppRouterHud.h"
 #import "AppRouterLoadingView.h"
+#import "AppRouterPullToRefresh.h"
 //#import "objcTemp.h"
 
 
@@ -41,6 +42,7 @@
                                                           @(HomeItemTypeAutoPanUp),
                                                           @(HomeItemTypeHud),
                                                           @(HomeItemTypeLoadingView),
+                                                          @(HomeItemTypePullToRefresh),
                                                           ]];
     }
     
@@ -63,6 +65,10 @@
             }
             case HomeItemTypeLoadingView: {
                 [AppRouterLoadingView open];
+                break;
+            }
+            case HomeItemTypePullToRefresh: {
+                [AppRouterPullToRefresh open];
                 break;
             }
             default:

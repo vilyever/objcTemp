@@ -1,57 +1,47 @@
 //
-//  LoadingViewController.m
-//  objcTempDemo
+//  LoadingHudViewController.m
+//  FTETAssistantForiOS
 //
-//  Created by Deng on 16/7/11.
+//  Created by Deng on 16/7/13.
 //  Copyright © Deng. All rights reserved.
 //
 
-#import "LoadingViewController.h"
 #import "LoadingHudViewController.h"
 //#import "objcTemp.h"
-@import objcTemp;
+//@import objcTemp;
 
 
-@interface LoadingViewController () <VDSimpleHudViewControllerDelegate>
+@interface LoadingHudViewController ()
 
-@property (weak, nonatomic) IBOutlet VDLoadingView *loadingView;
-@property (nonatomic, strong) LoadingHudViewController *loadingHudViewController;
+@property (nonatomic, strong, readwrite) VDLoadingAngularVariationView *loadingView;
 
 @end
 
 
-@implementation LoadingViewController
+@implementation LoadingHudViewController
 
 #pragma mark Public Method
 
 
 #pragma mark Properties
-- (LoadingHudViewController *)loadingHudViewController {
-    if (!_loadingHudViewController) {
-        _loadingHudViewController = [LoadingHudViewController new];
-        _loadingHudViewController.title = @"转转";
-        _loadingHudViewController.leftButtonTitle = @"取消";
-        _loadingHudViewController.shouldDisplayLeftButton = YES;
-        _loadingHudViewController.delegate = self;
+- (VDLoadingAngularVariationView *)loadingView {
+    if (!_loadingView) {
+        _loadingView = [[VDLoadingAngularVariationView alloc] init];
     }
     
-    return _loadingHudViewController;
+    return _loadingView;
 }
 
 #pragma mark Overrides
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-        
-    VDWeakifySelf;
-    [self.view vd_performActionOnTap:^{
-        VDStrongifySelf;
-        [self.loadingHudViewController vd_showAsHud];
-    }];
+    self.customView = self.loadingView;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+//    [self.loadingView startAnimation];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -68,6 +58,8 @@
 
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
+    
+//    [self.loadingView stopAnimation];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -87,10 +79,11 @@
 
 
 #pragma mark Delegates
-- (void)onSimpleHudViewControllerLeftButtonClick:(VDSimpleHudViewController *)controller {
-    [self.loadingHudViewController vd_hideHud];
-}
+
 
 #pragma mark Private Methods
+- (void)internalInitLoadingHudViewController {
+    
+}
 
 @end
