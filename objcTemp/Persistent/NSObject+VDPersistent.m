@@ -24,7 +24,7 @@
     for (VDProperty *property in properties) {
 //        if ([property.protocols containsObject:NSStringFromProtocol(@protocol(VDPersistentProtocol))]) {
             VDWeakifySelf;
-            [self vd_hookSelector:NSSelectorFromString(property.setterSelectorName) afterBlock:^(VDHookInvocationInfo *info) {
+            [self vd_hookSelector:NSSelectorFromString(property.setterSelectorName) afterBlock:^(VDHookElement *element, VDHookInvocationInfo *info) {
                 VDStrongifySelf;
                 if (![property isPrimitive]) {
                     [[NSUserDefaults standardUserDefaults] setObject:[info getArgumentAtIndex:0] forKey:[NSString stringWithFormat:@"%@_%@", [[self class] vd_className], property.name]];
@@ -67,7 +67,7 @@
                 }
                 [[NSUserDefaults standardUserDefaults] synchronize];
             }];
-            [self vd_hookSelector:NSSelectorFromString(property.getterSelectorName) insteadBlock:^(VDHookInvocationInfo *info) {
+            [self vd_hookSelector:NSSelectorFromString(property.getterSelectorName) insteadBlock:^(VDHookElement *element, VDHookInvocationInfo *info) {
                 VDStrongifySelf;
                 if (![property isPrimitive]) {
                     id value = [[NSUserDefaults standardUserDefaults] objectForKey:[NSString stringWithFormat:@"%@_%@", [[self class] vd_className], property.name]];

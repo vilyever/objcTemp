@@ -20,11 +20,10 @@
 @implementation VDHookElement
 
 #pragma mark Public Method
-+ (instancetype)elementWithTarget:(id)target selector:(SEL)selector block:(void (^)(VDHookInvocationInfo *))block {
-    return [self elementWithTarget:target selector:selector block:block autoRemove:NO];
++ (instancetype)elementWithTarget:(id)target selector:(SEL)selector block:(void (^)(VDHookElement *element, VDHookInvocationInfo *info))block {    return [self elementWithTarget:target selector:selector block:block autoRemove:NO];
 }
 
-+ (instancetype)elementWithTarget:(id)target selector:(SEL)selector block:(void (^)(VDHookInvocationInfo *))block autoRemove:(BOOL)autoRemove {
++ (instancetype)elementWithTarget:(id)target selector:(SEL)selector block:(void (^)(VDHookElement *element, VDHookInvocationInfo *info))block autoRemove:(BOOL)autoRemove {
     VDHookElement *element = [[VDHookElement alloc] init];
     element.target = target;
     element.selector = selector;
@@ -35,7 +34,7 @@
 
 - (void)invokeBlock:(VDHookInvocationInfo *)invocationInfo {
     if (self.block) {
-        self.block(invocationInfo);
+        self.block(self, invocationInfo);
     }
 }
 

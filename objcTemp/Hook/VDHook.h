@@ -10,6 +10,12 @@
 #import "VDHookRecorder.h"
 #import "VDHookInvocationInfo.h"
 
+
+#if !VDHookDeallocSelector
+#define VDHookDeallocSelector \
+NSSelectorFromString(@"dealloc")
+#endif
+
 @class VDHook;
 
 
@@ -18,21 +24,21 @@
 #pragma mark Public Method
 + (VDHook *)sharedInstance;
 
-+ (VDHookElement *)hookInstance:(id)instance selector:(SEL)selector beforeBlock:(void (^)(VDHookInvocationInfo *info))block;
-+ (VDHookElement *)hookInstance:(id)instance selector:(SEL)selector insteadBlock:(void (^)(VDHookInvocationInfo *info))block;
-+ (VDHookElement *)hookInstance:(id)instance selector:(SEL)selector afterBlock:(void (^)(VDHookInvocationInfo *info))block;
++ (VDHookElement *)hookInstance:(id)instance selector:(SEL)selector beforeBlock:(void (^)(VDHookElement *element, VDHookInvocationInfo *info))block;
++ (VDHookElement *)hookInstance:(id)instance selector:(SEL)selector insteadBlock:(void (^)(VDHookElement *element, VDHookInvocationInfo *info))block;
++ (VDHookElement *)hookInstance:(id)instance selector:(SEL)selector afterBlock:(void (^)(VDHookElement *element, VDHookInvocationInfo *info))block;
 
-+ (VDHookElement *)hookInstance:(id)instance selector:(SEL)selector beforeBlock:(void (^)(VDHookInvocationInfo *info))block autoRemove:(BOOL)autoRemove;
-+ (VDHookElement *)hookInstance:(id)instance selector:(SEL)selector insteadBlock:(void (^)(VDHookInvocationInfo *info))block autoRemove:(BOOL)autoRemove;
-+ (VDHookElement *)hookInstance:(id)instance selector:(SEL)selector afterBlock:(void (^)(VDHookInvocationInfo *info))block autoRemove:(BOOL)autoRemove;
++ (VDHookElement *)hookInstance:(id)instance selector:(SEL)selector beforeBlock:(void (^)(VDHookElement *element, VDHookInvocationInfo *info))block autoRemove:(BOOL)autoRemove;
++ (VDHookElement *)hookInstance:(id)instance selector:(SEL)selector insteadBlock:(void (^)(VDHookElement *element, VDHookInvocationInfo *info))block autoRemove:(BOOL)autoRemove;
++ (VDHookElement *)hookInstance:(id)instance selector:(SEL)selector afterBlock:(void (^)(VDHookElement *element, VDHookInvocationInfo *info))block autoRemove:(BOOL)autoRemove;
 
-//+ (VDHookElement *)hookClass:(Class)clazz selector:(SEL)selector beforeBlock:(void (^)(VDHookInvocationInfo *info))block;
-//+ (VDHookElement *)hookClass:(Class)clazz selector:(SEL)selector insteadBlock:(void (^)(VDHookInvocationInfo *info))block;
-//+ (VDHookElement *)hookClass:(Class)clazz selector:(SEL)selector afterBlock:(void (^)(VDHookInvocationInfo *info))block;
+//+ (VDHookElement *)hookClass:(Class)clazz selector:(SEL)selector beforeBlock:(void (^)(VDHookElement *element, VDHookInvocationInfo *info))block;
+//+ (VDHookElement *)hookClass:(Class)clazz selector:(SEL)selector insteadBlock:(void (^)(VDHookElement *element, VDHookInvocationInfo *info))block;
+//+ (VDHookElement *)hookClass:(Class)clazz selector:(SEL)selector afterBlock:(void (^)(VDHookElement *element, VDHookInvocationInfo *info))block;
 //
-//+ (VDHookElement *)hookClass:(Class)clazz selector:(SEL)selector beforeBlock:(void (^)(VDHookInvocationInfo *info))block autoRemove:(BOOL)autoRemove;
-//+ (VDHookElement *)hookClass:(Class)clazz selector:(SEL)selector insteadBlock:(void (^)(VDHookInvocationInfo *info))block autoRemove:(BOOL)autoRemove;
-//+ (VDHookElement *)hookClass:(Class)clazz selector:(SEL)selector afterBlock:(void (^)(VDHookInvocationInfo *info))block autoRemove:(BOOL)autoRemove;
+//+ (VDHookElement *)hookClass:(Class)clazz selector:(SEL)selector beforeBlock:(void (^)(VDHookElement *element, VDHookInvocationInfo *info))block autoRemove:(BOOL)autoRemove;
+//+ (VDHookElement *)hookClass:(Class)clazz selector:(SEL)selector insteadBlock:(void (^)(VDHookElement *element, VDHookInvocationInfo *info))block autoRemove:(BOOL)autoRemove;
+//+ (VDHookElement *)hookClass:(Class)clazz selector:(SEL)selector afterBlock:(void (^)(VDHookElement *element, VDHookInvocationInfo *info))block autoRemove:(BOOL)autoRemove;
 
 #pragma mark Properties
 

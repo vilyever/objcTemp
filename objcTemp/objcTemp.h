@@ -47,6 +47,7 @@ FOUNDATION_EXPORT const unsigned char objcTempVersionString[];
 #import <objcTemp/UIApplication+VDEnhance.h>
 
 #import <objcTemp/UICollectionViewCell+VDEnhance.h>
+#import <objcTemp/UICollectionView+VDEnhance.h>
 
 #import <objcTemp/UIColor+VDEnhance.h>
 
@@ -116,3 +117,9 @@ FOUNDATION_EXPORT const unsigned char objcTempVersionString[];
 #import <objcTemp/VDDefaultPullingView.h>
 #import <objcTemp/VDPullRefreshManager.h>
 #import <objcTemp/UIScrollView+VDPullRefresh.h>
+
+#import <objcTemp/VDNotificationElement.h>
+#import <objcTemp/NSObject+VDNotification.h>
+
+#import <objcTemp/VDKVOElement.h>
+#import <objcTemp/NSObject+VDKVO.h>

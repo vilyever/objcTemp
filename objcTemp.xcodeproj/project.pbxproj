@@ -137,6 +137,16 @@
 		FE6400221D3F4E9C00652BAC /* VDPullRefreshElement.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6400201D3F4E9C00652BAC /* VDPullRefreshElement.m */; };
 		FE64002C1D40AC3C00652BAC /* VDDefaultPullingView.h in Headers */ = {isa = PBXBuildFile; fileRef = FE64002A1D40AC3C00652BAC /* VDDefaultPullingView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FE64002D1D40AC3C00652BAC /* VDDefaultPullingView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE64002B1D40AC3C00652BAC /* VDDefaultPullingView.m */; };
+		FE6400871D45AEC200652BAC /* UICollectionView+VDEnhance.h in Headers */ = {isa = PBXBuildFile; fileRef = FE6400851D45AEC200652BAC /* UICollectionView+VDEnhance.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE6400881D45AEC200652BAC /* UICollectionView+VDEnhance.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6400861D45AEC200652BAC /* UICollectionView+VDEnhance.m */; };
+		FE6400921D45B1D600652BAC /* VDKVOElement.h in Headers */ = {isa = PBXBuildFile; fileRef = FE6400901D45B1D600652BAC /* VDKVOElement.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE6400931D45B1D600652BAC /* VDKVOElement.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6400911D45B1D600652BAC /* VDKVOElement.m */; };
+		FE6400961D45B60D00652BAC /* NSObject+VDKVO.h in Headers */ = {isa = PBXBuildFile; fileRef = FE6400941D45B60D00652BAC /* NSObject+VDKVO.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE6400971D45B60D00652BAC /* NSObject+VDKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6400951D45B60D00652BAC /* NSObject+VDKVO.m */; };
+		FE64009A1D45B74300652BAC /* VDNotificationElement.h in Headers */ = {isa = PBXBuildFile; fileRef = FE6400981D45B74300652BAC /* VDNotificationElement.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE64009B1D45B74300652BAC /* VDNotificationElement.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6400991D45B74300652BAC /* VDNotificationElement.m */; };
+		FE64009E1D45B9F100652BAC /* NSObject+VDNotification.h in Headers */ = {isa = PBXBuildFile; fileRef = FE64009C1D45B9F100652BAC /* NSObject+VDNotification.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE64009F1D45B9F100652BAC /* NSObject+VDNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = FE64009D1D45B9F100652BAC /* NSObject+VDNotification.m */; };
 		FECA263D1D25030B00ED8FDD /* objcTemp.podspec in Resources */ = {isa = PBXBuildFile; fileRef = FECA263B1D25030B00ED8FDD /* objcTemp.podspec */; };
 		FECA263E1D25030B00ED8FDD /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = FECA263C1D25030B00ED8FDD /* README.md */; };
 		FECA268A1D25147000ED8FDD /* VDProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = FECA26881D25147000ED8FDD /* VDProperty.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -293,6 +303,16 @@
 		FE6400201D3F4E9C00652BAC /* VDPullRefreshElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDPullRefreshElement.m; sourceTree = "<group>"; };
 		FE64002A1D40AC3C00652BAC /* VDDefaultPullingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDDefaultPullingView.h; sourceTree = "<group>"; };
 		FE64002B1D40AC3C00652BAC /* VDDefaultPullingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDDefaultPullingView.m; sourceTree = "<group>"; };
+		FE6400851D45AEC200652BAC /* UICollectionView+VDEnhance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+VDEnhance.h"; sourceTree = "<group>"; };
+		FE6400861D45AEC200652BAC /* UICollectionView+VDEnhance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+VDEnhance.m"; sourceTree = "<group>"; };
+		FE6400901D45B1D600652BAC /* VDKVOElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDKVOElement.h; sourceTree = "<group>"; };
+		FE6400911D45B1D600652BAC /* VDKVOElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDKVOElement.m; sourceTree = "<group>"; };
+		FE6400941D45B60D00652BAC /* NSObject+VDKVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+VDKVO.h"; sourceTree = "<group>"; };
+		FE6400951D45B60D00652BAC /* NSObject+VDKVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+VDKVO.m"; sourceTree = "<group>"; };
+		FE6400981D45B74300652BAC /* VDNotificationElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDNotificationElement.h; sourceTree = "<group>"; };
+		FE6400991D45B74300652BAC /* VDNotificationElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDNotificationElement.m; sourceTree = "<group>"; };
+		FE64009C1D45B9F100652BAC /* NSObject+VDNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+VDNotification.h"; sourceTree = "<group>"; };
+		FE64009D1D45B9F100652BAC /* NSObject+VDNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+VDNotification.m"; sourceTree = "<group>"; };
 		FECA263B1D25030B00ED8FDD /* objcTemp.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = objcTemp.podspec; sourceTree = "<group>"; };
 		FECA263C1D25030B00ED8FDD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		FECA26881D25147000ED8FDD /* VDProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDProperty.h; sourceTree = "<group>"; };
@@ -463,6 +483,8 @@
 		FE615F391D23679B00AECD76 /* objcTemp */ = {
 			isa = PBXGroup;
 			children = (
+				FE64008E1D45B1C600652BAC /* KVO */,
+				FE64008F1D45B1C600652BAC /* NSNotification */,
 				FE6400161D3F49BD00652BAC /* PullToRefresh */,
 				FE4170A31D35E8C900518C78 /* NSArray */,
 				FE41706F1D33778000518C78 /* Loading */,
@@ -618,6 +640,8 @@
 			children = (
 				FE615F7F1D2367B500AECD76 /* UICollectionViewCell+VDEnhance.h */,
 				FE615F801D2367B500AECD76 /* UICollectionViewCell+VDEnhance.m */,
+				FE6400851D45AEC200652BAC /* UICollectionView+VDEnhance.h */,
+				FE6400861D45AEC200652BAC /* UICollectionView+VDEnhance.m */,
 			);
 			path = UICollectionViewCell;
 			sourceTree = "<group>";
@@ -706,6 +730,28 @@
 				FE64002B1D40AC3C00652BAC /* VDDefaultPullingView.m */,
 			);
 			path = PullToRefresh;
+			sourceTree = "<group>";
+		};
+		FE64008E1D45B1C600652BAC /* KVO */ = {
+			isa = PBXGroup;
+			children = (
+				FE6400901D45B1D600652BAC /* VDKVOElement.h */,
+				FE6400911D45B1D600652BAC /* VDKVOElement.m */,
+				FE6400941D45B60D00652BAC /* NSObject+VDKVO.h */,
+				FE6400951D45B60D00652BAC /* NSObject+VDKVO.m */,
+			);
+			path = KVO;
+			sourceTree = "<group>";
+		};
+		FE64008F1D45B1C600652BAC /* NSNotification */ = {
+			isa = PBXGroup;
+			children = (
+				FE6400981D45B74300652BAC /* VDNotificationElement.h */,
+				FE6400991D45B74300652BAC /* VDNotificationElement.m */,
+				FE64009C1D45B9F100652BAC /* NSObject+VDNotification.h */,
+				FE64009D1D45B9F100652BAC /* NSObject+VDNotification.m */,
+			);
+			path = NSNotification;
 			sourceTree = "<group>";
 		};
 		FECA26871D25146300ED8FDD /* Property */ = {
@@ -808,6 +854,11 @@
 				FE6400211D3F4E9C00652BAC /* VDPullRefreshElement.h in Headers */,
 				FE6400191D3F49F000652BAC /* UIScrollView+VDPullRefresh.h in Headers */,
 				FE64001D1D3F4E8E00652BAC /* VDPullRefreshManager.h in Headers */,
+				FE6400871D45AEC200652BAC /* UICollectionView+VDEnhance.h in Headers */,
+				FE6400961D45B60D00652BAC /* NSObject+VDKVO.h in Headers */,
+				FE64009A1D45B74300652BAC /* VDNotificationElement.h in Headers */,
+				FE64009E1D45B9F100652BAC /* NSObject+VDNotification.h in Headers */,
+				FE6400921D45B1D600652BAC /* VDKVOElement.h in Headers */,
 				FE4170D61D363DC800518C78 /* UIView+VDInputManager.h in Headers */,
 				FE4170AA1D35E93A00518C78 /* NSMutableArray+VDEnhance.h in Headers */,
 				FE64002C1D40AC3C00652BAC /* VDDefaultPullingView.h in Headers */,
@@ -920,6 +971,7 @@
 				FECA26B01D26556800ED8FDD /* NSObject+VDPersistent.m in Sources */,
 				FE416FAC1D2DED9400518C78 /* NSObject+VDThemeManager.m in Sources */,
 				FE615FAE1D2367B500AECD76 /* NSDictionary+VDEnhance.m in Sources */,
+				FE64009B1D45B74300652BAC /* VDNotificationElement.m in Sources */,
 				FE615FD21D2367B500AECD76 /* UIView+VDFrame.m in Sources */,
 				FE615FCA1D2367B500AECD76 /* UILabel+VDVerticalAlignment.m in Sources */,
 				FE615FC61D2367B500AECD76 /* UIImage+VDEnhance.m in Sources */,
@@ -938,6 +990,7 @@
 				FE64002D1D40AC3C00652BAC /* VDDefaultPullingView.m in Sources */,
 				FE615FB01D2367B500AECD76 /* NSObject+VDEnhance.m in Sources */,
 				FE416F701D2CA6CE00518C78 /* UITableViewCell+VDEnhance.m in Sources */,
+				FE6400881D45AEC200652BAC /* UICollectionView+VDEnhance.m in Sources */,
 				FECA263E1D25030B00ED8FDD /* README.md in Sources */,
 				FE4171271D375F4500518C78 /* UIImageView+VDTheme.m in Sources */,
 				FECA268B1D25147000ED8FDD /* VDProperty.m in Sources */,
@@ -957,10 +1010,13 @@
 				FECA26941D25215F00ED8FDD /* VDJsonObject.m in Sources */,
 				FE615FA91D2367B500AECD76 /* VDHookInvocationInfo.m in Sources */,
 				FE41708C1D34B81D00518C78 /* VDLoadingAngularVariationView.m in Sources */,
+				FE6400931D45B1D600652BAC /* VDKVOElement.m in Sources */,
 				FE64001A1D3F49F000652BAC /* UIScrollView+VDPullRefresh.m in Sources */,
 				FE416F8D1D2CFFA900518C78 /* VDSelectorArgument.m in Sources */,
 				FE4170731D33788600518C78 /* VDLoadingView.m in Sources */,
 				FE4170AB1D35E93A00518C78 /* NSMutableArray+VDEnhance.m in Sources */,
+				FE6400971D45B60D00652BAC /* NSObject+VDKVO.m in Sources */,
+				FE64009F1D45B9F100652BAC /* NSObject+VDNotification.m in Sources */,
 				FE416FF01D2F44FC00518C78 /* UIView+VDAutoPanUp.m in Sources */,
 				FE615FBC1D2367B500AECD76 /* VDRouter.m in Sources */,
 				FE615FC01D2367B500AECD76 /* UIApplication+VDEnhance.m in Sources */,

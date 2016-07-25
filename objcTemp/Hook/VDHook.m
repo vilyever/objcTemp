@@ -82,33 +82,33 @@ static void VDHookedForwardInvocationMethod(__unsafe_unretained NSObject *target
     return _sharedInstance;
 }
 
-+ (VDHookElement *)hookInstance:(id)instance selector:(SEL)selector beforeBlock:(void (^)(VDHookInvocationInfo *info))block {
++ (VDHookElement *)hookInstance:(id)instance selector:(SEL)selector beforeBlock:(void (^)(VDHookElement *element, VDHookInvocationInfo *info))block {
     return [self hookInstance:instance selector:selector beforeBlock:block autoRemove:NO];
 }
 
-+ (VDHookElement *)hookInstance:(id)instance selector:(SEL)selector insteadBlock:(void (^)(VDHookInvocationInfo *info))block {
++ (VDHookElement *)hookInstance:(id)instance selector:(SEL)selector insteadBlock:(void (^)(VDHookElement *element, VDHookInvocationInfo *info))block {
     return [self hookInstance:instance selector:selector insteadBlock:block autoRemove:NO];
 }
 
-+ (VDHookElement *)hookInstance:(id)instance selector:(SEL)selector afterBlock:(void (^)(VDHookInvocationInfo *info))block {
++ (VDHookElement *)hookInstance:(id)instance selector:(SEL)selector afterBlock:(void (^)(VDHookElement *element, VDHookInvocationInfo *info))block {
     return [self hookInstance:instance selector:selector afterBlock:block autoRemove:NO];
 }
 
-+ (VDHookElement *)hookInstance:(id)instance selector:(SEL)selector beforeBlock:(void (^)(VDHookInvocationInfo *info))block autoRemove:(BOOL)autoRemove {
++ (VDHookElement *)hookInstance:(id)instance selector:(SEL)selector beforeBlock:(void (^)(VDHookElement *element, VDHookInvocationInfo *info))block autoRemove:(BOOL)autoRemove {
     VDHookElement *element = [VDHookElement elementWithTarget:instance selector:selector block:block autoRemove:autoRemove];
     [[VDHookRecorder recorderForTarget:instance selector:selector] addBeforeElement:element];
     [self internalHookInstance:instance selector:selector];
     return element;
 }
 
-+ (VDHookElement *)hookInstance:(id)instance selector:(SEL)selector insteadBlock:(void (^)(VDHookInvocationInfo *info))block autoRemove:(BOOL)autoRemove {
++ (VDHookElement *)hookInstance:(id)instance selector:(SEL)selector insteadBlock:(void (^)(VDHookElement *element, VDHookInvocationInfo *info))block autoRemove:(BOOL)autoRemove {
     VDHookElement *element = [VDHookElement elementWithTarget:instance selector:selector block:block autoRemove:autoRemove];
     [[VDHookRecorder recorderForTarget:instance selector:selector] addInsteadElement:element];
     [self internalHookInstance:instance selector:selector];
     return element;
 }
 
-+ (VDHookElement *)hookInstance:(id)instance selector:(SEL)selector afterBlock:(void (^)(VDHookInvocationInfo *info))block autoRemove:(BOOL)autoRemove {
++ (VDHookElement *)hookInstance:(id)instance selector:(SEL)selector afterBlock:(void (^)(VDHookElement *element, VDHookInvocationInfo *info))block autoRemove:(BOOL)autoRemove {
     VDHookElement *element = [VDHookElement elementWithTarget:instance selector:selector block:block autoRemove:autoRemove];
     [[VDHookRecorder recorderForTarget:instance selector:selector] addAfterElement:element];
     [self internalHookInstance:instance selector:selector];

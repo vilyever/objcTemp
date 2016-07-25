@@ -136,10 +136,9 @@
     
     if (!self.isTrailer) {
         self.infoLabel.hidden = YES;
-        if (!isRefreshing) {
-            CGFloat percent = MIN(pullingOffset / [self pr_triggerRefreshingOffset], 1.0f);
-            self.indicatorView.transform = CGAffineTransformConcat(CGAffineTransformMakeRotation(M_PI * 2.0f * percent), CGAffineTransformMakeScale(1.0f + percent, 1.0f + percent));
-        }
+        
+        CGFloat percent = isRefreshing ? 1.0f : MIN(pullingOffset / [self pr_triggerRefreshingOffset], 1.0f);
+        self.indicatorView.transform = CGAffineTransformConcat(CGAffineTransformMakeRotation(M_PI * 2.0f * percent), CGAffineTransformMakeScale(1.0f + percent, 1.0f + percent));
         
         if (enabled) {
             return VDPullRefreshLayoutTypeShowAndLayoutInsideWhenRefreshing;
