@@ -16,7 +16,7 @@
 @interface VDNotificationElement ()
 
 @property (nonatomic, assign, readwrite) BOOL isDisposed;
-@property (nonatomic, strong) VDNotificationElement *hookedDeallocElement;
+@property (nonatomic, strong) VDHookElement *hookedDeallocElement;
 
 @end
 
