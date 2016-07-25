@@ -75,7 +75,7 @@
                 break;
         }
         
-        for (id delegate in self.delegates) {
+        for (id delegate in [self.delegates copy]) {
             if ([delegate respondsToSelector:@selector(onSelectedHomeItemTypeChange:)]) {
                 [delegate onSelectedHomeItemTypeChange:_selectedItemType];
             }

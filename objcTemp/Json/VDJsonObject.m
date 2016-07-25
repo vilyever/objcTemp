@@ -116,7 +116,7 @@
     
     NSArray *properties = [[self class] vd_propertiesTraceToAncestorClass:[VDJsonObject class]];
     
-    NSDictionary *jsonKeyDictionary = [[self class] jsonKeyDictionary];
+    NSDictionary *jsonKeyDictionary = [[[self class] jsonKeyDictionary] copy];
     
     for (VDProperty *property in properties) {
         if ([property.protocols containsObject:NSStringFromProtocol(@protocol(VDJsonNameAsKey))]
@@ -202,7 +202,7 @@
     
     NSArray *properties = [[self class] vd_propertiesTraceToAncestorClass:ancestorClass];
     
-    NSDictionary *jsonKeyDictionary = [[self class] jsonKeyDictionary];
+    NSDictionary *jsonKeyDictionary = [[[self class] jsonKeyDictionary] copy];
     
     for (VDProperty *property in properties) {
         if ([property.protocols containsObject:NSStringFromProtocol(@protocol(VDJsonNameAsKey))]

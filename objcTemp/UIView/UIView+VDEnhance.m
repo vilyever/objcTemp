@@ -14,29 +14,24 @@
 @implementation UIView (VDEnhance)
 
 #pragma mark Public Method
-+ (instancetype)vd_viewFromNib
-{
++ (instancetype)vd_viewFromNib {
     return [self vd_viewFromNibWithNibName:NSStringFromClass( [self class] ) ];
 }
 
-+ (instancetype)vd_viewFromNibWithNibName:(NSString *)nibName
-{
++ (instancetype)vd_viewFromNibWithNibName:(NSString *)nibName {
     UIView *instance = [[[self class] alloc] init];
     NSArray *nibViews = [ [NSBundle mainBundle] loadNibNamed:nibName owner:instance options:nil];
     instance = nibViews[0];
     return instance;
 }
 
-- (NSArray *)vd_addSubview:(UIView *)view scaleToFill:(BOOL)scaleToFill
-{
-    if (!view)
-    {
+- (NSArray *)vd_addSubview:(UIView *)view scaleToFill:(BOOL)scaleToFill {
+    if (!view) {
         return nil;
     }
     
     [self addSubview:view];
-    if (scaleToFill)
-    {
+    if (scaleToFill) {
         view.translatesAutoresizingMaskIntoConstraints = NO;
         
         NSMutableArray *array = [NSMutableArray arrayWithArray:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[vdsubview]-0-|" options:0 metrics:nil views:@{@"vdsubview" : view} ] ];
@@ -52,10 +47,8 @@
     return nil;
 }
 
-- (void)vd_removeAllSubviews
-{
-    for (UIView *view in self.subviews)
-    {
+- (void)vd_removeAllSubviews {
+    for (UIView *view in [self.subviews copy]) {
         [view removeFromSuperview];
     }
 }

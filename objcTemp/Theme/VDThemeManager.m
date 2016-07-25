@@ -164,7 +164,7 @@ NSString * const VDThemeManagerThemeTypeDidChangeNotificationUserInfoOldThemeTyp
 }
 
 - (void)internalOnThemeChange:(NSInteger)newThemeType withOldThemeType:(NSInteger)oldThemeType {
-    for (id target in self.themeTargets) {
+    for (id target in [self.themeTargets copy]) {
         if ([target respondsToSelector:@selector(vd_onThemeChange:withOldThemeType:)]) {
             [target vd_onThemeChange:newThemeType withOldThemeType:oldThemeType];
         }

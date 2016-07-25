@@ -99,7 +99,7 @@
 }
 
 - (void)vd_onThemeChange:(NSInteger)newThemeType withOldThemeType:(NSInteger)oldThemeType {
-    for (VDThemeElement *element in [self vd_themeElements]) {
+    for (VDThemeElement *element in [[self vd_themeElements] copy]) {
         [self vd_performElement:element];
     }
 }

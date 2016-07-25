@@ -17,7 +17,7 @@
 #pragma mark Public Method
 - (void)vd_setDelaysContentTouches:(BOOL)delay {
     self.delaysContentTouches = delay;
-    for (id view in self.subviews) {
+    for (id view in [self.subviews copy]) {
         if ([view respondsToSelector:@selector(setDelaysContentTouches:)]) {
             [view setDelaysContentTouches:delay];
         }

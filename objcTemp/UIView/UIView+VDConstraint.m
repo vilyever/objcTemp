@@ -19,7 +19,7 @@
 #pragma mark Properties
 - (CGFloat)vd_constraintTop
 {
-    for (NSLayoutConstraint *constraint in self.superview.constraints)
+    for (NSLayoutConstraint *constraint in [self.superview.constraints copy])
     {
         if (constraint.firstItem == self
             && constraint.shouldBeArchived
@@ -37,7 +37,7 @@
 
 - (CGFloat)vd_constraintBottom
 {
-    for (NSLayoutConstraint *constraint in self.superview.constraints)
+    for (NSLayoutConstraint *constraint in [self.superview.constraints copy])
     {
         if (constraint.secondItem == self
             && constraint.shouldBeArchived
@@ -55,7 +55,7 @@
 
 - (CGFloat)vd_constraintLeading
 {
-    for (NSLayoutConstraint *constraint in self.superview.constraints)
+    for (NSLayoutConstraint *constraint in [self.superview.constraints copy])
     {
         if (constraint.firstItem == self
             && constraint.shouldBeArchived
@@ -73,7 +73,7 @@
 
 - (CGFloat)vd_constraintTrailing
 {
-    for (NSLayoutConstraint *constraint in self.superview.constraints)
+    for (NSLayoutConstraint *constraint in [self.superview.constraints copy])
     {
         if (constraint.secondItem == self
             && constraint.shouldBeArchived
@@ -91,7 +91,7 @@
 
 - (CGFloat)vd_constraintWidth
 {
-    for (NSLayoutConstraint *constraint in self.constraints)
+    for (NSLayoutConstraint *constraint in [self.constraints copy])
     {
         if (constraint.firstItem == self
             && constraint.shouldBeArchived
@@ -114,7 +114,7 @@
 
 - (CGFloat)vd_constraintHeight
 {
-    for (NSLayoutConstraint *constraint in self.constraints)
+    for (NSLayoutConstraint *constraint in [self.constraints copy])
     {
         if (constraint.firstItem == self
             && constraint.shouldBeArchived
@@ -137,7 +137,7 @@
 
 - (CGFloat)vd_constraintAspectRatio
 {
-    for (NSLayoutConstraint *constraint in self.constraints)
+    for (NSLayoutConstraint *constraint in [self.constraints copy])
     {
         if (constraint.firstItem == self
             && constraint.shouldBeArchived

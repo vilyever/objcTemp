@@ -83,7 +83,7 @@
 }
 
 - (void)layoutSubviews {
-    for (UIView *view in self.subviews) {
+    for (UIView *view in [self.subviews copy]) {
         view.center = CGPointMake(self.bounds.size.width / 2.0f, self.bounds.size.height / 2.0f);
     }
 }

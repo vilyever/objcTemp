@@ -124,7 +124,7 @@ static char VDHookRecordersAssociatedObjectKey;
 #pragma mark Private Method
 - (void)internalRemoveDisposedElements:(NSMutableArray *)elements {
     NSMutableArray *willRemovedElements = [NSMutableArray new];
-    for (VDHookElement *element in elements) {
+    for (VDHookElement *element in [elements copy]) {
         if (element.isDisposed) {
             [willRemovedElements addObject:element];
         }
@@ -137,7 +137,7 @@ static char VDHookRecordersAssociatedObjectKey;
 
 - (void)internalInvokeElements:(NSMutableArray *)elements invocationInfo:(VDHookInvocationInfo *)invocationInfo {
     NSMutableArray *willRemovedElements = [NSMutableArray new];
-    for (VDHookElement *element in elements) {
+    for (VDHookElement *element in [elements copy]) {
         if (!element.isDisposed) {
             [element invokeBlock:invocationInfo];
         }
