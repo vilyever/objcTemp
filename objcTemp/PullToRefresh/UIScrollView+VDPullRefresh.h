@@ -35,5 +35,6 @@
 @property (nonatomic, assign) BOOL vd_isPullRefreshTrailerEnable;
 @property (nonatomic, assign) BOOL vd_isPullRefreshHeaderRefreshing;
 @property (nonatomic, assign) BOOL vd_isPullRefreshTrailerRefreshing;
+@property (nonatomic, assign) BOOL vd_isPullRefreshAnimatingPullbackEnable;
 
 @end

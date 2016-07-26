@@ -184,6 +184,7 @@
     _currentOffsetEdgeInsets = UIEdgeInsetsZero;
     _defaultHeaderPullingViewHeight = 60.0f;
     _defaultTrailerPullingViewHeight = 60.0f;
+    _animatingPullbackEnable = YES;
 }
 
 - (void)internalAddScrollView:(UIScrollView *)scrollView {
@@ -528,7 +529,7 @@
         
         // TODO: with animation, the content offset is not change continious
         // TODO: add end refreshing state
-        if (self.scrollView.isDragging) {
+        if (self.scrollView.isDragging || !self.animatingPullbackEnable) {
             self.scrollView.contentInset = scrollViewInsets;
         }
         else {

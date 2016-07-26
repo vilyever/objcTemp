@@ -132,6 +132,7 @@ typedef NS_ENUM(NSInteger, VDPullRefreshLayoutType) {
 @property (nonatomic, assign) BOOL isHeaderRefreshing;
 @property (nonatomic, assign) BOOL isTrailerPullingEnabled;
 @property (nonatomic, assign) BOOL isTrailerRefreshing;
+@property (nonatomic, assign) BOOL animatingPullbackEnable;
 
 @property (nonatomic, assign, readonly) VDPullRefreshLayoutType headerLayoutType;
 @property (nonatomic, assign, readonly) VDPullRefreshLayoutType trailerLayoutType;

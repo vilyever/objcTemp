@@ -24,8 +24,14 @@
         return;
     }
     
+    VDWeakifySelf;
     VDKVOElement *element = [self vd_kvoWithTarget:self keyPath:VDKeyPath(self, bounds) action:^(VDKVOElement *element, NSDictionary *change) {
-        [self.collectionViewLayout invalidateLayout];
+        VDStrongifySelf;
+        CGRect oldBounds = [[change objectForKey:NSKeyValueChangeOldKey] CGRectValue];
+        CGRect newBounds = [[change objectForKey:NSKeyValueChangeNewKey] CGRectValue];
+        if (!CGSizeEqualToSize(oldBounds.size, newBounds.size)) {
+            [self performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
+        }
     }];
     
     [self setVd_autoRelayoutKVOElement:element];

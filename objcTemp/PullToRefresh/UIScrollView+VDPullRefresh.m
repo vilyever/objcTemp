@@ -136,4 +136,12 @@
     return self.vd_pullRefreshElement.isTrailerRefreshing;
 }
 
+- (void)setVd_isPullRefreshAnimatingPullbackEnable:(BOOL)vd_isPullRefreshAnimatingPullbackEnable {
+    self.vd_pullRefreshElement.animatingPullbackEnable = vd_isPullRefreshAnimatingPullbackEnable;
+}
+
+- (BOOL)vd_isPullRefreshAnimatingPullbackEnable {
+    return self.vd_pullRefreshElement.animatingPullbackEnable;
+}
+
 @end
