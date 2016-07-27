@@ -30,6 +30,7 @@
 
 - (void)triggerAllDelegates;
 - (void)triggerDelegate:(UIViewController<VDBusinessProcessDelegate> *)delegate;
+- (void)triggerDelegate:(UIViewController<VDBusinessProcessDelegate> *)delegate cancelOnViewDisappeared:(BOOL)cancelOnViewDisappeared;
 - (void)triggerDelegateAfterViewWillAppear:(UIViewController<VDBusinessProcessDelegate> *)delegate;
 - (void)triggerDelegateAfterViewDidAppear:(UIViewController<VDBusinessProcessDelegate> *)delegate;
 

@@ -155,6 +155,10 @@
     [view vd_addSubview:controller.view scaleToFill:YES];
 }
 
+- (BOOL)vd_isViewAppeared {
+    return self.isViewLoaded && self.view.window;
+}
+
 #pragma mark Private Method
 + (UIViewController*)vd_internalTopViewControllerWithRootViewController:(UIViewController*)rootViewController
 {

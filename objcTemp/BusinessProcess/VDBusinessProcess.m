@@ -103,9 +103,17 @@
 }
 
 - (void)triggerDelegate:(UIViewController<VDBusinessProcessDelegate> *)delegate {
-    if (delegate.isViewLoaded
-        && [delegate respondsToSelector:@selector(bp_onBusinessProcessChange:)]) {
-        [delegate bp_onBusinessProcessChange:self];
+    [self triggerDelegate:delegate cancelOnViewDisappeared:YES];
+}
+
+- (void)triggerDelegate:(UIViewController<VDBusinessProcessDelegate> *)delegate cancelOnViewDisappeared:(BOOL)cancelOnViewDisappeared {
+    if (!cancelOnViewDisappeared
+        || (cancelOnViewDisappeared
+            && (delegate.isViewLoaded
+                && delegate.view.window)))  {
+        if ([delegate respondsToSelector:@selector(bp_onBusinessProcessChange:)]) {
+            [delegate bp_onBusinessProcessChange:self];
+        }
     }
 }
 
@@ -115,7 +123,7 @@
     [delegate vd_hookSelector:@selector(viewWillAppear:) afterBlock:^(VDHookElement *element, VDHookInvocationInfo *info) {
         VDStrongifySelf;
         __strong __typeof(&*vd_weak_delegate)delegate = vd_weak_delegate;
-        [self triggerDelegate:delegate];
+        [self triggerDelegate:delegate cancelOnViewDisappeared:NO];
     }];
 }
 
@@ -125,7 +133,7 @@
     [delegate vd_hookSelector:@selector(viewDidAppear:) afterBlock:^(VDHookElement *element, VDHookInvocationInfo *info) {
         VDStrongifySelf;
         __strong __typeof(&*vd_weak_delegate)delegate = vd_weak_delegate;
-        [self triggerDelegate:delegate];
+        [self triggerDelegate:delegate cancelOnViewDisappeared:NO];
     }];
 }
 
