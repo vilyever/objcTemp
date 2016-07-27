@@ -165,6 +165,10 @@
     
 }
 
+- (void)internalOnChildBusinessProcessChange:(VDBusinessProcess *)childBusinessProcess {
+    
+}
+
 - (void)internalOnBusinessProcessUnbindAllDelegates {
 }
 
