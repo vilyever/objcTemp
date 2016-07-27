@@ -23,6 +23,8 @@
 + (instancetype)mainBusinessProcess;
 + (instancetype)newBranchBusinessProcess;
 
+- (instancetype)initWithMain:(BOOL)isMain;
+
 - (void)bindDelegate:(UIViewController<VDBusinessProcessDelegate> *)delegate;
 - (void)unbindDelegate:(UIViewController<VDBusinessProcessDelegate> *)delegate;
 

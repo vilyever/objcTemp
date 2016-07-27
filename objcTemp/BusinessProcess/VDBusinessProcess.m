@@ -29,19 +29,19 @@
 
 #pragma mark Public Method
 + (instancetype)mainBusinessProcess {
-    VDBusinessProcess *instance = [self vd_sharedInstance];
-    instance.isMain = YES;
-    return [self vd_sharedInstance];
+    return [self vd_sharedInstance:^id{
+        return [[self alloc] initWithMain:YES];
+    }];
 }
 
 + (instancetype)newBranchBusinessProcess {
-    VDBusinessProcess *instance = [[self alloc] initNewBusinessProcess];
-    instance.isMain = NO;
-    return instance;
+    return [[self alloc] initWithMain:NO];
 }
 
-- (instancetype)initNewBusinessProcess {
+- (instancetype)initWithMain:(BOOL)isMain {
     self = [super init];
+    
+    _isMain = isMain;
     
     [self internalInitVDBusinessProcess];
     
@@ -58,8 +58,10 @@
     }
     
     VDWeakifySelf;
-    [delegate vd_hookSelector:VDHookDeallocSelector afterBlock:^(VDHookElement *element, VDHookInvocationInfo *info) {
+    __weak __typeof(&*delegate)vd_weak_delegate = delegate;
+    [delegate vd_hookSelector:VDHookDeallocSelector beforeBlock:^(VDHookElement *element, VDHookInvocationInfo *info) {
         VDStrongifySelf;
+        __strong __typeof(&*vd_weak_delegate)delegate = vd_weak_delegate;
         [self unbindDelegate:delegate];
     }];
 }
@@ -108,16 +110,20 @@
 
 - (void)triggerDelegateAfterViewWillAppear:(UIViewController<VDBusinessProcessDelegate> *)delegate {
     VDWeakifySelf;
-    [self vd_hookSelector:@selector(viewWillAppear:) afterBlock:^(VDHookElement *element, VDHookInvocationInfo *info) {
+    __weak __typeof(&*delegate)vd_weak_delegate = delegate;
+    [delegate vd_hookSelector:@selector(viewWillAppear:) afterBlock:^(VDHookElement *element, VDHookInvocationInfo *info) {
         VDStrongifySelf;
+        __strong __typeof(&*vd_weak_delegate)delegate = vd_weak_delegate;
         [self triggerDelegate:delegate];
     }];
 }
 
 - (void)triggerDelegateAfterViewDidAppear:(UIViewController<VDBusinessProcessDelegate> *)delegate {
     VDWeakifySelf;
-    [self vd_hookSelector:@selector(viewDidAppear:) afterBlock:^(VDHookElement *element, VDHookInvocationInfo *info) {
+    __weak __typeof(&*delegate)vd_weak_delegate = delegate;
+    [delegate vd_hookSelector:@selector(viewDidAppear:) afterBlock:^(VDHookElement *element, VDHookInvocationInfo *info) {
         VDStrongifySelf;
+        __strong __typeof(&*vd_weak_delegate)delegate = vd_weak_delegate;
         [self triggerDelegate:delegate];
     }];
 }
