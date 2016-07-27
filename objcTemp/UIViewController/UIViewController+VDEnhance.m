@@ -8,6 +8,7 @@
 
 #import "UIViewController+VDEnhance.h"
 #import "VDMacros.h"
+#import "UIView+VDEnhance.h"
 
 //#import <objc/runtime.h>
 
@@ -132,6 +133,26 @@
     else if (self.navigationController && self.navigationController.topViewController == self) {
         [self.navigationController popViewControllerAnimated:animated];
     }
+}
+
+- (UIViewController *)vd_superiorViewController {
+    UIViewController *superiorViewController = self;
+    while (superiorViewController.parentViewController) {
+        if (!superiorViewController.parentViewController.parentViewController
+            && ([superiorViewController.parentViewController isKindOfClass:[UINavigationController class]]
+                || [superiorViewController.parentViewController isKindOfClass:[UITabBarController class]])) {
+                break;
+        }
+        
+        superiorViewController = superiorViewController.parentViewController;
+    }
+    
+    return superiorViewController;
+}
+
+- (void)vd_addChildViewController:(UIViewController *)controller toView:(UIView *)view {
+    [self addChildViewController:controller];
+    [view vd_addSubview:controller.view scaleToFill:YES];
 }
 
 #pragma mark Private Method

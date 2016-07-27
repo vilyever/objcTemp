@@ -147,6 +147,8 @@
 		FE64009B1D45B74300652BAC /* VDNotificationElement.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6400991D45B74300652BAC /* VDNotificationElement.m */; };
 		FE64009E1D45B9F100652BAC /* NSObject+VDNotification.h in Headers */ = {isa = PBXBuildFile; fileRef = FE64009C1D45B9F100652BAC /* NSObject+VDNotification.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FE64009F1D45B9F100652BAC /* NSObject+VDNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = FE64009D1D45B9F100652BAC /* NSObject+VDNotification.m */; };
+		FE6400D51D48649C00652BAC /* VDBusinessProcess.h in Headers */ = {isa = PBXBuildFile; fileRef = FE6400D31D48649C00652BAC /* VDBusinessProcess.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE6400D61D48649C00652BAC /* VDBusinessProcess.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6400D41D48649C00652BAC /* VDBusinessProcess.m */; };
 		FECA263D1D25030B00ED8FDD /* objcTemp.podspec in Resources */ = {isa = PBXBuildFile; fileRef = FECA263B1D25030B00ED8FDD /* objcTemp.podspec */; };
 		FECA263E1D25030B00ED8FDD /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = FECA263C1D25030B00ED8FDD /* README.md */; };
 		FECA268A1D25147000ED8FDD /* VDProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = FECA26881D25147000ED8FDD /* VDProperty.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -313,6 +315,8 @@
 		FE6400991D45B74300652BAC /* VDNotificationElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDNotificationElement.m; sourceTree = "<group>"; };
 		FE64009C1D45B9F100652BAC /* NSObject+VDNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+VDNotification.h"; sourceTree = "<group>"; };
 		FE64009D1D45B9F100652BAC /* NSObject+VDNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+VDNotification.m"; sourceTree = "<group>"; };
+		FE6400D31D48649C00652BAC /* VDBusinessProcess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDBusinessProcess.h; sourceTree = "<group>"; };
+		FE6400D41D48649C00652BAC /* VDBusinessProcess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDBusinessProcess.m; sourceTree = "<group>"; };
 		FECA263B1D25030B00ED8FDD /* objcTemp.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = objcTemp.podspec; sourceTree = "<group>"; };
 		FECA263C1D25030B00ED8FDD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		FECA26881D25147000ED8FDD /* VDProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDProperty.h; sourceTree = "<group>"; };
@@ -483,6 +487,7 @@
 		FE615F391D23679B00AECD76 /* objcTemp */ = {
 			isa = PBXGroup;
 			children = (
+				FE6400D21D48649000652BAC /* BusinessProcess */,
 				FE64008E1D45B1C600652BAC /* KVO */,
 				FE64008F1D45B1C600652BAC /* NSNotification */,
 				FE6400161D3F49BD00652BAC /* PullToRefresh */,
@@ -754,6 +759,15 @@
 			path = NSNotification;
 			sourceTree = "<group>";
 		};
+		FE6400D21D48649000652BAC /* BusinessProcess */ = {
+			isa = PBXGroup;
+			children = (
+				FE6400D31D48649C00652BAC /* VDBusinessProcess.h */,
+				FE6400D41D48649C00652BAC /* VDBusinessProcess.m */,
+			);
+			path = BusinessProcess;
+			sourceTree = "<group>";
+		};
 		FECA26871D25146300ED8FDD /* Property */ = {
 			isa = PBXGroup;
 			children = (
@@ -863,6 +877,7 @@
 				FE4170AA1D35E93A00518C78 /* NSMutableArray+VDEnhance.h in Headers */,
 				FE64002C1D40AC3C00652BAC /* VDDefaultPullingView.h in Headers */,
 				FECA26AF1D26556800ED8FDD /* NSObject+VDPersistent.h in Headers */,
+				FE6400D51D48649C00652BAC /* VDBusinessProcess.h in Headers */,
 				FE615FC51D2367B500AECD76 /* UIImage+VDEnhance.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1037,6 +1052,7 @@
 				FE4170521D3346B500518C78 /* VDHudMaskView.m in Sources */,
 				FE4170951D34DD5600518C78 /* VDSimpleHudViewController.m in Sources */,
 				FE416FB81D2DEE1700518C78 /* VDThemeSelectorArgument.m in Sources */,
+				FE6400D61D48649C00652BAC /* VDBusinessProcess.m in Sources */,
 				FE615FD81D2367B500AECD76 /* VDWeakRef.m in Sources */,
 				FE615FA11D2367B500AECD76 /* VDFingerPrintViewController.m in Sources */,
 			);

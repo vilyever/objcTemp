@@ -62,13 +62,17 @@
 
 + (void)vd_backToRootViewController;
 
-// with direction, it must length larger than 52.0f to show completion arrow
+// with direction, it must length larger than 52.0f to show arrow
 - (UIPopoverPresentationController *)vd_popoverFromView:(UIView *)view atDirection:(UIPopoverArrowDirection)direction shouldDisplayArrow:(BOOL)shouldDisplayArrow fromViewController:(UIViewController *)controller;
 
 - (UIPopoverPresentationController *)vd_popoverInCenterOfWindowFromViewController:(UIViewController *)controller;
 
 - (void)vd_dismiss;
 - (void)vd_dismissWithAnimation:(BOOL)animated;
+
+// 当前controller的最上层的parentViewController, 通常为被present的controller或nav中的controller或tab中的controller
+- (UIViewController *)vd_superiorViewController;
+- (void)vd_addChildViewController:(UIViewController *)controller toView:(UIView *)view;
 
 #pragma mark Private Method
 + (UIViewController*)vd_internalTopViewControllerWithRootViewController:(UIViewController*)rootViewController;
