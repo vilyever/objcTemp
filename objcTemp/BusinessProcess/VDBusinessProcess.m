@@ -103,7 +103,8 @@
 }
 
 - (void)triggerDelegate:(UIViewController<VDBusinessProcessDelegate> *)delegate {
-    if ([delegate respondsToSelector:@selector(bp_onBusinessProcessChange:)]) {
+    if (delegate.isViewLoaded
+        && [delegate respondsToSelector:@selector(bp_onBusinessProcessChange:)]) {
         [delegate bp_onBusinessProcessChange:self];
     }
 }
