@@ -34,15 +34,16 @@ dispatch_source_t VDCreateDispatchTimer(NSTimeInterval interval, dispatch_queue_
 @implementation VDGCDTimer
 
 #pragma mark Public Method
-+ (instancetype)timerWithInterval:(NSTimeInterval)interval repeats:(BOOL)repeats actionBlock:(void(^)(VDGCDTimer *timer))actionBlock {
-    return [[self alloc] initWithInterval:interval repeats:repeats actionBlock:actionBlock];
++ (instancetype)timerWithInterval:(NSTimeInterval)interval repeats:(BOOL)repeats fireOnMainThread:(BOOL)isFireOnMainThread actionBlock:(void(^)(VDGCDTimer *timer))actionBlock {
+    return [[self alloc] initWithInterval:interval repeats:repeats fireOnMainThread:isFireOnMainThread actionBlock:actionBlock];
 }
 
-- (instancetype)initWithInterval:(NSTimeInterval)interval repeats:(BOOL)repeats actionBlock:(void(^)(VDGCDTimer *timer))actionBlock {
+- (instancetype)initWithInterval:(NSTimeInterval)interval repeats:(BOOL)repeats isFireOnMainThread:(BOOL)isFireOnMainThread actionBlock:(void(^)(VDGCDTimer *timer))actionBlock {
     self = [super init];
     
     _interval = interval;
     _repeats = repeats;
+    _isFireOnMainThread = isFireOnMainThread;
     _actionBlock = actionBlock;
     
     _firedCount = 0;
@@ -52,20 +53,38 @@ dispatch_source_t VDCreateDispatchTimer(NSTimeInterval interval, dispatch_queue_
 
 - (void)fire {
     if (self.actionBlock) {
-        VDWeakifySelf;
-        dispatch_async(dispatch_get_main_queue(), ^{
-            VDStrongifySelf;
-            self.actionBlock(self);
-        });
+        self.actionBlock(self);
+    }
+}
+
+- (void)fireOnMainThread {
+    if ([NSThread isMainThread]) {
+        [self fire];
+    }
+    else {
+        if (self.actionBlock) {
+            VDWeakifySelf;
+            dispatch_async(dispatch_get_main_queue(), ^{
+                VDStrongifySelf;
+                [self fire];
+            });
+        }
     }
 }
 
 - (void)start {
     if (!self.isRunning) {
         dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+        VDWeakifySelf;
         self.timer = VDCreateDispatchTimer(self.interval, queue, ^{
+            VDStrongifySelf;
             self.firedCount++;
-            [self fire];
+            if (self.isFireOnMainThread) {
+                [self fireOnMainThread];
+            }
+            else {
+                [self fire];
+            }
             if (!self.repeats) {
                 [self stop];
             }
