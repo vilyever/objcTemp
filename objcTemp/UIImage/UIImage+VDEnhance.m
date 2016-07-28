@@ -18,13 +18,11 @@
     return [UIImage imageWithContentsOfFile:[ [NSBundle mainBundle] pathForResource:filePath ofType:type] ];
 }
 
-+ (UIImage *)vd_imageWithColor:(UIColor *)color
-{
++ (UIImage *)vd_imageWithColor:(UIColor *)color {
     return [self vd_imageWithColor:color withImageSize:CGSizeMake(1.0f, 1.0f) ];
 }
 
-+ (UIImage *)vd_imageWithColor:(UIColor *)color withImageSize:(CGSize)size
-{
++ (UIImage *)vd_imageWithColor:(UIColor *)color withImageSize:(CGSize)size {
     CGRect rect = CGRectMake(0.0f, 0.0f, size.width, size.height);
     UIGraphicsBeginImageContext(rect.size);
     CGContextRef context = UIGraphicsGetCurrentContext();
@@ -37,8 +35,7 @@
     return image;
 }
 
-+ (UIImage *)vd_imageWithColor:(UIColor *)color withImageSize:(CGSize)size withCornerRadius:(float)cornerRadius
-{
++ (UIImage *)vd_imageWithColor:(UIColor *)color withImageSize:(CGSize)size withCornerRadius:(float)cornerRadius {
     CGRect rect = CGRectMake(0.0f, 0.0f, size.width, size.height);
     
     UIGraphicsBeginImageContext(rect.size);
@@ -60,10 +57,8 @@
     return image;
 }
 
-+ (UIImage *)vd_resizeImage:(UIImage *)image withProportion:(CGFloat)proportion
-{
-    if (proportion <= 0.0f)
-    {
++ (UIImage *)vd_resizeImage:(UIImage *)image withProportion:(CGFloat)proportion {
+    if (proportion <= 0.0f) {
         return nil;
     }
     
@@ -71,7 +66,11 @@
     CGFloat imageWidth = CGImageGetWidth(imageRef) * proportion;
     CGFloat imageHeight = CGImageGetHeight(imageRef) * proportion;
     
-    CGRect bounds = CGRectMake(0.0f, 0.0f, imageWidth, imageHeight);
+    return [self vd_resizeImage:image withNewSize:CGSizeMake(imageWidth, imageHeight)];
+}
+
++ (UIImage *)vd_resizeImage:(UIImage *)image withNewSize:(CGSize)newSize {
+    CGRect bounds = CGRectMake(0.0f, 0.0f, newSize.width, newSize.height);
     
     UIGraphicsBeginImageContextWithOptions(bounds.size, NO, 0.0f);
     [image drawInRect:bounds];
@@ -81,14 +80,21 @@
     return resizedImage;
 }
 
-+ (UIImage *)vd_imageWithView:(UIView *)view
-{
++ (UIImage *)vd_imageWithView:(UIView *)view {
     UIGraphicsBeginImageContext(view.frame.size);
     [view.layer renderInContext:UIGraphicsGetCurrentContext() ];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
     return image;
+}
+
+- (UIImage *)vd_resizeWithProportion:(CGFloat)proportion {
+    return [[self class] vd_resizeImage:self withProportion:proportion];
+}
+
+- (UIImage *)vd_resizeWithNewSize:(CGSize)newSize {
+    return [[self class] vd_resizeImage:self withNewSize:newSize];
 }
 
 #pragma mark Private Method

@@ -22,6 +22,11 @@
 
 + (UIImage *)vd_resizeImage:(UIImage *)image withProportion:(CGFloat)proportion;
 
++ (UIImage *)vd_resizeImage:(UIImage *)image withNewSize:(CGSize)newSize;
+
 + (UIImage *)vd_imageWithView:(UIView *)view;
+
+- (UIImage *)vd_resizeWithProportion:(CGFloat)proportion;
+- (UIImage *)vd_resizeWithNewSize:(CGSize)newSize;
 
 @end
