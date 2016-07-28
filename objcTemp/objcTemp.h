@@ -125,3 +125,6 @@ FOUNDATION_EXPORT const unsigned char objcTempVersionString[];
 #import <objcTemp/NSObject+VDKVO.h>
 
 #import <objcTemp/VDBusinessProcess.h>
+
+#import <objcTemp/VDGCDTimer.h>
+
