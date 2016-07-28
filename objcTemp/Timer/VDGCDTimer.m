@@ -38,7 +38,7 @@ dispatch_source_t VDCreateDispatchTimer(NSTimeInterval interval, dispatch_queue_
     return [[self alloc] initWithInterval:interval repeats:repeats fireOnMainThread:isFireOnMainThread actionBlock:actionBlock];
 }
 
-- (instancetype)initWithInterval:(NSTimeInterval)interval repeats:(BOOL)repeats isFireOnMainThread:(BOOL)isFireOnMainThread actionBlock:(void(^)(VDGCDTimer *timer))actionBlock {
+- (instancetype)initWithInterval:(NSTimeInterval)interval repeats:(BOOL)repeats fireOnMainThread:(BOOL)isFireOnMainThread actionBlock:(void(^)(VDGCDTimer *timer))actionBlock {
     self = [super init];
     
     _interval = interval;
