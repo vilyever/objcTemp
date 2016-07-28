@@ -9,6 +9,7 @@
 #import "VDGCDTimer.h"
 //#import "objcTemp.h"
 //@import objcTemp;
+#import "VDMacros.h"
 
 
 dispatch_source_t VDCreateDispatchTimer(NSTimeInterval interval, dispatch_queue_t queue, dispatch_block_t block) {
@@ -51,7 +52,11 @@ dispatch_source_t VDCreateDispatchTimer(NSTimeInterval interval, dispatch_queue_
 
 - (void)fire {
     if (self.actionBlock) {
-        self.actionBlock(self);
+        VDWeakifySelf;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            VDStrongifySelf;
+            self.actionBlock(self);
+        });
     }
 }
 
