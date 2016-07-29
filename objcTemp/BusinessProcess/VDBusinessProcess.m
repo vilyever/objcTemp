@@ -19,8 +19,8 @@
 
 @property (nonatomic, assign, readwrite) BOOL isMain;
 
-@property (nonatomic, strong) NSMutableArray *delegates;
-@property (nonatomic, strong) NSMutableArray *branchArray;
+@property (nonatomic, strong, readwrite) NSMutableArray<__kindof UIViewController<VDBusinessProcessDelegate> *> *delegates;
+@property (nonatomic, strong, readwrite) NSMutableArray<__kindof VDBusinessProcess *> *branchArray;
 
 @end
 
@@ -138,7 +138,7 @@
 }
 
 #pragma mark Properties
-- (NSMutableArray *)delegates {
+- (NSMutableArray<__kindof UIViewController<VDBusinessProcessDelegate> *> *)delegates {
     if (!_delegates) {
         _delegates = [NSMutableArray new];
     }
@@ -146,7 +146,7 @@
     return _delegates;
 }
 
-- (NSMutableArray *)branchArray {
+- (NSMutableArray<__kindof VDBusinessProcess *> *)branchArray {
     if (!_branchArray) {
         _branchArray = [NSMutableArray new];
     }

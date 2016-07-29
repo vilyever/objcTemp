@@ -19,9 +19,10 @@
 
 - (void)getOriginalReturnValue:(void *)valuePtr;
 - (void)setReturnValue:(void *)valuePtr;
-- (void)getArgument:(void *)argumentLocation atIndex:(NSInteger)idx;
-- (id)getArgumentAtIndex:(NSInteger)idx;
-- (NSString *)getStringArgumentAtIndex:(NSInteger)idx;
+
+- (void)getArgument:(void *)argument atIndex:(NSInteger)idx;
+- (__weak id)getArgumentAtIndex:(NSInteger)idx;
+- (__weak NSString *)getStringArgumentAtIndex:(NSInteger)idx;
 - (NSInteger)getIntegerArgumentAtIndex:(NSInteger)idx;
 - (int)getIntArgumentAtIndex:(NSInteger)idx;
 - (BOOL)getBoolArgumentAtIndex:(NSInteger)idx;
@@ -30,6 +31,8 @@
 - (char)getCharArgumentAtIndex:(NSInteger)idx;
 - (long)getLongArgumentAtIndex:(NSInteger)idx;
 - (SEL)getSELArgumentAtIndex:(NSInteger)idx;
+
+- (void)setArgument:(void *)argument atIndex:(NSInteger)idx;
 
 #pragma mark Properties
 @property (nonatomic, strong) NSInvocation *invocation;

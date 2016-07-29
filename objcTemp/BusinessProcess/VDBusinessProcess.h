@@ -62,6 +62,9 @@
 @property (nonatomic, assign, readonly) BOOL isMain;
 @property (nonatomic, weak) VDBusinessProcess *parentBusinessProcess;
 
+@property (nonatomic, strong, readonly) NSMutableArray<__kindof UIViewController<VDBusinessProcessDelegate> *> *delegates;
+@property (nonatomic, strong, readonly) NSMutableArray<__kindof VDBusinessProcess *> *branchArray;
+
 
 #pragma mark Private Method
 - (void)internalInitVDBusinessProcess;

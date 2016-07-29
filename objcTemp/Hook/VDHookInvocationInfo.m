@@ -35,19 +35,19 @@
     [self.invocation setReturnValue:valuePtr];
 }
 
-- (void)getArgument:(void *)argumentLocation atIndex:(NSInteger)idx {
+- (void)getArgument:(void *)argument atIndex:(NSInteger)idx {
     // 0 is instance, 1 is selector
-    [self.invocation getArgument:argumentLocation atIndex:idx + 2];
+    [self.invocation getArgument:argument atIndex:idx + 2];
 }
 
-- (id)getArgumentAtIndex:(NSInteger)idx {
-    id argument;
+- (__weak id)getArgumentAtIndex:(NSInteger)idx {
+    __weak id argument;
     [self getArgument:&argument atIndex:idx];
     return argument;
 }
 
-- (NSString *)getStringArgumentAtIndex:(NSInteger)idx {
-    NSString *argument;
+- (__weak NSString *)getStringArgumentAtIndex:(NSInteger)idx {
+    __weak NSString *argument;
     [self getArgument:&argument atIndex:idx];
     return argument;
 }
@@ -98,6 +98,11 @@
     SEL argument;
     [self getArgument:&argument atIndex:idx];
     return argument;
+}
+
+- (void)setArgument:(void *)argument atIndex:(NSInteger)idx {
+    // 0 is instance, 1 is selector
+    [self.invocation setArgument:argument atIndex:idx + 2];
 }
 
 
