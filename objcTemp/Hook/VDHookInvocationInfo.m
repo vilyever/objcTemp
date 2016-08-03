@@ -40,14 +40,14 @@
     [self.invocation getArgument:argument atIndex:idx + 2];
 }
 
-- (__weak id)getArgumentAtIndex:(NSInteger)idx {
-    __weak id argument;
+- (__unsafe_unretained id)getArgumentAtIndex:(NSInteger)idx {
+    __unsafe_unretained id argument;
     [self getArgument:&argument atIndex:idx];
     return argument;
 }
 
-- (__weak NSString *)getStringArgumentAtIndex:(NSInteger)idx {
-    __weak NSString *argument;
+- (__unsafe_unretained NSString *)getStringArgumentAtIndex:(NSInteger)idx {
+    __unsafe_unretained NSString *argument;
     [self getArgument:&argument atIndex:idx];
     return argument;
 }
@@ -107,7 +107,10 @@
 
 
 #pragma mark Properties
-
+- (void)setInvocation:(NSInvocation *)invocation {
+    _invocation = invocation;
+    [_invocation retainArguments];
+}
 
 #pragma mark Overrides
 - (instancetype)init {

@@ -17,12 +17,12 @@
 #pragma mark Public Method
 + (instancetype)infoWithInvocation:(NSInvocation *)invocation;
 
-- (void)getOriginalReturnValue:(void *)valuePtr;
+- (void)getOriginalReturnValue:(void *)valuePtr; // try use __unsafe_unretained to avoid crash
 - (void)setReturnValue:(void *)valuePtr;
 
-- (void)getArgument:(void *)argument atIndex:(NSInteger)idx;
-- (__weak id)getArgumentAtIndex:(NSInteger)idx;
-- (__weak NSString *)getStringArgumentAtIndex:(NSInteger)idx;
+- (void)getArgument:(void *)argument atIndex:(NSInteger)idx; // try use __unsafe_unretained var to avoid crash
+- (__unsafe_unretained id)getArgumentAtIndex:(NSInteger)idx;
+- (__unsafe_unretained NSString *)getStringArgumentAtIndex:(NSInteger)idx;
 - (NSInteger)getIntegerArgumentAtIndex:(NSInteger)idx;
 - (int)getIntArgumentAtIndex:(NSInteger)idx;
 - (BOOL)getBoolArgumentAtIndex:(NSInteger)idx;
