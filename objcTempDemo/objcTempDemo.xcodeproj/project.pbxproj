@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FE416FA11D2D0C1300518C78 /* objcTemp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE416FA01D2D0C1300518C78 /* objcTemp.framework */; };
-		FE416FA21D2D0C1300518C78 /* objcTemp.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FE416FA01D2D0C1300518C78 /* objcTemp.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FE416FFD1D2F4B7E00518C78 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE416FFC1D2F4B7E00518C78 /* BaseViewController.m */; };
 		FE4170011D2F4BA700518C78 /* AutoPanUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE416FFF1D2F4BA700518C78 /* AutoPanUpViewController.m */; };
 		FE4170021D2F4BA700518C78 /* AutoPanUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE4170001D2F4BA700518C78 /* AutoPanUpViewController.xib */; };
@@ -41,6 +39,7 @@
 		FE6400371D40D24A00652BAC /* PullToRefreshTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6400351D40D24A00652BAC /* PullToRefreshTableViewCell.m */; };
 		FE6400381D40D24A00652BAC /* PullToRefreshTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE6400361D40D24A00652BAC /* PullToRefreshTableViewCell.xib */; };
 		FE64003B1D41B33000652BAC /* AppRouterPullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = FE64003A1D41B33000652BAC /* AppRouterPullToRefresh.m */; };
+		FE6401481D51B4AC00652BAC /* objcTemp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE6401471D51B4AC00652BAC /* objcTemp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -50,7 +49,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				FE416FA21D2D0C1300518C78 /* objcTemp.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -58,7 +56,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		FE416FA01D2D0C1300518C78 /* objcTemp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = objcTemp.framework; path = "/Users/ftet/Library/Developer/Xcode/DerivedData/objcTemp-dsvrfefekloeavfmbfjuecgqqsko/Build/Products/Debug-iphoneos/objcTemp.framework"; sourceTree = "<absolute>"; };
 		FE416FFB1D2F4B7E00518C78 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		FE416FFC1D2F4B7E00518C78 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		FE416FFE1D2F4BA700518C78 /* AutoPanUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoPanUpViewController.h; sourceTree = "<group>"; };
@@ -113,6 +110,7 @@
 		FE6400361D40D24A00652BAC /* PullToRefreshTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PullToRefreshTableViewCell.xib; sourceTree = "<group>"; };
 		FE6400391D41B33000652BAC /* AppRouterPullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppRouterPullToRefresh.h; sourceTree = "<group>"; };
 		FE64003A1D41B33000652BAC /* AppRouterPullToRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppRouterPullToRefresh.m; sourceTree = "<group>"; };
+		FE6401471D51B4AC00652BAC /* objcTemp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = objcTemp.framework; path = Carthage/Build/iOS/objcTemp.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,7 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE416FA11D2D0C1300518C78 /* objcTemp.framework in Frameworks */,
+				FE6401481D51B4AC00652BAC /* objcTemp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,7 +215,7 @@
 		FE615FD91D2367FF00AECD76 = {
 			isa = PBXGroup;
 			children = (
-				FE416FA01D2D0C1300518C78 /* objcTemp.framework */,
+				FE6401471D51B4AC00652BAC /* objcTemp.framework */,
 				FE615FE41D2367FF00AECD76 /* objcTempDemo */,
 				FE615FE31D2367FF00AECD76 /* Products */,
 			);
@@ -497,7 +495,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = objcTempDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -515,7 +516,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = objcTempDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
