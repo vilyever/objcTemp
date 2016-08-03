@@ -39,7 +39,8 @@
 		FE6400371D40D24A00652BAC /* PullToRefreshTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6400351D40D24A00652BAC /* PullToRefreshTableViewCell.m */; };
 		FE6400381D40D24A00652BAC /* PullToRefreshTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE6400361D40D24A00652BAC /* PullToRefreshTableViewCell.xib */; };
 		FE64003B1D41B33000652BAC /* AppRouterPullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = FE64003A1D41B33000652BAC /* AppRouterPullToRefresh.m */; };
-		FE6401481D51B4AC00652BAC /* objcTemp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE6401471D51B4AC00652BAC /* objcTemp.framework */; };
+		FE64014A1D51B73F00652BAC /* objcTemp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE6401491D51B73F00652BAC /* objcTemp.framework */; };
+		FE64014B1D51B73F00652BAC /* objcTemp.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FE6401491D51B73F00652BAC /* objcTemp.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -49,6 +50,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				FE64014B1D51B73F00652BAC /* objcTemp.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -110,7 +112,7 @@
 		FE6400361D40D24A00652BAC /* PullToRefreshTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PullToRefreshTableViewCell.xib; sourceTree = "<group>"; };
 		FE6400391D41B33000652BAC /* AppRouterPullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppRouterPullToRefresh.h; sourceTree = "<group>"; };
 		FE64003A1D41B33000652BAC /* AppRouterPullToRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppRouterPullToRefresh.m; sourceTree = "<group>"; };
-		FE6401471D51B4AC00652BAC /* objcTemp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = objcTemp.framework; path = Carthage/Build/iOS/objcTemp.framework; sourceTree = "<group>"; };
+		FE6401491D51B73F00652BAC /* objcTemp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = objcTemp.framework; path = Carthage/Build/iOS/objcTemp.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,7 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE6401481D51B4AC00652BAC /* objcTemp.framework in Frameworks */,
+				FE64014A1D51B73F00652BAC /* objcTemp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,7 +217,7 @@
 		FE615FD91D2367FF00AECD76 = {
 			isa = PBXGroup;
 			children = (
-				FE6401471D51B4AC00652BAC /* objcTemp.framework */,
+				FE6401491D51B73F00652BAC /* objcTemp.framework */,
 				FE615FE41D2367FF00AECD76 /* objcTempDemo */,
 				FE615FE31D2367FF00AECD76 /* Products */,
 			);
