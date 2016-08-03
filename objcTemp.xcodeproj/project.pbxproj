@@ -152,7 +152,6 @@
 		FE6400FB1D49F47800652BAC /* VDGCDTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = FE6400F91D49F47800652BAC /* VDGCDTimer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FE6400FC1D49F47800652BAC /* VDGCDTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6400FA1D49F47800652BAC /* VDGCDTimer.m */; };
 		FECA263D1D25030B00ED8FDD /* objcTemp.podspec in Resources */ = {isa = PBXBuildFile; fileRef = FECA263B1D25030B00ED8FDD /* objcTemp.podspec */; };
-		FECA263E1D25030B00ED8FDD /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = FECA263C1D25030B00ED8FDD /* README.md */; };
 		FECA268A1D25147000ED8FDD /* VDProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = FECA26881D25147000ED8FDD /* VDProperty.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FECA268B1D25147000ED8FDD /* VDProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = FECA26891D25147000ED8FDD /* VDProperty.m */; };
 		FECA268E1D2516FD00ED8FDD /* NSObject+VDProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = FECA268C1D2516FD00ED8FDD /* NSObject+VDProperty.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -1021,7 +1020,6 @@
 				FE615FB01D2367B500AECD76 /* NSObject+VDEnhance.m in Sources */,
 				FE416F701D2CA6CE00518C78 /* UITableViewCell+VDEnhance.m in Sources */,
 				FE6400881D45AEC200652BAC /* UICollectionView+VDEnhance.m in Sources */,
-				FECA263E1D25030B00ED8FDD /* README.md in Sources */,
 				FE6400FC1D49F47800652BAC /* VDGCDTimer.m in Sources */,
 				FE4171271D375F4500518C78 /* UIImageView+VDTheme.m in Sources */,
 				FECA268B1D25147000ED8FDD /* VDProperty.m in Sources */,
